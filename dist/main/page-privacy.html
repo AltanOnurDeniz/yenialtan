@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gizlilik Politikası | Webso</title>
+        <meta name="description" content="SaaS, Software and Startup Site Template">
+        <meta name="theme-color" content="#178d72">
+
+        <!-- Meta for SEO and Link Cards -->
+        <meta name="twitter:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Lexend">
+        <meta property="og:description" content="SaaS, Software and Startup Site Template">
+        <meta property="og:url" content="https://unistudio.co/html/lexend/">
+        <meta property="og:site_name" content="Lexend">
+        <meta property="og:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta property="og:image:width" content="1180">
+        <meta property="og:image:height" content="600">
+        <meta property="og:image:type" content="image/png">
+        <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+        <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper-defined-timelines.js" as="script">
+        <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+        <link rel="preload" href="../assets/js/app.js" as="script">
+
+        <!-- app head for bootstrap core -->
+        <script src="../assets/js/app-head-bs.js"></script>
+
+        <!-- include uni-core components -->
+        <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+        <!-- include styles -->
+        <link rel="stylesheet" href="../assets/css/unicons.min.css">
+        <link rel="stylesheet" href="../assets/css/prettify.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+        <!-- include main style -->
+        <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+
+        <!-- include scripts -->
+        <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    </head>
+    <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden">
+
+             <!--  Search modal -->
+             <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+                    <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                        <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                            <i class="unicon-close"></i>
+                        </button>
+                        <span class="ft-tertiary fs-7">ESC</span>
+                    </div>
+    
+                    <div class="panel w-100 sm:w-500px px-2 py-10">
+                        <h3 class="h4 sm:h2 text-center">Ne aramıştınız?</h3>
+                        <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                            <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                            <input type="search" name="q" class="form-control-plaintext ms-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Ara..." aria-label="Search" autofocus>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Newsletter modal -->
+            <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+                    <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                    <div class="row md:child-cols-6 col-match g-0">
+                        <div class="d-none md:d-flex">
+                            <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                                <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="panel vstack self-center p-4 md:py-8 text-center">
+                                <h3 class="h3 md:h2">Haber bültenimize abone ol</h3>
+                                <p class="ft-tertiary">Yeni gönderiler, haberler ve güncellemeler hakkında bildirim almak için 10 binden fazla kişiye katılın.</p>
+                                <div class="panel mt-2 lg:mt-4">
+                                    <form class="vstack gap-1">
+                                        <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Email...">
+                                        <button type="submit" class="btn btn-sm btn-primary">Üye ol</button>
+                                    </form>
+                                    <p class="fs-7 mt-2">Endişelenmeyin, spam yapmıyoruz!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Menu panel -->
+            <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+                <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                    <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                        <div class="uc-logo">
+                            <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                                <img class="w-32px" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                            </a>
+                        </div>
+                        <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                            <i class="unicon-close"></i>
+                        </button>
+                    </header>
+    
+                    <div class="panel">
+                        <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                            <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Ara...">
+                            <span class="form-icon text-gray">
+                                <i class="unicon-search icon-1"></i>
+                            </span>
+                        </form>
+                        <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                            <li><a href="index.html">Ana Sayfa</a></li>
+                            <li><a href="page-feature.html">Ürünler</a></li>
+                            <li><a href="page-pricing.html">Paketler</a></li>
+                            <li><a href="page-about.html">Hakkımızda</a></li>
+                            <li><a href="page-career.html">Kariyer</a></li>
+                            <li><a href="page-contact.html">İletişim</a></li>
+                            <li class="hr opacity-10 my-1"></li> 
+                            <li><a href="sign-in.html">Giriş Yap</a></li>
+                            <li><a href="sign-up.html">Kayıt Ol</a></li>
+                        </ul>
+                        <ul class="social-icons nav-x mt-4">
+                            <li>
+                                <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                            </li>
+                        </ul>
+                        <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                            <div class="vstack gap-1">
+                                <span class="fs-7 opacity-60">Arayüz seçimi:</span>
+                                <div class="darkmode-trigger" data-darkmode-switch="">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider fs-5"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Contact modal -->
+            <div id="uc-contact-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+                    <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+    
+                    <div class="panel vstack gap-2 md:gap-4 text-center">
+                        <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Kısaca bahsedin, size yardımcı olalım.</h4>
+                                <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <div class="vstack lg:hstack gap-2">
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="İsim*" required>
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Soyisim*" required>
+                                        </div>
+                                        <div class="vstack lg:hstack gap-2">
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="E-mail adresi*" required>
+                                            <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Telefon numarası*" required>
+                                        </div>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Şirket ismi*" required>
+                                        <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Mesaj..."></textarea>
+                                        <button class="btn btn-primary btn-md text-white mt-2" type="submit">Gönder</button>
+                                        <p class="fs-7 opacity-70 mt-2 text-center">Platform hakkında bilgi almak ve tüm sorularınızı yanıtlamak için buradayız. Nasıl çalıştığını görmeye hazır olun!</p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--  Bottom Actions Sticky -->
+        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+                <label class="switch">
+                    <span class="sr-only">Dark mode toggle</span>
+                    <input type="checkbox">
+                    <span class="slider fs-5"></span>
+                </label>
+            </div>
+            <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+                <i class="icon-2 unicon-chevron-up"></i>
+            </a>
+        </div>
+
+         <!-- Header start -->
+         <header class="uc-header uc-navbar-sticky-wrap z-999" style="--uc-nav-height: 80px" data-uc-sticky="start: 170; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+            <nav class="uc-navbar-container ft-tertiary z-1">
+                <div class="container max-w-xl">
+                    <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo text-dark dark:text-white">
+                                <a class="panel text-none" href="index.html" style="width: 140px">
+                                    <img class="dark:d-none" src="../assets/images/common/webso-dark-logo.svg" alt="Webso">
+                                    <img class="d-none dark:d-block" src="../assets/images/common/webso-light-logo.svg" alt="Webso">
+                                </a>
+                            </div>
+                            <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">
+                                <li>
+                                    <a href="#">Şablonlar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row g-0 col-match" data-uc-grid>
+                                            <div class="col-7">
+                                                <div class="panel p-3">
+                                                    <h6 class="h6 ms-3">Bütün şablonları incele</h6>
+                                                    <div class="row child-cols-3 g-0">
+                                                        <div>
+                                                            <a href="index.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index.png" alt="Home - 01">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 1</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-2.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-2.png" alt="Home - 02">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 2</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-3.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-3.png" alt="Home - 03">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 3</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-4.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-4.png" alt="Home - 04">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 4</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-features.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-features.png" alt="Features">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Features</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-pricing.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-pricing.png" alt="Pricing">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Pricing</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-integrations.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-integrations.png" alt="Integrations">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Integrations</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-about.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-about.png" alt="About">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">About</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="panel p-3 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <h6 class="h6 ms-3">Diğer sayfalar</h6>
+                                                    <div class="row child-cols-6 g-0">
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Career</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career-detail.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Job details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact-2.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-2.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-3.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v3</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-2.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign up</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-3.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign in</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-4.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Reset Password</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Shop</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-cart.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Cart</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-checkout.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Checkout</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-product-detail.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Product detail</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-order.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Order confirmation</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Ürünler <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-checkmark fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Sürükle-Bırak</b>
+                                                                <p class="fw-normal">Her seviyeden kullanıcı için uygun!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-pie fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">CRM Entegrasyonları</b>
+                                                                <p class="fw-normal">İşletmenizi kolaylıkla yönetin.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-increase-level fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">E-Ticaret Çözümleri</b>
+                                                                <p class="fw-normal">Her yerden satış yapmanın keyfini çıkarın.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-venn-diagram fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Çoklu Birimler</b>
+                                                                <p class="fw-normal">Global pazara hitap edin!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="vstack gap-2 p-3 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                        <figure class="featured-image m-0 rounded ratio ratio-3x2 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/login.webp" alt="Image">
+                                                        </figure>
+                                                        <button class="btn btn-md btn-alt-primary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-2"><i class="icon-1 unicon-play-filled-alt"></i></button>
+                                                        <a href="../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                    </div>
+                                                    <div class="vstack justify-between gap-2">
+                                                        <div class="vstack gap-1">
+                                                            <h5 class="h6 m-0">İhtiyacınız olan her şey parmaklarınızın ucunda</h5>
+                                                            <p class="fs-7 opacity-70">Farklı görevler için birden fazla yazılım zorluğuna elveda.</p>
+                                                        </div>
+                                                        <a href="page-pricing.html" class="btn btn-sm btn-primary">Şimdi dene</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Kaynaklar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                            <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Blog</b>
+                                                                <p class="fw-normal">Blog bültenimize katılın ve her yeni yazıyı ilk siz okuyun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="#uc-newsletter-modal" data-uc-toggle="">
+                                                            <i class="icon-1 unicon-email fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Bülten</b>
+                                                                <p class="fw-normal">En son güncellemeler ve özel içerikler için bültenimize abone olun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-play fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Video Eğitimleri</b>
+                                                                <p class="fw-normal">İşletmenizi birlikte büyütelim.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                            <i class="icon-1 unicon-star fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Kariyer</b>
+                                                                <p class="fw-normal">Vizyonumuzu paylaşan insanlar arıyoruz.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                            <i class="icon-1 unicon-headset fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Yardım Merkezi</b>
+                                                                <p class="fw-normal">Özel ekibimiz sorularınızı derhal yanıtlayacaktır.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="page-pricing.html">Paketler</a></li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <div class="d-none xl:d-block">
+                                <a class="text-none fw-medium" href="#uc-contact-modal" data-uc-toggle>
+                                    <span>Size Ulaşalım</span>
+                                </a>
+                            </div>
+                            <div class="d-none lg:d-block">
+                                <a class="text-none fw-medium" href="sign-in.html">
+                                    <span>Giriş Yap</span>
+                                </a>
+                            </div>
+                            <a class="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex" href="page-pricing.html">Siteni Oluştur</a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Header end -->
+
+        <!-- Wrapper start -->
+        <div id="wrapper" class="wrap">
+            <div class="breadcrumbs panel z-1 py-2 bg-gray-25 dark:bg-gray-100 dark:bg-opacity-5 dark:text-white">
+                <div class="container max-w-xl">
+                    <ul class="breadcrumb nav-x justify-center gap-1 fs-7 sm:fs-6 m-0">
+                        <li><a href="index.html">Home</a></li>
+                        <li><i class="unicon-chevron-right opacity-50 rtl:rotate-180"></i></li>
+                        <li><span class="opacity-50">Gizlilik Politikası</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section py-4 lg:py-6 xl:py-8">
+                <div class="container max-w-lg">
+                    <div class="page-wrap panel vstack gap-4 lg:gap-6 xl:gap-8">
+                        <header class="page-header panel vstack justify-center gap-2 lg:gap-4 text-center">
+                            <div class="panel">
+                                <h1 class="h3 lg:h1 m-0">Gizlilik Politikası</h1>
+                            </div>
+                        </header>
+                        <div class="breadcrumb nav-x justify-center gap-1 fs-7 sm:fs-6 m-0">
+                            <p>Webso.com'un Gizlilik Politikasına Hoş Geldiniz!</p>
+                            <p>Bu politikada gizlilik uygulamalarımız açıklanıyor - Kullanıcılarımıza ait hangi Kişisel Verileri topluyoruz, bu Kişisel Verileri ne yapıyoruz, nasıl paylaşıyoruz ve ilgili kişi sıfatıyla Kişisel Veriler üzerinde sahip olduğunuz haklar.</p>
+                            <p>Hizmetlerimizden herhangi birine erişerek veya hizmetlerimizden herhangi birini kullanarak, bu Gizlilik Politikasını okuduğunuzu kabul etmiş olursunuz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">1. Lütfen dikkatle okuyun!</h3>
+                            <p>Webso.com ziyaretçi ve kullanıcılarının gizliliğine büyük önem vermektedir. Bu doğrultuda, işbu Gizlilik Politikasında ("Gizlilik Politikası") tüm dünyadaki iştirakleri ile beraber Webso.com A.Ş. şirketinin ("Webso", "biz", "bizim", "bizi" veya "bize") Kişisel Verilerinizi nasıl topladığı, kullandığı ve paylaştığının yanı sıra, ilgili kişi sıfatıyla Kişisel Veriler üzerinde sahip olduğunuz haklar açıklanmaktadır. İşbu Gizlilik Politikası, kayıtlı olmayan kullanıcılar, kayıtlı kullanıcılar ve premium kullanıcılar da dahil tüm Webso kullanıcıları (topluca "Kullanıcılar", "siz", "sizi", "size" veya "sizin") ve web sitelerimiz (www.Webso.com ve tüm alt etki alanları da dahil, "Web Sitesi"), web uygulamalarımız ("Webso Uygulamaları") mobil uygulamalarımız ("Mobil Uygulamalar") ve ilgili hizmetlerimiz de dahil tüm Webso hizmetleri (topluca, "Hizmetler") için geçerlidir. İşbu Gizlilik Politikasının bizimle yapmış olduğunuz herhangi bir sözleşmenin hükümlerini ve Kişisel Verilerin Korunması Kanunu ve/veya diğer ilgili kanunlar çerçevesinde sahip olduğunuz hakları geçersiz kılması amaçlanmamaktadır.</p>
+                            <p>Hizmetlerimize erişmeden önce lütfen işbu Politikayı okuyun ve Kişisel Verilerinize ilişkin uygulamalarımızı tam olarak anladığınızdan emin olun. İşbu Gizlilik Politikasını okuyup tam olarak anlıyor ve uygulamalarımıza karşı çıkıyorsanız, tüm Hizmetlerimizi derhal terk etmeli ve Hizmetlerimizin her türlü kullanımına derhal son vermelisiniz. İşbu Gizlilik Politikası hakkında herhangi bir sorunuz ya da kaygınız varsa, buradan lütfen bizimle iletişime geçin.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">2. Hangi Kişisel Verileri topluyoruz?</h3>
+                            <p>Hizmetlerimizi sağlayabilmek için Kullanıcılarımıza ait Kişisel Verileri topluyoruz. Bu Kişisel Veriler, hizmetlerimizi kullandığınız zaman sizden gelen Kişisel Veriler, otomatik olarak topladığımız Kişisel Veriler ve diğer kaynaklardan topladığımız Kişisel Verileri içeriyor.</p>
+                            <h3 class="h5 lg:h5 m-0">2.1. Kullanıcı Verileri</h3>
+                            <p>Size Hizmetleri sağlayabilmek için belirlenmiş veya belirlenebilir bir gerçek kişiye ait Kişisel Verileri ("Kişisel Veriler") toplamamız gerekiyor. Bize sağladığınız, Hizmetleri kullanımınızdan ve diğer kaynaklardan aldığımız Kişisel Verileri topluyoruz. Topladığımız size ait Kişisel Veri türleri şunlardır:</p>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Bize sağladığınız veriler. Hizmetlerimize kayıt olduğunuz, etki alanı adlarını satın aldığınız ve/veya tescil ettirdiğiniz, Hizmetlerimizden herhangi birini kullandığınız ve/veya herhangi bir iletişim kanalından (örneğin Webso'nun destek biletleri, e-posta adresleri) bizimle doğrudan temasa geçtiğiniz zaman, örneğin adınız soyadınız, e-posta adresiniz, telefon numaranız, ödeme bilgileriniz (Ücretli Hizmetlerin Kullanıcıları için), bizimle iletişimlerinizde yer verdiğiniz Kişisel Veriler ve taranmış kimlik belgelerinde (örneğin kimlik kartı, sürücü belgesi, pasaport veya resmi şirket tescil belgeleri gibi) yer alanlar gibi Kişisel Verilerinizi bize sağlayabilirsiniz.   </li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Hizmetleri kullandığınız zaman topladığımız veriler. Hizmetlerimizden herhangi birini ziyaret ettiğiniz, indirdiğiniz ve/veya kullandığınız zaman, örneğin Ziyaretçi veya Kullanıcının cihazı, işletim sistemi, internet tarayıcısı, ekran çözünürlüğü, dil ve klavye ayarları, internet servis sağlayıcısı, başvuru yapan ve gidilen sayfalar, tarih ve zaman damgaları vb. Ziyaretçi ve Kullanıcıların Hizmetlerdeki göz atma ve tıklama faaliyetleri, oturum ısı haritaları ve kaydırmalar gibi belirleyici olmayan toplu kullanım verilerini içeren Kişisel Verileri toplayabiliriz.</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Diğer kaynaklardan topladığımız veriler. Örneğin (i) dolandırıcılık faaliyetlerinde bulunan Kullanıcıları tespit etmemize yardımcı olan güvenlik hizmetleri sağlayıcıları, dolandırıcılığı algılama ve önleme hizmetleri sağlayıcılarından; (ii) sosyal medya platformlarından - sosyal medya hesabınızla giriş yaptığınız veya kayıt olduğunuz zaman o hizmetten Kişisel Verilerinizi (örneğin kullanıcı adınız, temel profiliniz gibi Kişisel Veriler) alabiliriz - ve bazı durumlarda sunduğumuz hizmetleri iyileştirmemize yardımcı olan müşteri adaylarını tanımlama hizmetlerini sağlayan şirketlerden; (iii) reklam kampanyalarımızı izlemek, yönetmek ve ölçmek için iş birliği yaptığımız reklam ve pazarlama ortaklarımız gibi üçüncü taraflardan size ait Kişisel Verileri alabiliriz.</li>
+                            <h3 class="h5 lg:h5 m-0">2.2. Nihai Kullanıcıların Verileri</h3>
+                            <p>Ayrıca, Kullanıcılarımızın web sitelerinin veya hizmetlerinin ziyaretçileri ve kullanıcılarına ("Nihai Kullanıcılar") ait Kişisel Verileri de yalnızca Kullanıcılarımız için ve Kullanıcılarımız adına toplayabiliriz (aşağıda 6. Bölümde ayrıntılı olarak açıklandığı üzere).</p>
+                            <h3 class="h5 lg:h5 m-0">2.3. Webso işleri başvuru sahibi bilgileri</h3>
+                            <p>Ayrıca, https://www.Webso.com/Kariyer adresinde yayınlanan açık pozisyonlardan herhangi birine başvurduklarında Webso iş adayları ("Başvuru Sahipleri") tarafından bize e-posta yoluyla veya başka bir şekilde sağlanan bilgileri de toplarız (İş Başvuru Sahipleri için Gizlilik Politikası’nda ayrıntılı olarak açıklandığı üzere).</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">3. Bu Kişisel Verileri nasıl kullanıyoruz?</h3>
+                            <p>Topladığımız size ait Kişisel Verileri hizmetlerimizi sağlamak, iyileştirmek ve daha güvenli bir hale getirmek için kullanıyoruz. Kişisel Verilerinizi şu amaçlar doğrultusunda kullanıyoruz:</p>
+                            <ul>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Hizmetleri sağlamak ve çalıştırmak,</li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Kullanıcıların ortak veya kişisel tercihleri, deneyimleri ve yaşadıkları sorunlar esasında Hizmetlerimizi daha da geliştirmek, özelleştirmek, genişletmek ve iyileştirmek,</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Kullanıcılarımıza kesintisiz müşteri desteği ve teknik destek sağlamak,</li>
+                            <li><p class="h6 lg:h6 m-0">4.</p> Hizmetlere ilişkin genel veya kişiselleştirilmiş bildirimler ve promosyon iletileri ile Kullanıcılarımızla temasa geçebilmek (aşağıda 8. Bölümde ayrıntılı olarak açıklandığı üzere),</li>
+                            </ul>
+                            <ul>
+                            <li><p class="h6 lg:h6 m-0">5.</p> Olası yeni müşterileri tanımlamak amacıyla kayıtlarımızı güncellemek, genişletmek ve analiz etmek,</li>
+                            <li><p class="h6 lg:h6 m-0">6.</p> Belirli yarışmalar, etkinlikler ve promosyonlara olanak sağlamak, sponsor olmak ve bunları sunmak, katılımcıların uygunluğunu belirlemek, performanslarını izlemek, kazananlarla temasa geçmek, ödül ve yardımları vermek,</li>
+                            <li><p class="h6 lg:h6 m-0">7.</p> Performansımızı ve pazarlama aktivitelerimizi analiz etmek,</li>
+                            <li><p class="h6 lg:h6 m-0">8.</p> Bizim veya iş ortaklarımızın hizmetlerini sağlamak ve geliştirmek için kullanabileceğimiz toplu istatistiki veriler ve diğer toplu ve/veya çıkarsanan Kişisel Verileri oluşturmak,</li>
+                            </ul>
+                            <ul>
+                            <li><p class="h6 lg:h6 m-0">9.</p> Yalnızca talep etmeniz halinde size mesleki destek sağlamak,</li>
+                            <li><p class="h6 lg:h6 m-0">10.</p> Veri güvenliğini ve dolandırıcılığı önleme imkanlarımızı artırmak,</li>
+                            <li><p class="h6 lg:h6 m-0">11.</p> Kişisel Verilerin Korunması Kanunu da dahil, tüm ilgili kanun ve yönetmeliklere uymak.</li>
+                            </ul>
+                            <p>Hizmetlerimizi geliştirmemize yardımcı olması için "makine öğrenimi" (Avrupa hukuku buna "otomatik karar verme" olarak atıfta bulunur) gibi teknikler kullanabiliriz. Makine öğrenimini kullandığımızda ya: (i) yine de sürece bir insan dahil olur (ve bu nedenle tamamen otomatik değildir); ya da (ii) makine öğrenimini, önemli gizlilik etkileri olmayan şekillerde kullanırız (örneğin, Webso Uygulama Pazarı'nı ziyaret ettiğinizde başvuruların nasıl görünebileceğini yeniden düzenleme). Spam gönderen veya diğer kötüye kullanım veya hileli faaliyetlerde bulunan hesapları izlememize, tanımlamamıza ve askıya almamıza yardımcı olması için de makine öğrenimini kullanabiliriz.</p>
+                            <p>Şu durumlarda Kişisel Verilerinizi 3. Bölümde belirtilen amaçlar doğrultusunda kullanıyoruz:</p>
+                            <ul>
+                                <li><p class="h6 lg:h6 m-0">1.</p> Kişisel Verilerinizi kullanmamızın sizinle akdedilmiş bir sözleşmenin icrası ya da sizinle akdedilecek bir sözleşmeye ilişkin işlemleri gerçekleştirmek için gerekli olduğunda (örneğin, size bir web sitesi oluşturucu sağlamak veya size müşteri desteği ya da teknik destek sağlamak gibi)</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> Kişisel Verilerinizi kullanmamızın ilgili bir yasal yükümlülük veya bir düzenleyici kurum tarafından koyulan bir yükümlülüğü yerine getirmek için gerekli olduğunda</li>
+                                <li><p class="h6 lg:h6 m-0">3.</p> Kişisel Verilerinizi kullanmamızın, orantılı bir şekilde yapılması ve gizlilik haklarınızı ihlal etmemesi kaydıyla, meşru çıkarlarımızı ve iş amaçlarımızı desteklemek için gerekli olduğunda (örneğin teknik sorunları tespit ederek Hizmetlerimizi ve Webso'nun etkinliğini sürdürmek ve geliştirmek gibi)</li>
+                            </ul>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">4. Kişisel Verilerinizi nasıl paylaşıyoruz?</h3>
+                            <p>Kişisel Verilerinizi hizmet sağlayıcıları ve başkalarıyla aşağıda belirtilen şekillerde ve durumlarda paylaşabiliriz (veya diğer bir şekilde bu bilgilere erişmelerine izin verebiliriz):</p>
+                            <h3 class="h5 lg:h5 m-0">4.1. Üçüncü Taraf Hizmet Sağlayıcıları</h3>
+                            <p>Webso, sağladıkları hizmet ve çözümler bizimkileri tamamlayan, kolaylaştıran ve destekleyen birtakım seçkin hizmet sağlayıcılarıyla ortaklık yapmaktadır. Bu hizmetler ve çözümler arasında barındırma (hosting) ve sunucu ortak yerleşim hizmetleri, iletişim ve içerik dağıtım ağları (CDN), veri güvenliği ve siber güvenlik hizmetleri, faturalandırma ve ödeme işleme hizmetleri, etki alanı adı tescil işlemleri, dolandırıcılığı algılama ve önleme hizmetleri, web analizi, e-posta dağıtım ve izleme hizmetleri, oturum kayıt ve uzaktan erişim hizmetleri, performans ölçümü, veri optimizasyonu ve pazarlama hizmetleri, içerik sağlayıcıları ve bizim hukuk ve mali müşavirlerimiz (topluca, "Üçüncü Taraf Hizmet Sağlayıcı/Sağlayıcıları") bulunmaktadır.</p>
+                            <p>Webso bir iş amacı doğrultusunda aşağıda belirtilen kategorilerdeki Kişisel Verileri, Üçüncü Taraf Hizmet Sağlayıcıları ile paylaşabilir:</p>
+                            <ul>
+                                <li><p class="h6 lg:h6 m-0">1.</p> Ad ve soyadı, diğer ad, posta adresi, benzersiz kişisel tanımlayıcı, çevrimiçi tanımlayıcı, internet protokol adresi, e-posta adresi, hesap adı da dâhil bir gerçek kişiyi belirleyen veriler veya bir gerçek kişiyi belirleyen diğer benzer veriler</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> Ticari Kişisel Veriler, örneğin satın alınan, temin edilen veya satın alınması düşünülen ürün ve hizmetlere ilişkin Kişisel Veriler</li>
+                            </ul>
+                            <h3 class="h5 lg:h5 m-0">4.2. Yasaların Uygulanması, Yasal Talepler ve Görevler</h3>
+                            <p>Webso, mahkeme celbi, yasal işlemler, arama izni veya mahkeme emri gibi yasal bir talep uyarınca veya varsa mevcut yasalara uygun olarak bu Gizlilik Politikasında açıklanan Kişisel Bilgilerinizin herhangi bir kategorisini, yasaların bunu gerektirdiğine kanaat getirdiğimiz takdirde size bildirimde bulunarak veya bulunmayarak ifşa edebilir veya başka bir şekilde bunlara erişime izin verebilir.</p>
+                            <h3 class="h5 lg:h5 m-0">4.3. Hakların ve Güvenliğin Korunması</h3>
+                            <p>Webso, Gizlilik Politikasında tanımlanan Kişisel Bilgilerinizin herhangi bir kategorisini, Webso'nun, herhangi bir Kullanıcımızın, Kullanıcılarımızın kullanıcılarının veya herhangi bir kamu üyesinin haklarını, mülkiyet veya kişisel güvenliğini koruyacağına kanaat getirmişsek, size bildirim yapmadan veya bildirim yaparak paylaşabilir.</p>
+                            <h3 class="h5 lg:h5 m-0">4.4. Webso Bağlı Kuruluşları ve Bağlı Şirketleri</h3>
+                            <p>Kişisel Bilgilerinizi, bu Gizlilik Politikasında açıklanan amaçlar doğrultusunda şirketler ailemiz içinde dahili olarak paylaşabiliriz. Örneğin, Kişisel Bilgilerinizi ABD merkezli yan kuruluşumuz Webso.com ile size (ve Kullanıcıların Kullanıcılarına) Hizmetlerimizi sağlama ve kolaylaştırma sürecinde paylaşabiliriz.</p>
+                            <p>Kişisel Bilgilerin Avrupa Birliği, Birleşik Krallık ve İsviçre'deki Webso yan kuruluşları ve bağlı şirketleri tarafından Webso'nun bu bölgelerin dışında bulunan yan kuruluşlarıyla paylaşılması, yalnızca ilgili Standart Sözleşme Maddeleri gibi onaylanmış bir aktarım mekanizması kapsamında gerçekleşecektir.</p>
+                            <h3 class="h5 lg:h5 m-0">4.5. Kurumsal kontroldeki bir değişiklikle bağlantılı olarak</h3>
+                            <p>Ayrıca, Webso veya bağlı kuruluşlarından herhangi birinin, birleşme, devralma veya varlıklarının tamamının satın alınması dahil olmak üzere herhangi bir kontrol değişikliğine uğraması halinde, Kişisel Bilgileriniz bu tür bir olayda yer alan taraflarla paylaşılabilir.</p>
+                            <h3 class="h5 lg:h5 m-0">4.6. Ek Talimatlarınız Üzerine</h3>
+                            <p>Webso Hizmetleri, farklı teknikler aracılığıyla, Webso Web Sitesi (Webso Uygulama Pazarı dahil) aracılığıyla üçüncü taraflarca size sunulan uygulamalar ve widget'lar, e-ticaret ödeme sağlayıcıları, web sitenizde size yardımcı olabilecek üçüncü taraf tasarımcılar vb. dahil ancak bunlarla sınırlı olmamak üzere web veya mobil sitelerinizi geliştirmek için çeşitli üçüncü taraf hizmetleri, ürünleri ve araçları (topluca "Üçüncü Taraf Hizmetleri") kullanmanıza ve temin etmenize olanak tanır. Bu tür Üçüncü Taraf Hizmetlerle etkileşime geçmeyi seçerseniz, bu hizmetler web veya mobil siteleriniz aracılığıyla toplanan Nihai Kullanıcıların Kişisel Bilgilerine erişebilir ve bunları işleyebilirler. Örneğin:</p>
+                            <li><p class="h6 lg:h6 m-0">a.</p> Çerçeveli Sayfalar: Hizmetlerimiz, Üçüncü Taraf Hizmetlerine veya diğer taraflara ("Çerçeveler") içerik sunmak için sayfa çerçeveleme teknikleri gibi yöntemlerle Üçüncü Taraf Hizmetlerini doğrudan web veya mobil sitelerinize entegre etmenizi sağlayabilir. Bu durumlarda, Üçüncü Taraf Hizmetleri Nihai Kullanıcılardan Kişisel Bilgiler toplayabilir.</li>
+                            <li><p class="h6 lg:h6 m-0">b.</p> Geliştiriciler: Üçüncü taraf geliştiricilerin ("Üçüncü Taraf Geliştirici(ler)"), web veya mobil sitelerinize entegre edebileceğiniz Webso Uygulama Pazarı ("Üçüncü Taraf Uygulama(lar)") aracılığıyla kendi uygulamalarını geliştirmelerine ve Kullanıcılara sunmalarına izin veriyoruz. Her bir Üçüncü Taraf Geliştirici, diğer hususların yanı sıra, söz konusu geliştiricilerin sizin ve/veya Nihai Kullanıcıların kendilerine sağladığı Kişisel Bilgilere erişme, bunları saklama, paylaşma ve kullanma yöntemlerini kısıtlayan Webso Uygulama Pazarı İş Ortağı Sözleşmesine tabidir.</li>
+                            <li><p class="h6 lg:h6 m-0">c.</p> Sosyal Medya Özellikleri: Hizmetlerimiz, belirli Sosyal Medya özelliklerini, widget'larını ve "Facebook Connect" veya "Google Sign-in" gibi tek oturum açma özelliklerini ("Sosyal Medya Özellikleri") web veya mobil sitelerinize entegre etmenizi sağlayabilir. Bu Sosyal Medya Özellikleri, Nihai Kullanıcılardan ad, takma ad, benzersiz kişisel tanımlayıcı, çevrimiçi tanımlayıcı, internet protokol adresi, e-posta adresi veya diğer benzer tanımlayıcılar dahil olmak üzere tanımlayıcılar gibi belirli Kişisel Bilgileri toplayabilir. Sosyal Medya Özellikleri ya üçüncü bir tarafça ya da doğrudan Hizmetlerimizde barındırılmaktadır.</li>
+                            <p>4.6 Bölümünde yukarıda listelenen örneklerde, Webso'nun yalnızca doğrudan ve kendi takdirinize bağlı olarak etkileşimde bulunduğunuz Üçüncü Taraf Hizmetlerinin (Üçüncü Taraf Geliştiriciler, Üçüncü Taraf Uygulamaları ve Sosyal Medya Özellikleri dahil ancak bunlarla sınırlı olmamak üzere) hizmetlerini satın almanıza olanak tanıyan bir aracı platform olarak hareket ettiğini lütfen unutmayın. Bu bağlamda, Webso sizin adınıza Üçüncü Şahıs Hizmetlerine bilgi ifşa eden bir hizmet sağlayıcı olarak hareket eder. Webso, Kullanıcılarınızın Kişisel Bilgilerini yalnızca sizin talimatınız veya izniniz üzerine Üçüncü Taraf Hizmetlerle paylaşacaktır ve söz konusu Kişisel Bilgilerin bu tür Üçüncü Taraf Hizmetler tarafından işlenmesinden hiçbir şekilde sorumlu değildir ve olmayacaktır.</p>
+                            <p>Webso, herhangi bir Üçüncü Taraf Hizmetinin eylemlerini veya politikalarını kontrol etmez ve bunlardan sorumlu değildir ve herhangi bir Üçüncü Taraf Hizmetini kullanmanızın riski size aittir. Bir Üçüncü Taraf Hizmetine eşlik eden tüm gizlilik politikalarını incelemenizi ve hizmetlerini yüklemeye ve/veya kullanmaya karar vermeden önce ihtiyaç duyabileceğiniz açıklamaları söz konusu Üçüncü Taraf Hizmetinden istemenizi öneririz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">5. Kişisel Verilerinizi nerede saklıyoruz?</h3>
+                            <p>Webso, dünya genelindeki bireyler hakkındaki verileri işler ve Kişisel Bilgilerinizi ülkenizin dışına aktarabilir. Güvenliğiniz, gizliliğiniz ve mahremiyetiniz önceliğimizdir. Bu nedenle Webso, güçlü veri koruma yasalarına sahip olduklarını doğrulamak adına bu ülkelerdeki gizlilik yasalarının değerlendirmesini içeren bir inceleme süreci yürütür.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">6. Nihai Kullanıcıların Kişisel Verileri</h3>
+                            <p>Webso, Nihai Kullanıcıların belirli Kişisel Verilerini ("Nihai Kullanıcıların Verileri") yalnızca Kullanıcılarımız adına ve Kullanıcılarımızın talimatıyla toplayabilir, saklayabilir ve işleyebilir. Örneğin Kullanıcılarımızın her biri, Gmail gibi üçüncü taraf hizmetlerinden kişilerini içe aktarabilir veya kendi Kullanıcı Sitesi vasıtasıyla kişileri diğer bir şekilde toplayabilir ve yönetebilir. Bunun üzerine bu kişiler Kullanıcı adına Webso tarafından saklanır.</p>
+                            <p>Bu amaçlar doğrultusunda, Webso Nihai Kullanıcıların Verileri için "Veri Sorumlusu" değil de "Veri İşleyen" hizmetini görmektedir ve addedilecektir (büyük harfle başlayan bu her iki terimin de Kişisel Verilerin Korunması Kanununda ve Avrupa Birliği Genel Veri Koruma Yönetmeliğinde (“GDPR”) tanımlandığı üzere).</p>
+                            <p>Bu Kullanıcı Sitelerinin sorumlusu olan ve bu Kullanıcı Sitelerini işleten Kullanıcılar, Nihai Kullanıcıların Verilerinin "Veri Sorumlusu" addedilecektir ve ilgili tüm yetki alanlarındaki tüm gizlilik ve veri koruma kanunları ve Kişisel Verilerin Korunması Kanunu da dahil, Nihai Kullanıcıların Verilerinin toplanması ve sorumluluğu konusunda tüm ilgili kanun ve yönetmeliklere uymakla yükümlüdür.</p>
+                            <p>Kullanıcıların Kişisel Bilgilerinin İşlenmesi, Avrupa Birliği, İsrail veya Avrupa Komisyonu'nun yeterli düzeyde koruma sağladığına karar verdiği üçüncü bir ülke veya bölge içinde gerçekleşecek işleme ve aktarım, “Data Processing Addendum – Users” ("DPA") uyarınca olacaktır. Avrupa Komisyonu'na göre yeterli bir koruma düzeyi sağlamayan Avrupa Birliği dışındaki üçüncü bir ülkeye yapılacak herhangi bir aktarım ve İşleme, DPA'da (Bilgi İşlem Anlaşması) ayrıntılı olarak açıklandığı üzere onaylanmış bir aktarım mekanizması kapsamında gerçekleştirilecektir.</p>
+                            <p>Nihai Kullanıcıların Kişisel Verilerinin güvenliği, bütünlüğü, yetkili kullanımı ve bu Kişisel Verilerin toplanması ve kullanılması için gereken açık rıza ve izinlerin alınması, ilgili kişi haklarının açıklanması ve adil işleme bildirimlerinin yapılması sizin sorumluluğunuzdadır.</p>
+                            <p>Webso Kullanıcılara ve Nihai Kullanıcılara hukuki danışmanlık sağlayamaz, ancak tüm Kullanıcıların kendi Kullanıcı Sitelerinde Kişisel Verilerin Korunması Kanunu ve/veya diğer ilgili kanunlar ve yönetmelikler uyarınca açık ve kapsamlı gizlilik politikaları yayınlamaları ve bulundurmalarını ve tüm Nihai Kullanıcıların bu politikaları dikkatle okumalarını, anladıklarından emin olmalarını ve Kişisel Verilerin Korunması Kanununda ve/veya diğer ilgili kanunlarda zorunlu kılınan ölçüde açık rızalarını vermelerini öneririz.</p>
+                            <p>Nihai Kullanıcıların Kişisel Verilerinin Webso tarafından nasıl ele alındığı konusunda daha fazla bilgi için (ki bu bilgiler Nihai Kullanıcılara sağladığınız belirli bildirimler ve/veya Nihai Kullanıcılardan aldığınız açık rızalar için önemli olabilir), 4., 12. ve 13. Bölümlere bakabilirsiniz.</p>
+                            <p>Eğer Kullanıcılarımızdan herhangi birinin bir ziyaretçisi, kullanıcısı veya müşterisi iseniz, lütfen bu paragrafı okuyun: Webso'nun Kişisel Verilerini işlediği Nihai Kullanıcılarla doğrudan hiçbir ilişkisi bulunmamaktadır. Eğer Kullanıcılarımızdan herhangi birinin ziyaretçisi, kullanıcısı veya müşterisi iseniz ve Kişisel Verilerinize ilişkin herhangi bir talepte bulunmak veya soru sormak isterseniz, lütfen ilgili Kullanıcı/Kullanıcılar ile doğrudan temasa geçin. Örneğin, Webso tarafından Kullanıcıları adına işlenen hatalı Kişisel Verilere erişmek, bu Kişisel Verileri düzeltmek, değiştirmek veya silmek isterseniz, lütfen talebinizi (bu verilerin "Veri Sorumlusu" olan) ilgili Kullanıcıya yöneltin. Eğer Kullanıcılarımız tarafından Webso'nun Nihai Kullanıcılara ait herhangi bir Kişisel Veriyi kaldırması talep edilirse, bu tür talepleri öncelikle talebi doğruladıktan sonra vakitlice ve Kişisel Verilerin Korunması Kanunu ve/veya diğer ilgili kanunlar uyarınca yanıtlayacağız (örneğin GDPR uyarınca otuz (30) gün içerisinde). Kullanıcımız tarafından bize aksi yönde bir talimat verilmedikçe, Nihai Kullanıcıların Verilerini aşağıda 12. Bölümde belirtilen süre boyunca muhafaza edeceğiz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">7. Çerezler ve diğer üçüncü taraf teknolojilerinin kullanımı</h3>
+                            <p>Biz ve Üçüncü Taraf Hizmet Sağlayıcılarımız Hizmetlerimizi sağlayabilmek ve düzgün çalışmalarını sağlamak, performansımızı ve pazarlama faaliyetlerimizi incelemek ve deneyiminizi kişiselleştirmek için çerezler ve benzer diğer teknolojileri ("Çerezler") kullanıyoruz.</p>
+                            <p>Çerezleri nasıl kullandığımız ve çerezleri nasıl yönetebileceğiniz konusunda daha fazla bilgiyi şurada bulabilirsiniz: Çerez politikası.</p>
+                            <p>Bir tarayıcı veya mobil uygulamanın HTTP üst bilgisindeki "Beni İzleme" sinyaline yanıt olarak uygulamalarımızı değiştirmediğimizi lütfen dikkate alınız, ancak tarayıcıların birçoğu çerezlerin kabul edilip edilmeyeceği ve çerezlerin nasıl kaldırılabileceği de dahil olmak üzere çerezleri yönetmenize olanak verir. Tarayıcınızı bir çerez yerleştirildiğinde sizi bilgilendirecek şekilde ayarlayabilir veya tarayıcınızda çerezleri engellemeyi seçebilirsiniz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">8. Webso tarafından gönderilen iletişimler</h3>
+                            <p>Size promosyon iletileri ve içerikleri gönderebiliriz.
+                                Bizimle temasa geçerek veya abonelikten çıkarak promosyon iletilerini almak istemediğinizi kolaylıkla belirtebilirsiniz.
+                                Sizinle ayrıca hizmetlere ve faturalandırmaya ilişkin ileti ve içeriklerle de temas kurabiliriz. Bu iletileri almamayı tercih edemezsiniz.</p>
+                             <h3 class="h5 lg:h5 m-0">8.1. Promosyon İletileri</h3>
+                             <p>Kişisel Verilerinizi size Webso'dan veya ortaklarımızdan (Webso adına hareket eden) e-posta, SMS, platformumuzdaki bildirimler, pazarlama çağrıları ve benzer iletişim yolları ile size promosyon içerikleri ve iletileri göndermek için kullanabiliriz.</p>
+                             <p>Bu tür promosyon iletileri ve çağrılar almak istemediğiniz takdirde, dilediğiniz zaman Webso'yu bilgilendirebilir veya aldığınız promosyon iletileri içerisinde yer alan "abonelikten çık" veya DURDUR talimatlarını izleyebilirsiniz.</p>
+                             <h3 class="h5 lg:h5 m-0">8.2. Hizmet ve Faturalandırma İletileri</h3>
+                             <p>Webso ayrıca Hizmetlerimize veya Hizmetlerimizi kullanımınıza ilişkin bilgileri size iletmek için de sizinle temas kurabilir. Örneğin belirli bir Hizmete bakım için geçici olarak ara verildiği takdirde bu durumu size bildirmek, destek biletinizi veya e-postanızı yanıtlamak, güncel veya yakında başlayacak abonelikleriniz için yaklaşan veya gecikmiş ödemelere ilişkin hatırlatmalar veya uyarılar göndermek, Kullanıcı Sitenize ilişkin uygunsuz kullanım şikâyetlerini iletmek veya sizi Hizmetlerimizdeki önemli değişiklikler konusunda bilgilendirmek için (kullanabileceğimiz yollardan herhangi biriyle) size bir bildirim gönderebiliriz.</p>
+                             <p>Bu tür iletileri her zaman alabilmeniz önemlidir. Bu nedenle, Webso Kullanıcısı olmaya son vermedikçe (bunu hesabınızı devre dışı bırakarak yapabilirsiniz) bu tür Hizmet ve Faturalandırma İletilerini almama talebinde bulunamazsınız.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">9. Kişisel Verilerinize ilişkin haklarınız (İlgili kişinin hakları)</h3>
+                            <p>Webso, tüm Webso kullanıcılarının Kişisel Bilgileri üzerinde kontrol sahibi olmasının zorunlu olduğuna inanmaktadır. Bu nedenle, Webso Hizmetlerini kullanma şeklinize bağlı olarak, Kişisel Bilgilerinize erişim talep etme, bir kopyasını alma, güncelleme, değiştirme veya silme, belirli Kişisel Bilgileri başka bir hizmete taşıma, Kişisel Bilgilerinizin belirli kullanımlarını kısıtlama veya bunlara itiraz etme (örneğin, doğrudan pazarlama amaçları için) hakkına sahip olabilirsiniz.  Dahası, Kişisel Bilgilerinizin işlenmesi için onayınıza bağlı olduğumuzda (örneğin doğrudan pazarlama için), onayınızı istediğiniz zaman geri çekebilirsiniz ve bu geri çekme işlemi o andan itibaren geçerli olacaktır.</p>
+                            <p>Webso bu haklardan herhangi birini kullanmanız durumunda sizden daha fazla ücret almayacak ve size aynı düzeyde hizmeti sunmaya devam edecektir.</p>
+                            <p>Bir Webso kullanıcısı iseniz, Kişisel Bilgilerinizin çoğuna doğrudan hesabınız üzerinden veya Webso'nun size sunduğu online formlar aracılığıyla erişebilir ve bilgilerinizi düzeltebilirsiniz (aşağıda ayrıntılı şekilde açıklanmıştır). Haklarınızı ayrıca talebinizi iletisim@Webso.com adresine e-posta göndererek veya müşteri hizmetleri departmanımızla iletişime geçerek de kullanabilirsiniz. Haklarınızı kullanma talebinizi aldığımızda, gizliliğinizi ve güvenliğinizi korumak amacıyla talebi yerine getirmeden önce kimliğinizi doğrulamak üzere bazı adımlar atabiliriz.</p>
+                            <p>Talebinizi yerine getirmeden önce, güvenlik amaçları doğrultusunda ve kimliğinizi doğrulamak için sizden ek bilgiler isteyebiliriz. Kişisel Verilerin Korunması Kanununda ve/veya diğer ilgili kanunlarda izin verilen durumlarda bu talepler için bir ücret alma hakkımız saklıdır (örneğin, eğer talebiniz gerekçesiz veya aşırı ise).</p>
+                            <p>Kişisel Verileri Koruma Kuruluna bulunduğunuz yerdeki denetleyici makama şikayette bulunma hakkına sahipsiniz (ama yine de önce bizimle temasa geçmenizi öneririz).</p>
+                            <p>Eğer bir Webso Kullanıcısı iseniz ve sakladığımız Kişisel Verilerin (size veya Nihai Kullanıcılara ait) bir nüshasını almak, bu Kişisel Verilere erişmek ve/veya bu Kişisel Verilerde düzeltmeler yapmamızı talep etmek veya doğrudan pazarlama amaçları doğrultusunda üçüncü taraflara ifşa etmiş olduğumuz size ait Kişisel Verilerin (varsa) bir listesini talep etmek isterseniz, lütfen şu Destek Merkezi makalelerinde verilen talimatları izleyin: "Webso Hesap Verilerinizi Alma" "Webso Hesabınızı Kalıcı Olarak Silme". Talebinizi ayrıca e-postayla destek@webso.com, adresine de iletebilirsiniz. Dikkate alınması gereken yasal ve diğer izin verilebilir hususlara bağlı olarak, talebinizi bir an önce yerine getirmek için her türlü makul çabayı göstereceğiz (talebinizi yerine getirmek için sizden ek bilgiler almamız gerekmediği takdirde).</p>
+                            <p>Webso hesabınızı kalıcı olarak silerseniz tüm Kişisel Verilerinizin Webso'nun veritabanlarından silineceğini lütfen dikkate alınız. Bu işlemi tamamlarsanız, Webso Hizmetlerinizden hiçbirini artık kullanamazsınız. Hesabınız ve hesabınızdaki tüm veriler kalıcı olarak kaldırılır; Webso ileride hesabınızı geri yükleyemez ve verilerinizi geri getiremez. Eğer daha sonra destek kanallarımızla temasa geçerseniz, sistem hesabınızı tanıyamaz ve destek temsilcileri silinen hesabı bulamaz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">10. Sorular ve Şikayetler</h3>
+                            <p>Eğer Kişisel Verileri toplamamız, kullanmamız veya ifşamıza ilişkin herhangi bir sorunuz veya kaygınız varsa ya da işbu Gizlilik Politikasını veya Kişisel Verilerin Korunması Kanununu ya da ilgili diğer veri koruma kanunlarını ihlal ettiğimize inanıyorsanız, lütfen bizimle temasa geçin - irtibat bilgilerimiz işbu Gizlilik Politikasının sonunda belirtilmiştir.</p>
+                            <p>Veri Koruma Görevlileri ekibimiz şikâyetinizi inceleyecek, bir ihlal oluşup oluşmadığını ve varsa alınacak önlemleri belirleyecektir. Gizlilik konusundaki tüm şikâyetleri ciddiyetle ele alıyoruz ve şikâyetinizi bir an önce ve Kişisel Verilerin Korunması Kanunu ve/veya diğer ilgili kanunlar uyarınca çözümlemek için her türlü makul çabayı göstereceğiz.</p>
+                            <p>Dilediğiniz zaman Kişisel Verileri Koruma Kuruluna veya bulunduğunuz yerdeki denetleyici makama şikâyette bulunabilirsiniz, ancak şikâyetinizi çözümleyebilmemiz için önce bizimle temasa geçmenizi öneririz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">11. Veri Saklama</h3>
+                            <p>İşbu Gizlilik Politikasında belirtildiği üzere, Kullanıcı Hesabınız aktif olduğu veya size Hizmetleri sağlamak için gerektiği sürece Kişisel Verilerinizi (ve Nihai Kullanıcıların Kişisel Verilerini) saklayabiliriz.</p>
+                            <p>Siz Kullanıcı Hesabınızı devre dışı bıraktıktan sonra ve/veya belirli Hizmetleri kullanmaya son verdikten sonra dahi, yasal yükümlülüklerimizi yerine getirmek için makul ölçüde gerektikçe, Kullanıcılarımıza veya Nihai Kullanıcılara ilişkin anlaşmazlıkları çözümlemek, dolandırıcılığı ve uygunsuz kullanımı önlemek, sözleşmelerimizi icra etmek ve/veya meşru çıkarlarımızı korumak için Kişisel Verilerinizi saklamaya devam edebiliriz.</p>
+                            <p>Kişisel Bilgiler için uygun saklama süresini belirlerken, bu tür verilerin miktarını, niteliğini ve hassasiyetini, bu tür verilerin yetkisiz kullanımından veya ifşasından kaynaklanacak zarar riskini, bunları işleme amaçlarımızı ve geçerli yasal gereklilikleri dikkate alırız.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">12. Güvenlik</h3>
+                            <p>Webso, fiziksel, elektronik ve uygulamaya ilişkin tedbirler de dahil olmak üzere, bizimle paylaştığınız Kişisel Verileri korumak için tasarlanmış güvenlik tedbirleri almıştır. Diğerlerinin yanında, Hizmetlerimizin çoğu alanlarında HTTPS güvenli erişim sağlamaktayız; özel satın alma formlarımız vasıtasıyla hassas ödeme bilgilerinin iletilmesi (örneğin kredi kartı numarası gibi) endüstri standardındaki SSL/TLS şifreli bir bağlantı ile korunmaktadır ve düzenli olarak bir PCI DSS (Payment Card Industry (PCI) Veri Güvenliği Standartları) sertifikasını sürekli olarak bulundurmaktayız. Ayrıca sistemlerimizi muhtemel güvenlik açıkları ve saldırılara karşı sürekli izlemekteyiz ve Hizmetlerimizin güvenliğini ve Ziyaretçilerimiz ile Kullanıcılarımızın gizliliğinin korunmasını daha da artıracak yeni yolların ve Üçüncü Taraf Hizmetlerinin sürekli arayışındayız.</p>
+                            <p>Webso tarafından alınan tüm önlemlere ve gösterilen tüm çabalara rağmen, Kişisel Verilerinizin, Nihai Kullanıcıların Kişisel Verilerinin ve karşıya yüklediğiniz, yayınladığınız veya diğer bir şekilde Webso ya da bir başkası ile paylaştığınız tüm diğer bilgilerin mutlak bir şekilde korunacağını ve güvende olacağını garanti edemeyiz ve etmiyoruz. Kullanıcı Hesabınız ve Kullanıcı Siteniz için güçlü şifreler koymanızı ve ifşa edilmesinin sizin için önemli veya telafisi mümkün olmayan zararlara neden olabileceğine inandığınız Kişisel Verileri bize veya bir başkasına sağlamaktan kaçınmanızı şiddetle öneririz.
+                                Dahası, Hizmetlerimizdeki bazı alanlar diğerlerinden daha az güvenli olduğundan (örneğin, Destek forumu biletinizi "Özel" yerine "Herkese Açık" olarak belirttiğinizde veya SSL olmayan bir sayfayı ziyaret ettiğinizde) ve e-posta ve anlık mesajlaşma güvenli iletişim şekilleri olarak kabul edilmediğinden, bu alanlardan herhangi birinde veya bu yöntemlerden herhangi biriyle hiçbir Kişisel Veri paylaşmamanızı rica eder ve şiddetle öneririz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">13. Üçüncü Taraf Web Siteleri</h3>
+                            <p>Hizmetlerimiz başka web siteleri ve hizmetlere bağlantılar içerebilir. Bu web siteleri ve hizmetlerin gizlilik uygulamalarından sorumlu değiliz. Hizmetlerimizi terk ettiğiniz zaman dikkatli olmanızı ve Kişisel Verilerinizi sağlamadan önce ziyaret ettiğiniz her bir web sitesi ve hizmetin ve tüm web siteleri ve hizmetlerin gizlilik beyanlarını okumanızı şiddetle öneririz. İşbu Gizlilik Politikası bağlantı verilen bu tür üçüncü taraf web siteleri ve hizmetleri için geçerli değildir.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">14. Webso İş Başvuruları</h3>
+                            <p>Webso, tüm nitelikli Başvuru Sahiplerinin https://www.Webso.com/kariyer adresinde yayınlanan açık pozisyonlardan herhangi birine, iletişim bilgilerini ve özgeçmişlerini ve diğer ilgili bilgileri Web Sitemizdeki başvuru formu aracılığıyla bize göndererek başvurmalarını memnuniyetle karşılar. Webso, bu verileri İş Başvurusu Sahipleri için Gizlilik Politikamıza uygun olarak ele alacaktır.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">15. Herkese açık forumlar ve kullanıcı içerikleri</h3>
+                            <p>Hizmetlerimiz herkese açık bloglar, topluluklar ve destek forumları sunmaktadır. Bu alanlarda sağladığınız tüm Kişisel Verilerin bu alanlara erişen kişiler tarafından okunabileceği, toplanabileceği ve kullanılabileceğini lütfen unutmayın. Kişisel Verilerinizin bloglarımız, topluluklarımız veya forumlarımızdan kaldırılmasını talep etmek için bize buradan ulaşabilirsiniz. Bazı durumlarda, Kişisel Verilerinizi bu alanlardan kaldırmamız mümkün olmayabilir. Örneğin, ilgili profilinize bir üçüncü taraf uygulaması ile giriş yaptığınızda (örneğin Facebook sosyal eklenti uygulaması) yorum yayınlamak için de o uygulamayı kullanmışsanız ve o platformda yayınladığınız Kişisel Verilerin kaldırılmasını isterseniz, ilgili uygulamaya giriş yapmalı veya ilgili uygulamanın sağlayıcısı ile temasa geçmelisiniz.</p>
+                            <p>Her halükarda, herkese açık olmasını istemediğiniz Kişisel Verileri (herhangi bir yolla) yayınlamamanızı öneririz.</p>
+                            <p>Herhangi bir kullanıcı içeriğini Kullanıcı Hesabınıza yüklediğiniz, Kullanıcı Sitenizde yayınladığınız ve/veya herhangi bir Hizmetin kullanımı kapsamında diğer bir şekilde sağladığınız takdirde, bunun riski size aittir. Kişisel Verilerinizi korumak için yeterli düzeyde güvenlik tedbirlerini almış durumdayız.  Ancak, Kullanıcı İçeriklerinize erişebilen diğer Kullanıcıların veya halktan kişilerin eylemlerini kontrol edemeyiz ve Kullanıcı Sitenizde sizin veya bizim koymuş olduğumuz gizlilik ayarlarının veya güvenlik tedbirlerinin (örneğin, Kullanıcı Sitenizdeki şifre korumalı alanlar da dâhil) aşılmasından sorumlu tutulamayız. Sizin tarafınızdan veya bizim tarafımızdan kaldırıldıktan sonra dahi, herhangi bir üçüncü tarafça (Nihai Kullanıcılardan herhangi biri de dâhil) kopyalanması veya kaydedilmesi halinde, bir Kullanıcı İçeriğinin kopyalarının önbelleğe alınmış veya arşivlenmiş sayfalarda görüntülenebileceğini anlıyor ve kabul ediyorsunuz. Açıkça belirtmek gerekirse, herkese açık olmasını istemediğiniz verileri karşıya yüklememenizi ve yayınlamamanızı öneririz.</p>
+                        </div>
+                        <div class="page-footer panel">
+                            <p class="fs-7 opacity-60 m-0">Güncellenen Tarih: 20 Haziran, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper end -->
+
+               <!-- Footer start -->
+               <footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark">
+                <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
+                    <div class="container max-w-xl">
+                        <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                            <div class="uc-footer-widgets panel">
+                                <div class="row child-cols-6 md:child-cols col-match g-4">
+                                    <div class="col-12 lg:col-4">
+                                        <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                            <div class="vstack gap-2">
+                                                <a href="index.html">
+                                                    <img class="w-32px text-primary" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                                                </a>
+                                                <p>Bizimle, herkes kolayca profesyonel web siteleri oluşturabilir. Sürükle-bırak arayüzümüz ve şablonlarımızla, kodlama gerektirmeden hayalinizdeki siteyi hızla oluşturun. Dijital dünyada yer almak artık çok kolay!</p>
+                                            </div>
+                                            <div class="hstack items-start gap-1">
+                                                <a href="#">
+                                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                                </a>
+                                                <a href="#">
+                                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-about.html">Hakkımızda</a></li>
+                                            <li><a href="page-pricing.html">Planlar</a></li>
+                                            <li><a href="page-features.html">Özellikler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-integrations.html">Blog</a></li>
+                                            <li><a href="page-career.html">Kariyer</a></li>
+                                            <li><a href="page-contact.html">İletişim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-faq.html">S.S.S</a></li>
+                                            <li><a href="page-terms.html">Kullanım Koşulları</a></li>
+                                            <li><a href="page-privacy.html">Gizlilik Politikası</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                                <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+                                    <p class="opacity-60">Webso Teknoloji A.Ş. © 2024, Bütün hakları saklıdır.</p>
+                                </div>
+                                <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+                                    <ul class="nav-x gap-2">
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="vr"></div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    
+            <!-- Footer end -->
+
+        <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper-defined-timelines.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
+
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                setDarkMode(1);
+            } else if (getSchema === "light") {
+                setDarkMode(0);
+            }
+        </script>
+    </body>
+</html>

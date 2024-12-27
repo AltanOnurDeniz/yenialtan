@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kullanım Koşulları | Webso</title>
+        <meta name="description" content="SaaS, Software and Startup Site Template">
+        <meta name="theme-color" content="#178d72">
+
+        <!-- Meta for SEO and Link Cards -->
+        <meta name="twitter:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Lexend">
+        <meta property="og:description" content="SaaS, Software and Startup Site Template">
+        <meta property="og:url" content="https://unistudio.co/html/lexend/">
+        <meta property="og:site_name" content="Lexend">
+        <meta property="og:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta property="og:image:width" content="1180">
+        <meta property="og:image:height" content="600">
+        <meta property="og:image:type" content="image/png">
+        <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+        <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper-defined-timelines.js" as="script">
+        <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+        <link rel="preload" href="../assets/js/app.js" as="script">
+
+        <!-- app head for bootstrap core -->
+        <script src="../assets/js/app-head-bs.js"></script>
+
+        <!-- include uni-core components -->
+        <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+        <!-- include styles -->
+        <link rel="stylesheet" href="../assets/css/unicons.min.css">
+        <link rel="stylesheet" href="../assets/css/prettify.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+        <!-- include main style -->
+        <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+
+        <!-- include scripts -->
+        <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    </head>
+    <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden">
+
+             <!--  Search modal -->
+             <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+                    <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                        <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                            <i class="unicon-close"></i>
+                        </button>
+                        <span class="ft-tertiary fs-7">ESC</span>
+                    </div>
+    
+                    <div class="panel w-100 sm:w-500px px-2 py-10">
+                        <h3 class="h4 sm:h2 text-center">Ne aramıştınız?</h3>
+                        <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                            <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                            <input type="search" name="q" class="form-control-plaintext ms-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Ara..." aria-label="Search" autofocus>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Newsletter modal -->
+            <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+                    <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                    <div class="row md:child-cols-6 col-match g-0">
+                        <div class="d-none md:d-flex">
+                            <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                                <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="panel vstack self-center p-4 md:py-8 text-center">
+                                <h3 class="h3 md:h2">Haber bültenimize abone ol</h3>
+                                <p class="ft-tertiary">Yeni gönderiler, haberler ve güncellemeler hakkında bildirim almak için 10 binden fazla kişiye katılın.</p>
+                                <div class="panel mt-2 lg:mt-4">
+                                    <form class="vstack gap-1">
+                                        <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Email...">
+                                        <button type="submit" class="btn btn-sm btn-primary">Üye ol</button>
+                                    </form>
+                                    <p class="fs-7 mt-2">Endişelenmeyin, spam yapmıyoruz!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Menu panel -->
+            <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+                <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                    <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                        <div class="uc-logo">
+                            <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                                <img class="w-32px" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                            </a>
+                        </div>
+                        <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                            <i class="unicon-close"></i>
+                        </button>
+                    </header>
+    
+                    <div class="panel">
+                        <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                            <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Ara...">
+                            <span class="form-icon text-gray">
+                                <i class="unicon-search icon-1"></i>
+                            </span>
+                        </form>
+                        <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                            <li><a href="index.html">Ana Sayfa</a></li>
+                            <li><a href="page-feature.html">Ürünler</a></li>
+                            <li><a href="page-pricing.html">Paketler</a></li>
+                            <li><a href="page-about.html">Hakkımızda</a></li>
+                            <li><a href="page-career.html">Kariyer</a></li>
+                            <li><a href="page-contact.html">İletişim</a></li>
+                            <li class="hr opacity-10 my-1"></li> 
+                            <li><a href="sign-in.html">Giriş Yap</a></li>
+                            <li><a href="sign-up.html">Kayıt Ol</a></li>
+                        </ul>
+                        <ul class="social-icons nav-x mt-4">
+                            <li>
+                                <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                                <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                            </li>
+                        </ul>
+                        <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                            <div class="vstack gap-1">
+                                <span class="fs-7 opacity-60">Arayüz seçimi:</span>
+                                <div class="darkmode-trigger" data-darkmode-switch="">
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider fs-5"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--  Contact modal -->
+            <div id="uc-contact-modal" data-uc-modal="overlay: true">
+                <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+                    <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+    
+                    <div class="panel vstack gap-2 md:gap-4 text-center">
+                        <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                            <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                                <h4 class="h5 lg:h4 m-0">Kısaca bahsedin, size yardımcı olalım.</h4>
+                                <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                                    <form class="vstack gap-2">
+                                        <div class="vstack lg:hstack gap-2">
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="İsim*" required>
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Soyisim*" required>
+                                        </div>
+                                        <div class="vstack lg:hstack gap-2">
+                                            <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="E-mail adresi*" required>
+                                            <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Telefon numarası*" required>
+                                        </div>
+                                        <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Şirket ismi*" required>
+                                        <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Mesaj..."></textarea>
+                                        <button class="btn btn-primary btn-md text-white mt-2" type="submit">Gönder</button>
+                                        <p class="fs-7 opacity-70 mt-2 text-center">Platform hakkında bilgi almak ve tüm sorularınızı yanıtlamak için buradayız. Nasıl çalıştığını görmeye hazır olun!</p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!--  Bottom Actions Sticky -->
+        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+                <label class="switch">
+                    <span class="sr-only">Dark mode toggle</span>
+                    <input type="checkbox">
+                    <span class="slider fs-5"></span>
+                </label>
+            </div>
+            <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+                <i class="icon-2 unicon-chevron-up"></i>
+            </a>
+        </div>
+
+         <!-- Header start -->
+         <header class="uc-header uc-navbar-sticky-wrap z-999" style="--uc-nav-height: 80px" data-uc-sticky="start: 170; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+            <nav class="uc-navbar-container ft-tertiary z-1">
+                <div class="container max-w-xl">
+                    <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar=" animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo text-dark dark:text-white">
+                                <a class="panel text-none" href="index.html" style="width: 140px">
+                                    <img class="dark:d-none" src="../assets/images/common/webso-dark-logo.svg" alt="Webso">
+                                    <img class="d-none dark:d-block" src="../assets/images/common/webso-light-logo.svg" alt="Webso">
+                                </a>
+                            </div>
+                            <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">
+                                <li>
+                                    <a href="#">Şablonlar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row g-0 col-match" data-uc-grid>
+                                            <div class="col-7">
+                                                <div class="panel p-3">
+                                                    <h6 class="h6 ms-3">Bütün şablonları incele</h6>
+                                                    <div class="row child-cols-3 g-0">
+                                                        <div>
+                                                            <a href="index.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index.png" alt="Home - 01">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 1</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-2.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-2.png" alt="Home - 02">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 2</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-3.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-3.png" alt="Home - 03">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 3</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-4.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-4.png" alt="Home - 04">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 4</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-features.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-features.png" alt="Features">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Features</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-pricing.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-pricing.png" alt="Pricing">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Pricing</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-integrations.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-integrations.png" alt="Integrations">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Integrations</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-about.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-about.png" alt="About">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">About</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="panel p-3 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <h6 class="h6 ms-3">Diğer sayfalar</h6>
+                                                    <div class="row child-cols-6 g-0">
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Career</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career-detail.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Job details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact-2.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-2.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-3.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v3</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-2.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign up</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-3.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign in</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-4.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Reset Password</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Shop</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-cart.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Cart</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-checkout.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Checkout</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-product-detail.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Product detail</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-order.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Order confirmation</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Ürünler <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-checkmark fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Sürükle-Bırak</b>
+                                                                <p class="fw-normal">Her seviyeden kullanıcı için uygun!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-pie fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">CRM Entegrasyonları</b>
+                                                                <p class="fw-normal">İşletmenizi kolaylıkla yönetin.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-increase-level fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">E-Ticaret Çözümleri</b>
+                                                                <p class="fw-normal">Her yerden satış yapmanın keyfini çıkarın.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-venn-diagram fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Çoklu Birimler</b>
+                                                                <p class="fw-normal">Global pazara hitap edin!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="vstack gap-2 p-3 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                        <figure class="featured-image m-0 rounded ratio ratio-3x2 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/login.webp" alt="Image">
+                                                        </figure>
+                                                        <button class="btn btn-md btn-alt-primary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-2"><i class="icon-1 unicon-play-filled-alt"></i></button>
+                                                        <a href="../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                    </div>
+                                                    <div class="vstack justify-between gap-2">
+                                                        <div class="vstack gap-1">
+                                                            <h5 class="h6 m-0">İhtiyacınız olan her şey parmaklarınızın ucunda</h5>
+                                                            <p class="fs-7 opacity-70">Farklı görevler için birden fazla yazılım zorluğuna elveda.</p>
+                                                        </div>
+                                                        <a href="page-pricing.html" class="btn btn-sm btn-primary">Şimdi dene</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Kaynaklar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                            <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Blog</b>
+                                                                <p class="fw-normal">Blog bültenimize katılın ve her yeni yazıyı ilk siz okuyun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="#uc-newsletter-modal" data-uc-toggle="">
+                                                            <i class="icon-1 unicon-email fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Bülten</b>
+                                                                <p class="fw-normal">En son güncellemeler ve özel içerikler için bültenimize abone olun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-play fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Video Eğitimleri</b>
+                                                                <p class="fw-normal">İşletmenizi birlikte büyütelim.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                            <i class="icon-1 unicon-star fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Kariyer</b>
+                                                                <p class="fw-normal">Vizyonumuzu paylaşan insanlar arıyoruz.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                            <i class="icon-1 unicon-headset fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Yardım Merkezi</b>
+                                                                <p class="fw-normal">Özel ekibimiz sorularınızı derhal yanıtlayacaktır.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="page-pricing.html">Paketler</a></li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <div class="d-none xl:d-block">
+                                <a class="text-none fw-medium" href="#uc-contact-modal" data-uc-toggle>
+                                    <span>Size Ulaşalım</span>
+                                </a>
+                            </div>
+                            <div class="d-none lg:d-block">
+                                <a class="text-none fw-medium" href="sign-in.html">
+                                    <span>Giriş Yap</span>
+                                </a>
+                            </div>
+                            <a class="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex" href="page-pricing.html">Siteni Oluştur</a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Header end -->
+
+        <!-- Wrapper start -->
+        <div id="wrapper" class="wrap">
+            <div class="breadcrumbs panel z-1 py-2 bg-gray-25 dark:bg-gray-100 dark:bg-opacity-5 dark:text-white">
+                <div class="container max-w-xl">
+                    <ul class="breadcrumb nav-x justify-center gap-1 fs-7 sm:fs-6 m-0">
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><i class="unicon-chevron-right opacity-50 rtl:rotate-180"></i></li>
+                        <li><span class="opacity-50">Kullanım Koşulları</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section py-4 lg:py-6 xl:py-8">
+                <div class="container max-w-lg">
+                    <div class="page-wrap panel vstack gap-4 lg:gap-6 xl:gap-8">
+                        <header class="page-header panel vstack justify-center gap-2 lg:gap-4 text-center">
+                            <div class="panel">
+                                <h1 class="h3 lg:h1 m-0">Kullanım Koşulları</h1>
+                            </div>
+                        </header>
+                        <div class="breadcrumb nav-x justify-center gap-1 fs-7 sm:fs-6 m-0">
+                            <p>Webso.com Kullanım Koşulları'na Hoş Geldiniz! Sizi aramızda görmekten dolayı çok mutluyuz. Hizmetlerimizi kullanmayı tercih ettiğiniz için teşekkür ederiz.</p>
+                            <p>Aşağıda, web sitemizi ziyaret eden veya hizmetlerimizi kullanan herkes için geçerli olan bazı önemli hukuki şartların bir listesini bulacaksınız. Gerek sizi, gerekse kendimizi korumanın yanı sıra, hizmetlerimizi sağlayabilmek ve herkes için daha eğlenceli bir hale getirmek için bu şartları getirmek durumundayız. Webso geniş bir yelpazede bir dizi hizmet ve özellik sunmaktadır ve aşağıda belirtilen koşulların bir kısmı sizin kullandığınız belirli hizmetlere ilişkin olmayabilir.</p>
+                            <p>Hukuki şartlar ve koşullarla ilgili metinleri okumanın oldukça sıkıcı olabileceğinin farkındayız. Bu nedenle bu deneyiminizi daha zevkli hale getirmeye çalıştık. Anılan şartları ve koşulları nasıl iyileştirebileceğimiz konusunda olabilecek önerilerinizi memnuniyetle bekliyoruz. Bunların nasıl geliştirilebileceği konusunda önerileriniz varsa bizimle iletişime geçebilirsiniz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">1. Giriş</h3>
+                            <p>Sunduğumuz hizmetler, Kullanıcılarımızın (aşağıda tanımlandığı gibi) - hatta teknoloji meraklısı ya da bir tasarım gurusu olmasalar bile - kolaylıkla güzel ve son derece işlevsel bir çevrimiçi varlık yaratarak işletmeleri, içerik ve fikirlerini yönetmelerini ve tanıtmalarını ve tüm bunları yaparken, genel itibarıyla iyi bir deneyim yaşamalarını sağlamaya yönelik olarak tasarlanmıştır. Aşağıda açıklandığı üzere, kullanıcılarımıza göz alıcı web siteleri, çevrimiçi e-ticaret platformları, haber bültenleri, galeriler, medya oynatıcılar, mobil uygulamalar ile başka çevrimiçi ve mobil uygulamalar oluşturmalarını, yayınlamalarını ve kullanmalarını sağlayacak çok sayıda araç ve özellik sunuyoruz. Kullanıcılar tarafından oluşturulan çevrimiçi ve mobil web siteleri, işlevsellikler ve platformlar burada Kullanım Koşullarında “Kullanıcı Platformu/Platformları” olarak anılacaktır.</p>
+                            <h4 class="h5 lg:h5 m-0">1.1 Hukuki Sözleşme</h4>
+                            <p>İşbu Webso.com Kullanım Koşulları (“Kullanım Koşulları”),  Webso.com web sitesinde/sitelerinde sunulan ve özellikle bazı hizmetlerimiz ve özelliklerimiz için geçerli olan ek koşullarla birlikte (Webso Web Sitesi” ve hep birlikte Webso Koşulları” olarak anılacaktır), aksi tarafımızca açıkça belirtilmediği müddetçe Webso Web Sitesini, Webso mobil uygulamasını (“Webso Uygulaması”)  ve/veya web sitesi ile ilgili olarak tarafımızca sunulan diğer herhangi bir hizmet, uygulama ve özelliği (Webso Web Sitesi ya da Webso Uygulaması vasıtasıyla sunulan tüm hizmetler topluca  “Webso Hizmetleri” veya “Hizmetler” olarak anılacaktır) ziyaret eden ve/veya kullanan her birey (“Kullanıcı”, “siz” veya “tarafınız”) için geçerli olacak şartlar ve koşulların bütününü oluşturmaktadır. Şüpheleri ortadan kaldırmak için, Webso Hizmetleri (Kullanım Şartları'nda tanımlandığı şekilde) Webso Kullanıcısı tarafından oluşturulan, geliştirilen, bağlanan veya sunulan hizmetleri, uygulamaları, özellikleri veya bileşenleri içermez, Webso Web Sitesi veya Webso Uygulaması'nda sunulmuş olsalar bile.</p>
+                            <p>Webso Şartları; Webso.com A.Ş. ve ona bağlı şirketleri ile tüm dünyadaki iştirakleri ("Webso", "biz" veya "bizim") ile siz arasında herhangi bir Webso Hizmeti'nin kullanımına ilişkin bağlayıcı ve uygulanabilir bir yasal sözleşme niteliğindedir - bu nedenle lütfen bunları dikkatlice okuyun.
+                                Webso Hizmetleri ve/veya Webso Uygulamasını ziyaret etmeniz ve/veya kullanmanız sadece Webso Koşullarını tümüyle kabul etmeniz halinde mümkün olacaktır - ve Webso Hizmetlerinin herhangi birini kullanmanız ve/veya bu hizmetlerden herhangi biri için kayıt yaptırmanız, işbu Kullanım Koşullarını ve herhangi bir Webso Hizmetini kullanmanız bakımından geçerli olan diğer bilumum Webso Koşullarını bilgilendirilmiş olarak kabul ettiğinizi beyan ettiğiniz anlamına gelmektedir. Webso Koşullarını okumadıysanız veya tümüyle anlayıp kabul etmiyorsanız Webso Web Sayfasından hemen çıkmalı, Webso Hizmetlerini veya Webso Uygulamasının kullanımından kaçınmalı veya kullanımı sonlandırmalısınız.</p>
+                            <p>Hizmetlerimizi kullanarak, aynı zamanda Gizlilik Politikamız bölümünde yer alan Gizlilik Politikamızı da okuduğunuzu kabul etmiş olursunuz.</p>
+                            <h4 class="h5 lg:h5 m-0">1.2 Kullanıcı Hesabı</h4>
+                            <p>Webso Hizmetlerinin bazı bölümlerine ve özelliklerine erişmek ve bunları kullanabilmek için öncelikle Webso'ya kayıt olmalı ve bir kullanıcı hesabı (“Kullanıcı Hesabı”) oluşturmalısınız.</p>
+                            <p>Bir Kullanıcı Hesabının oluşturulması veya Ücretli Hizmetlerin satın alınması (aşağıda Bölüm 6'da tanımlandığı şekilde), doğrudan Webso Web Sitesinde veya Kullanıcı Hesaplarına ve diğer Ücretli Hizmetlere Webso abonelikleri satmaya yetkili, ilgisiz bir üçüncü taraf aracılığıyla ("Bayi") Webso ile ayrı bir sözleşme ("Bayi Sözleşmesi") kapsamında yapılabilir.</p>
+                            <p>Eğer bir Bayi aracılığıyla Webso Hizmetlerine kaydolursanız veya Ücretli Hizmetler satın alırsanız (burada "Bayi Kullanıcısı" olarak anılacaksınız), lütfen aşağıdakilere dikkat edin:</p>
+                            <ul>
+                                <li><p class="h6 lg:h6 m-0">1.</p> Bu Kullanım Koşulları, siz ve Bayi arasındaki herhangi bir düzenlemeye ek olarak geçerlidir ve Webso Hizmetlerini kullanımınızı yönetir.</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> Webso ile ilişkiniz gereği ve bu Kullanım Koşullarında aksi özellikle belirtilmedikçe, bu Kullanım Koşulları, Webso Hizmetlerini kullanımınız ve/veya Kullanıcı Hesabınızdaki (veya eklendiğiniz Kullanıcı Hesabındaki) faaliyetler konusunda Bayi ile aranızdaki tüm anlaşmalardan önce gelir.</li>
+                                <li><p class="h6 lg:h6 m-0">3.</p> Webso Hizmetlerinin kimi hizmetleri, uygulamaları ve özellikleri sizin için mevcut olmayabilir veya sadece Bayi platformu aracılığıyla size sunulabilir.</li>
+                            </ul>
+                            <h3 class="h5 lg:h5 m-0">1.3. Hesaplara; Rollere ve İzinlere Erişim</h3>
+                            <p>Başkalarını Kullanıcı Hesabınıza ve Kullanıcı Platformlarınıza davet edebilir ve onlara, Kullanıcı Hesabınız ve Kullanıcı Platformlarınızda belirli etkinlikleri gerçekleştirmeleri için belirli roller ve izinler atayabilirsiniz.</p>
+                            <p>Sahibi olmadığı bir Kullanıcı Hesabı üzerinde faaliyette bulunma izni verilen bir kişi, burada “Katkı Sağlayan” olarak anılacaktır.</p>
+                            <p>Sizden başka biri (Katkı Sağlayanlar dahil) Kullanıcı Hesabınıza ve/veya Kullanıcı Platformlarınızın herhangi bir ayarına erişirse, bu kişi (bir Katkı Sağlayan olduğu takdirde, kişiye atadığınız rollere ve izinlere bağlı olarak), size sunulan eylemleri gerçekleştirebilir (Webso Hizmetlerinde aksi açıkça belirtilmediği sürece), Kullanıcı Platform(lar)ınızda ve Kullanıcı Hesabınızda değişiklik yapabilir ve burada mevcut olan tüm yasal şartları kabul edebilir, çeşitli beyanlar ve garantiler verebilir ve daha fazlasını gerçekleştirebilir. Bu tür tüm faaliyetler, sizin tarafınızdan özel olarak yetkilendirilmiş olsun ya da olmasın, Kullanıcı Hesabının sahibi olarak sizin adınıza gerçekleştirilmiş olur.</p>
+                            <p>Bu nedenle, Kullanıcı Hesabınızın giriş bilgilerini (i) gizli tutmanızı ve (ii) Kullanıcı Hesabınıza yalnızca güvendiğiniz kişilere erişim izni vermenizi şiddetle öneririz çünkü Kullanıcı Hesabınız ve/veya Kullanıcı Platformlarınız altında gerçekleşen tüm faaliyetlerden (Katkı Sağlayanlar tarafından yapılan beyanlar, teminatlar ve taahhütler dahil olmak üzere) ve bunlardan kaynaklanabilecek herhangi bir hasar, masraf veya kayıptan tamamen ve yalnızca siz sorumlu olacaksınız.</p>
+                            <p>Kullanıcı Hesabınızı kaydederken ve Webso Hizmetlerini kullanırken doğru ve eksiksiz bilgiler sunmanız gerekmektedir. Kullanıcı Hesabının ve/veya tarafımıza sunulan Kullanıcı İçeriğinin (aşağıda tanımlandığı gibi) gerçek ve asıl sahibini belirlemek için kullanılabileceğinden, kendi iletişim ve faturalandırma bilgilerinizi (veya şirketinizin bilgilerini) geçerli e-posta adresinizle birlikte sağlamanızı şiddetle öneririz.</p>
+                            <p>Katkı Sağlayıcı sizseniz, Katkı Sağlayanı olduğunuz Kullanıcı Hesabına erişmek için kaydolmanız ve kendi Kullanıcı Hesabınızı oluşturmanız gerekir. Bu nedenle, bu Kullanım Koşulları Katkı Sağlayanlar için de geçerlidir.</p>
+                            <p>Bir Bayi Kullanıcısıysanız, sizinle Bayi arasındaki sözleşmeye bağlı olarak söz konusu Bayi, Kullanıcı Platformunun sahibi olabilir ve Bayi tarafından bu Kullanıcı Platformuna Katkı Sağlayan olarak davet edilebilirsiniz.</p>
+                            <p>​Bir Kullanıcı Platformuna Katkı Sağlayan olarak davet edildiyseniz veya bir Bayi Kullanıcıysanız, söz konusu Kullanıcı Platformunun sahibinin ve/veya Bayinin (ii) sizin tarafınızdan veya sizin adınıza söz konusu Kullanıcı Platformunda saklanan herhangi bir bilgiye (kişisel bilgiler dahil) tam erişimi olacağını kabul edersiniz. Bayi (ii), söz konusu Kullanıcı Platformu ile bağlantılı olarak bir Kullanıcı Hesabı sahibine tanınan tüm haklara ve işlevlere sahip olacaktır.</p>
+                            <h3 class="h5 lg:h5 m-0">1.4. Hesap Sahipliği</h3>
+                            <p>Webso, her bir Kullanıcı Platformu için, söz konusu Platformun sahibi olarak Webso'nun kayıtlarında Kullanıcı Hesabının sahibi olarak listelenen, Kullanıcı Platformunun oluşturulmasında kullanılan eposta adresinin sahibi olan kişi veya kuruluşu tanır. </p>
+                            <p>​Kullanıcı Hesabı sahipliği konusunda bir anlaşmazlık durumunda, bağımsız bir soruşturma yapılıp yapılmadığına bakılmaksızın, Kullanıcı Hesabının sahipliğini makul bir değerlendirme ile belirleme hakkını saklı tutarız. Fakat böyle bir belirleme yapamazsak (bu tamamen kendi takdirimize bağlıdır), sahipliği belirlemekten kaçınma hakkını saklı tutarız ve/veya ilgili taraflar anlaşmaya varana kadar bir Kullanıcı Hesabını askıya alabiliriz, bu durumda Webso'nun size veya başka bir tarafa karşı herhangi bir sorumluluğu olmaz. Sahipliği belirlememize yardımcı olabilecek belgeler (örneğin resmî kimlik belgesi, işletme ruhsatı) talep edebiliriz.</p>
+                            <p>Eğer Kullanıcı Hesabınızı bir Bayi aracılığıyla değil de doğrudan Webso Web sitesinde oluşturduysanız, sahipliği belirlemek için aşağıda belirtilen prensipleri dikkate alabiliriz. Bir Kullanıcı Platformuna Katkı Sağlayan olarak davet edildiyseniz veya bir Bayi Kullanıcıysanız, söz konusu Kullanıcı Platformunun sahibinin ve/veya Bayinin (ii) sizin tarafınızdan veya sizin adınıza söz konusu Kullanıcı Platformunda saklanan herhangi bir bilgiye (kişisel bilgiler dahil) tam erişimi olacağını kabul edersiniz. Bayi (ii), söz konusu Kullanıcı Platformu ile bağlantılı olarak bir Kullanıcı Hesabı sahibine tanınan tüm haklara ve işlevlere sahip olacaktır.</p>
+                            <ul>
+                                <li><p class="h6 lg:h6 m-0">1.</p> Webso, (söz konusu Kullanıcı Platformu veya Kullanıcı İçeriğinin oluşturulduğu bir Kullanıcı Hesabı için Webso'nun kayıtlarında listelenen) e-posta adresine erişimi olan kişi veya kuruluşu bir Kullanıcı Hesabının, Kullanıcı Platformunun ve/veya Oluşturulan ve/veya ilgili Webso Hizmetine yüklenen Kullanıcı İçeriğinin sahibi olarak kabul edecektir.</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> Herhangi bir Ücretli Hizmetin bir Kullanıcı Hesabı aracılığıyla satın alınması durumunda Webso, söz konusu Kullanıcı Hesabının ve/veya ilgili Kullanıcı Platformunun ve/veya burada oluşturulan Kullanıcı İçeriğinin sahibini, söz konusu Ücretli Hizmetleri satın almak için fatura bilgileri kullanılan kişi veya kuruluş olarak kabul edebilir ("Fatura bilgileri"). Yukarıda belirtilenlere bakılmaksızın, ilgili durumlarda, bir Kullanıcı Platformu harici bir alan adına (aşağıda tanımlandığı gibi, belirli Ücretli Hizmetlerin bir parçası olarak içe aktarılmış veya satın alınmış) bağlıysa ve bu tür alan adının kayıt bilgileri, www.whois.net adresli WHOIS veritabanı aracılığıyla veya Webso'nun veritabanında kamuya açık olarak bulunuyorsa Webso, ilgili Kullanıcı Platformunun sahibini söz konusu alan adının tescil sahibi olarak kayıtlı kişi veya kuruluş olarak kabul edebilir. Eğer hem bir şahıs hem de bir kuruluş, ilgili alan adının kaydedeni veya kaydeden kuruluşu olarak kayıtlı ise Webso, alan adının gerçek sahibi olarak kuruluşu kabul edecektir. Eğer Fatura Bilgileri, Kullanıcı Platformunun sahibi olarak başka bir kişiyi gösterirken, alan kaydı farklı bir sahibi gösteriyorsa Webso, Webso Hesabına bağlı olan alan adının kayıtlı sahibini Kullanıcı Platformunun sahibi olarak kabul edecektir.</li>
+                            </ul>
+                            <p>Yukarıdakilere bakılmaksızın, Webso, yalnız kendi takdirine bağlı olarak, böyle bir belirlemenin gerektiğini düşündüğü hallerde, yukarıda belirtilen göstergeleri dikkate almayarak, Kullanıcı İçeriğinin ve/veya bir Kullanıcı Web sitesinin sahipliğini istediği gibi belirleme hakkına sahip olacaktır.</p>
+                            <p>Bir Bayi Kullanıcısıysanız, ilgili Kullanıcı Hesabının mülkiyeti, Bayi Sözleşmesinin hükümleri uyarınca Webso tarafından belirlenebilir.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">2. Yükümlülükleriniz</h3>
+                            <p class="h5 lg:h5 m-0">2.1.Yükümlülükleriniz kullanım koşulları kapsamında aşağıdaki hususları beyan ve taahhüt etmektesiniz:</p>
+                                <li><p class="h6 lg:h6 m-0">1.</p> En az on üç (13), veya Avrupa Birliği (AB) içindeyseniz en az on altı (16), veya yargı bölgenizdeki yasal reşit olma yaşındaysanız ve yasal yetkiye sahipseniz, kendiniz veya sizin tarafınızdan Webso Koşulları'na taahhüt edilen kişi veya kuruluş adına Webso Koşulları'na girme ve bağlayıcı bir anlaşma oluşturma hakkı ve özgürlüğüne sahipsiniz.</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> ABD'nin kapsamlı ülke veya bölgesel ambargolarına tabi herhangi bir ülke veya bölgede düzenli olarak ikamet etmiyorsunuz ve Webso Hizmetlerini veya Webso Uygulamasını bu ülkelerde kullanmayacak veya dağıtmayacaksınız. Ayrıca, ABD dahil ancak bunlarla sınırlı olmamak üzere herhangi bir yaptırım listesine dahil olmadığınızı onaylıyorsunuz. ABD tarafından tutulan Özel Olarak Belirlenmiş Vatandaşlar ve Engellenen Kişiler Listesi (“SDN Listesi”) veya AB, Birleşik Krallık veya diğer ülkeler tarafından tutulan başka herhangi bir yaptırım listesinde yer almıyorsunuz ve Yaptırım Uygulanan Taraflardan biri, şirketinizin yüzde 50 veya daha fazla oranda sahibi değil ve şirketiniz böyle bir tarafça (“Yaptırım Uygulanan Taraf”) kontrol edilmemektedir.  Ayrıca, Webso Hizmetlerini veya Webso Uygulamasını Yaptırım Uygulanan Taraf adına veya onun yararına doğrudan veya dolaylı olarak kullanmayacağınızı veya dağıtmayacağınızı da onaylıyorsunuz.  Yaptırım listesinde yer almayışınızla ilgili yukarıda belirtilen onaylardan herhangi birini ihlal etmeniz durumunda, Webso'in para cezaları ve hukuki ücretler de dahil olmak üzere her türlü kaybı karşısında Webso'yu tazmin etmeyi kabul edersiniz.</li>
+                                <li><p class="h6 lg:h6 m-0">3.</p> İkamet ettiğiniz ülkenin ve/veya şirketinizin kurulu bulunduğu ülkenin tarafımıza sağlamış olduğunuz sözleşmede ve/veya fatura adresinde belirtilen ülkeyle aynı olduğunu beyan ve garanti edersiniz.</li>
+                                <li><p class="h6 lg:h6 m-0">4.</p> Webso'in kendi kullanımınız veya herhangi bir Nihai Kullanıcınız için geçerli olan herhangi bir kanun ya da gereklilik veya bunlara uymanız konularında herhangi bir hukuki danışmanlık veya tavsiyede bulunmadığını anladığınızı onaylıyorsunuz.
+                                    Ve özellikle Kullanıcı İçeriğinizle ilgili olarak:</li>
+                                <li><p class="h6 lg:h6 m-0">5.</p> Tasarımlar, görseller, animasyonlar, videolar, ses dosyaları, yazı tipleri, logolar, kodlar, algoritmalar, SPI’ler, API’ler, veri tabanları, illüstrasyonlar, kompozisyonlar, sanat eserleri, arayüzler, kullanıcı adları, alt alan adı oluşturma amacıyla sağladığınız bilgiler, metinler, edebi eserler ve diğer tüm materyaller de (“İçerik”) dahil olmak üzere sizin tarafınızdan yüklenen, geliştirilen veya sağlanan, ya da Webso Hizmetleri tarafından sizin için, Kullanıcı Platformunuza aktarılan, bağlanan, kopyalanan veya yüklenen tüm içeriğin (“Kullanıcı İçeriği”) tüm haklarına sahip olduğunuzu; bahsi geçen bu Kullanıcı İçeriğini, yasal olarak uygun olduğu takdirde, sizin ve bizim tarafımızdan veya herhangi bir bağlı kuruluşumuz tarafından ithal etmek, kopyalamak, kullanmak, bağlamak, geliştirmek, yayınlamak, aktarmak veya lisanslamak için tam güce, unvana, lisanslara, izinlere ve yetkiye sahip olduğunuzu (ve sahip olmaya devam edeceğinizi) onaylıyorsunuz.</li>
+                                <li><p class="h6 lg:h6 m-0">6.</p> Kullanıcı İçeriğinizi içe aktarmak, kopyalamak, sergilemek, karşıya yüklemek, iletmek ve/veya diğer bir şekilde kullanmak için Webso Hizmetlerinin her türlü web sitesine, web sayfasına ve/veya başka bir çevrimiçi hizmete erişilmesine izin vermek için gerekli tam yetkiye, mülkiyete, lisanslara, izinlere ve salahiyete sahip olduğunuzu (ve sahip olmaya devam edeceğinizi);</li>
+                                <li><p class="h6 lg:h6 m-0">7.</p> Kullanıcı İçeriğinin gerçek, doğru, güncel olduğunu, üçüncü tarafların herhangi bir hakkını ihlal etmediğini ve gerek tarafınızın gerekse Kullanıcı Platformunuzun ziyaretçi ve kullanıcılarının (“Nihai Kullanıcılar”) ikamet ettiği ülkede karşıya yüklemeniz, içe aktarmanız, kopyalamanız, bulundurmanız, yayımlamanız, iletmeniz, görüntülemeniz veya diğer bir şekilde kullanmanız açısından ve ayrıca Webso ve/veya Nihai Kullanıcılarınızın Webso Hizmetleriyle bağlantılı olarak erişmesi, içe aktarması, kopyalaması, karşıya yüklemesi, kullanması veya bulundurması açısından herhangi bir şekilde hukuka aykırılık teşkil etmediğini (ve öyle kalmaya devam edeceğini);</li>
+                                <li><p class="h6 lg:h6 m-0">8.</p> Herhangi bir kişisel bilginin ve/veya Kullanıcı İçeriğinin bir parçası olan herhangi bir kişi, kurum ya da mülkün görüntü veya tasvirinin ilan edilmesi, iletilmesi ve yayımlanması için yürürlükteki kanunlar kapsamında gerekli olan tüm onay ve izinleri temin etmiş olduğunuzu ve bu konuda geçerli tüm kanunlara uyacağınızı onaylıyorsunuz.</li>
+                            <h3 class="h5 lg:h5 m-0">2.2. Aşağıdaki hususları taahhüt ve kabul etmektesiniz:</h3>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Siz ya da Nihai Kullanıcılarınız için bulunduğunuz herhangi bir coğrafi konumda geçerli olan özel kanunlar da dâhil olmak üzere, Webso Hizmetlerini (ve ilgili her türlü ilişki veya işlemi) kullanmanız bakımından uygulanabilir olan yürürlükteki tüm kanunlara ve diğer tüm sözleşmesel koşullara harfiyen uymayı;</li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Kullanıcı Hesabınız ve/veya Kullanıcı Platformunuz/Platformlarınız kapsamında gerçekleştirilen tüm Webso Hizmetleri kullanımları ve tüm Kullanıcı İçeriğiniz (söz konusu Kullanıcı İçeriğinin Webso Hizmetlerinde veya Webso Hizmetleri ile ilişkili olarak erişilmesi, içe aktarılması, karşıya yüklenmesi, kopyalanması, kullanılması ya da yayımlanmasından doğan sonuçlar da dâhil olmak üzere) ile ilgili olarak tüm sorumluluk ve yükümlülüğün münhasıran tarafınıza ait olacağını;</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Kullanıcı İçeriğinizi ve Nihai Kullanıcılar, Kullanıcı Ürünleri ve tarafınızca kullanılan tüm uygulamalar ve/veya Üçüncü Taraf Hizmetleriyle ilgili olanlar da dahil olmak üzere Kullanıcı Platformunuz ile ilgili olarak tarafınızca işlenen tüm bilgileri düzenli ve bağımsız olarak kaydetmeyi ve yedeklemeyi;</li>
+                            <li><p class="h6 lg:h6 m-0">4.</p> Webso veya ortaklarından zaman zaman posta, e-posta veya (çağrı veya kısa mesajlar için telefon numarası da dâhil olmak üzere) tarafımıza sağlayacağınız diğer iletişim kanalları üzerinden gönderilecek tanıtım mesajları almayı. Bahse konu tanıtım materyallerini veya bildirileri almak istemiyorsanız lütfen dilediğiniz zaman tarafımıza bildiriniz;</li>
+                            <li><p class="h6 lg:h6 m-0">5.</p> Kullanıcı Platformunuzun (veya herhangi bir parçasının) Webso'in pazarlama ve tanıtım faaliyetleri kapsamında Webso tarafından çevrimiçi ve/veya çevrimdışı olarak dünya çapında, daimi ve ücretsiz olarak kullanılmasına ve bu amaçlar için makulen gerekli olduğu ölçüde değiştirilmesine izin verdiğinizi; Kullanıcı Platformunuzla ilgili olarak bu tür izin verilen sınırlı kullanımlar bakımından sahip olabileceğiniz tüm geçmiş, güncel ve ileri tarihli manevi haklardan, sanatçı haklarından ve diğer bilumum benzer haklardan dünya çapında feragat ettiğinizi.</li>
+                            <li><p class="h6 lg:h6 m-0">6.</p> Herhangi bir Kullanıcı Platformunun ve/veya İçeriğin barındırılması, iletilmesi, yayımlanması ve/veya görüntülenmesi (bunlarla ilgili herhangi bir reklam veya başka tanıtıcı içeriğin dahil edilmesi ve sunulması da dahil olmak üzere) Webso Hizmetlerinin ne şekilde, hangi yol ve yöntemlerle icra edileceğine ilişkin takdir yetkisinin münhasıran Webso'e ait olduğunu.</li>
+                            <li><p class="h6 lg:h6 m-0">7.</p> Webso, Webso Hizmetlerini alternatif fiyat planları içinde sunma ve her bir fiyat planında yükleme, depolama, indirme ve Webso Hizmetlerinin kullanımı için farklı kısıtlamalar getirme hakkına sahiptir. Bu kısıtlamalar arasında network trafiği ve bant genişliği, İçerik boyutu ve/veya uzunluğu, İçerik kalitesi ve/veya formatı, İçerik kaynakları, indirme süresi hacmi,İçeriğinizin abone sayısı, depolama hacmi vs. yer almakla beraber bununla sınırlı değildir.</li>
+                            <h3 class="h5 lg:h5 m-0">2.3. Aşağıda belirtilenleri yapmamayı kabul ve taahhüt etmektesiniz:</h3>
+                                <li><p class="h6 lg:h6 m-0">1.</p> Webso Web Sitesini, Webso Hizmetlerini (veya bunların herhangi bir parçasını), Kullanıcı Platformlarında kullanılmak ve görüntülenmek üzere Webso tarafından sunulan herhangi bir İçeriği ya da bu amaca yönelik Üçüncü Taraf Hizmetlerini (“Lisanslı İçerik”) ve/veya bunların herhangi bir parçasını herhangi bir şekilde kopyalamak, değiştirmek, tekrar kullanmak, bunlara dayalı türev eserler yaratmak, bunları indirmek, uyarlamak, tersine mühendislik uygulamak, benzerini yapmaya çalışmak, başka bir sunucuya taşımak, tercüme etmek, derlemek, kaynak koda dönüştürmek veya parçalara ayırmak veya önceden Webso'nun yazılı ve özel iznini almaksızın ve/veya Webso Koşulları kapsamında açıkça izin verilmediği halde yukarıda anılanların herhangi birini kamuya açık olarak sergilemek, icra etmek, iletmek veya dağıtmak;</li>
+                                <li><p class="h6 lg:h6 m-0">2.</p> Herhangi bir Kullanıcı İçeriğini veya Lisanslı İçeriği karalayıcı, hakaretamiz, müstehcen, taciz edici, tehditkar, kışkırtıcı, istismar edici, ırkçı, saldırgan, yanıltıcı veya hileli ya da suça veya suiistimale teşvik edici olarak addedilebilecek biçimde veya Webso'nun veya herhangi bir üçüncü tarafın haklarını (bilumum fikri mülkiyet hakları, sözleşmesel haklar veya vekil hakları da dâhil olmak üzere) başka şekillerde ihlal eden veya önceden açık onaylarını almadan herhangi bir kişi, kurum ya da markayı kötüleyen veya küçük düşüren başka şekillerde sunmak, iletmek veya sergilemek;</li>
+                                <li><p class="h6 lg:h6 m-0">3.</p> Başka web siteleri, üçüncü taraf yazılımları veya hizmetlerine giriş yapmak için gerekli bilgileri ve/veya şifreleri ele geçirmek için herhangi bir yasa dışı eylemde bulunmak;</li>
+                                <li><p class="h6 lg:h6 m-0">4.</p> Mevcutsa PCIDSS standardı da dâhil, ilgili kanunlar uyarınca yapılmadıkça, kredi kartı bilgilerini veya ödeme almak için kullanılan başka türden finansal bilgileri çalmak, ele geçirmek, karşıya yüklemek veya diğer bir şekilde erişilir kılmak;</li>
+                                <li><p class="h6 lg:h6 m-0">5.</p> Webso Web Sitesi veya Webso Hizmetleri (veya herhangi bir bölümü) içerisinde (i) herhangi bir kötü niyetli, yasa dışı, karalayıcı veya edebe aykırı İçeriği ve/veya (ii) federal Sağlık Sigortası Taşıma ve Sorumluluk Kanununda (“HIPAA”) tanımlandığı üzere herhangi bir “Gizli Sağlık Bilgisini”  karşıya yüklemek, eklemek, toplamak veya diğer bir şekilde kullanıma sunmak;</li>
+                                <li><p class="h6 lg:h6 m-0">6.</p> Webso Hizmetlerini veya Lisanslı İçeriği Webso tarafından sağlananlar dışında herhangi bir web sitesi, medya, ağ veya sistemde yayımlamak ve/veya kullanmak ve/veya Webso tarafından önceden yazılı olarak açıkça müsaade edilmediği müddetçe herhangi bir Webso Hizmeti, Lisanslı İçerik ve/veya Kullanıcı Platformunu (veya onun herhangi bir parçasını) çerçevelemek, "ayrıntılı bağlantı" (deep link), "page scrape" uygulamak, yansıtmak ve/veya bunlar etrafında bir tarayıcı ya da sınır ortamı oluşturmak;</li>
+                                <li><p class="h6 lg:h6 m-0">7.</p> Webso Hizmetlerinin herhangi bir kısmına (veya verilerine ve/veya İçeriğe) erişmek, bunları elde etmek, kopyalamak veya izlemek amacıyla "robot", "spider" veya diğer bir otomatik cihaz, program, kod, algoritma veya metodoloji veya bunlara benzer ya da eşdeğer manüel prosesler kullanmak; veya Webso Hizmetleri vasıtasıyla bu maksatla kullanıma sunulmayan herhangi bir yolla herhangi bir malzeme, doküman, hizmet veya bilgiyi elde etmek veya elde etmeye kalkışmak amacıyla herhangi bir Webso Hizmetinin navigasyon yapısını veya sunumunu herhangi bir şekilde yeniden oluşturmak veya atlamak;</li>
+                                <li><p class="h6 lg:h6 m-0">8.</p> Webso'nun itibarına ve saygınlığına gölge düşürücü olarak addedilebilecek veya Webso'nun itibarını zedeleyebilecek veya Webso'e zarar verebilecek biçimde hareket etmek;</li>
+                                <li><p class="h6 lg:h6 m-0">9.</p> Webso veya Webso Markalarını ve/veya bunların varyasyonlarını ve hatalı yazılmış hallerini kullanan arama motoru veya diğer tıklama başına ödeme anahtar kelimelerini (örneğin Google AdWords) veya alan adlarını satın almak;</li>
+                                <li><p class="h6 lg:h6 m-0">10.</p> Webso Hizmetlerinde ve/veya Kullanıcı Platformunda doğrudan veya dolaylı olarak başka bir kişi veya kurumu taklit etmek veya yanlış bilgi vermek veya kimliğinizi ya da Webso ve/veya Nihai Kullanıcılara gönderdiğiniz mesaj veya iletinin kaynağını saklamak amacıyla başka şekillerde herhangi bir manipülasyona başvurmak;</li>
+                                <li><p class="h6 lg:h6 m-0">11.</p> Herhangi bir kişi veya kurumla olan bağlantınıza ilişkin yalan beyanda bulunmak veya başka şekilde gerçek dışı bilgi vermek veya Webso'in ya da başka herhangi bir üçüncü tarafın sizi, Kullanıcı Platformunuzu, işletmenizi, Kullanıcı Ürünlerinizi veya herhangi bir beyanınızı desteklediğine dair açık veya zımni olarak gerçek dışı ifadeler kullanmak;</li>
+                                <li><p class="h6 lg:h6 m-0">12.</p> Bilgilendirilmiş olarak açıkça onaylamadıkları müddetçe, Webso Hizmetlerinin herhangi bir diğer Kullanıcısı ile ilgili ters arama yapmak veya bunları takip etmek veya takip etme girişiminde bulunmak veya diğer herhangi bir Kullanıcının mahremiyet haklarına ve diğer haklarına başka şekillerde müdahalede bulunmak veya bu hakları ihlal etmek veya Webso Hizmetleri ve/veya Kullanıcı Platformu ziyaretçileri veya kullanıcıları ile ilgili kişisel tanıtıcı bilgileri toplamak;</li>
+                                <li><p class="h6 lg:h6 m-0">13.</p> Webso Hizmetlerine, Kullanıcı Platformuna, başka Kullanıcının/Kullanıcıların hesabına veya Webso Hizmetlerine bağlı diğer sistem veya ağlara erişimi önlemek ya da kısıtlamak amacıyla kullanılan herhangi bir tedbiri bilgisayar korsanlığı, şifre arama veya diğer meşru olmayan ya da yasaklı yöntemler kullanmak suretiyle devre dışı bırakmak, atlamak veya başka şekillerde engellemek;</li>
+                                <li><p class="h6 lg:h6 m-0">14.</p> Webso Hizmetlerinin veya Webso Hizmetlerine bağlı herhangi bir ağın saldırılara açık olma durumunu incelemek, taramak veya test etmek;</li>
+                                <li><p class="h6 lg:h6 m-0">15.</p> Webso Hizmetlerini ve/veya Kullanıcı Platformunu herhangi bir donanım, yazılım veya telekomünikasyon ekipmanının çalıştırılmasına zarar vermesi veya ele geçirmesi olası olan veya bunu amaçlayan herhangi bir virüs, solucan, Truva Atı, saatli bomba, web böceği, casus yazılım, kötü amaçlı yazılım veya başka bilgisayar kodları, dosyaları veya programlarını veya fiili ya da potansiyel olarak zararlı, rahatsız edici veya saldırgan kod veya bileşenleri tasarlamak, geliştirmek, dağıtmak ve/veya başka şekillerde iletmek veya yürütmek amacıyla yüklemek veya diğer şekillerde kullanmak;</li>
+                                <li><p class="h6 lg:h6 m-0">16.</p> Webso Hizmetlerinin altyapısına veya Webso Hizmetlerine bağlı Webso sistemlerine veya ağlarına makul olmayan veya orantısız büyüklükte bir yük getiren herhangi bir işlem yapmak veya Webso Hizmetlerinin veya bunları barındıran veya kullanıma sunan sunucuların veya ağların işleyişine başka şekillerde müdahale etmek veya kesintiye uğratmak veya söz konusu sunucu veya ağlara ilişkin herhangi bir şarta, prosedüre, politikaya veya düzenlemeye uymamak;</li>
+                                <li><p class="h6 lg:h6 m-0">17.</p> Herhangi bir Webso Hizmetini ve/veya Kullanıcı Platformunu her türlü teklifsiz e-posta, istenmeyen e-posta, sahtekârlık, dolandırıcılık, kimlik avı, "zincirleme mektup", "saadet zinciri" veya benzer işlemlerle bağlantılı olarak kullanmak veya diğer şekillerde etik olmayan pazarlama veya reklam faaliyetlerinde bulunmak;</li>
+                                <li><p class="h6 lg:h6 m-0">18.</p> Webso Hizmetlerinden veya Webso Sistemlerinden herhangi birini depolama ve/veya video akışı amacıyla (ana akış amaçlı olsun ya da olmasın) kullanmak.  Örneğin, amacı video akışı veya asıl amacı dosya depolama olan web siteleri oluşturmak ve işletmek. Üçüncü taraf platformları veya hizmetleriyle entegrasyon veya bağlantı yoluyla dolaylı kullanım da dahil;</li>
+                                <li><p class="h6 lg:h6 m-0">19.</p> Webso Hizmetlerine, Kullanıcı Hesaplarına, Lisanslı İçeriğe ve/veya Kullanıcı İçeriğine, halka açık olarak desteklenen arayüzlerimiz dışında herhangi bir araç veya teknoloji (ör. veri toplama ve kazıma) yoluyla erişim.</li>
+                                <li><p class="h6 lg:h6 m-0">20.</p> Webso Koşullarında açıkça izin verilen durumlar dışında, Lisanslı İçeriğin ve/veya Webso Hizmetlerinin herhangi bir şekilde kullanımı veya erişiminin satılması, lisanslanması veya herhangi bir ticari amaçla istismar edilmesi;</li>
+                                <li><p class="h6 lg:h6 m-0">21.</p> Webso Hizmetleri ve/veya Lisanslı İçerik içinde yer alan telif hakkı bildirimlerini, filigranları, kısıtlamaları ve tedarikçilerimizin mülkiyet haklarını gösteren işaretleri, telif hakkı işaretini [©], Creative Commons [(cc)] göstergelerini veya ticari markaları [® veya ™] kaldırmak veya değiştirmek; veya</li>
+                                <li><p class="h6 lg:h6 m-0">22.</p> Webso Koşullarından herhangi birini veya Webso Hizmetlerini kullanımınız için geçerli olan herhangi bir yasa veya gerekliliği ihlal etmek, ihlal etmeye teşebbüs etmek veya başka bir şekilde bunlara uymamak.</li>
+                                <li><p class="h6 lg:h6 m-0">23.</p> Kıyaslama veya benzer rekabet analizi amaçlarıyla veya rekabetçi bir ürün veya hizmet oluşturmak için Hizmetlere erişme veya bunları kullanma.</li>
+                             <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">3. İçerik ve Mülkiyet</h3>
+                             <p>İçeriğinize ait tüm haklar tarafınıza aittir. Tarafınıza hizmetlerimizi sağlayabilmek için, içeriğinizi sunucularımız arasında kullanabilir, depolayabilir, yedekleyebilir ve kopyalayabiliriz.</p>
+                             <h3 class="h5 lg:h5 m-0">3.1. Fikri Mülkiyetiniz</h3>
+                             <p>Webso ile sizin aranızda, Kullanıcı İçeriğiniz ve sizin tarafınızdan oluşturulan, geliştirilen veya Webso Hizmetlerine bağlanan diğer tüm materyallerle ilgili tüm fikri mülkiyet hakları size ait olacaktır; buna her türlü tasarım, resimler, animasyonlar, videolar, ses dosyaları, yazı tipleri, logolar, illüstrasyonlar, kompozisyonlar, sanat eserleri, kodlar, algoritmalar, SPI'ler, API'ler, veritabanları, arayüzler, metin ve edebi eserler dahildir. Webso, Kullanıcı İçeriğiniz veya Webso Hizmetlerine bağladığınız içerik üzerinde mülkiyet hakkı talep etmez. Size Hizmetleri sağlamak ve Hizmetleri sürdürmek ve iyileştirmek için ("Amaç") bulut hizmetleri ve CDN'ler dahil olmak üzere Kullanıcı İçeriğinize erişmemiz, platformumuza yüklememiz ve/veya kopyalamamız gerektiğini biliyor ve kabul ediyorsunuz, buna uygun gördüğümüz şekilde, ekran ayarlamaları yapmak, yazılım araçlarımızı eğitmek, yedekleme için çoğaltmak ve hizmetlerimizi gerçekleştirmek için gerekli diğer teknik eylemleri ve/veya kullanımları gerçekleştirmek de dahildir. İşbu vesileyle, Kullanıcı İçeriğinizi Amaç için kullanmamız için bize münhasır olmayan, devredilebilir, alt lisanslanabilir, telifsiz ve dünya çapında geçerli olan bir lisans veriyorsunuz.</p>
+                             <h3 class="h5 lg:h5 m-0">3.2. Webso'nun Fikri Mülkiyeti</h3>
+                             <p>Tescil edilmiş ve/veya tescil edilebilir olsun ya da olmasın her türlü sanat eseri, grafik, görsel, web sitesi şablonu ve pencere öğesi, edebi eser, kaynak ve hedef kodu, bilgisayar kodu (html dahil), uygulama, ses, müzik, video ve diğer ortamlar, tasarım, animasyon, arayüz, dokümantasyon,bunların türevleri ve versiyonları, Webso Hizmetlerinin "görünümü ve hissi", yöntem, ürün, algoritma, veri, etkileşimli özellikler ve nesneler, reklam ve edinme araç ve yöntemi, buluş, ticari sır, logo, alan adı, özelleştirilmiş URL, ticari marka, hizmet markası, ticari ad ve mülkiyete ilişkin diğer tanımlayıcı unsur da dahil olmak üzere telif hakkına konu edilebilir her türlü materyal veya bu materyallerin yürürlükteki herhangi bir kanun kapsamında herhangi bir telif hakkına konu olan veya olabilecek diğer herhangi bir içeriği de dâhil olmak üzere Webso Hizmetlerine ait olan ve bunlardan kaynaklanan tüm hak, mülkiyet ve menfaatler (hep birlikte "Fikri Mülkiyet" olarak anılacaktır) ve bunların bilumum türevleri Webso'ya ait ve/veya Webso'ya lisanslıdır.</p>
+                             <p>Webso Koşullarını tamamen yerine getirmeniz ve uygulanabilir tüm Ücretleri zamanında ödemeniz kaydıyla, Webso, Kullanıcı Hesabınızı oluşturmanızı takiben Webso'nun tarafınıza Webso Hizmetlerini sağlamayı kabul ettiği müddetçe, Kullanıcı Platformunuzu oluşturma ve Nihai Kullanıcılarınıza görüntüleme, bu kapsamdaki Kullanıcı Ürünlerinizi (aşağıda tanımlandığı üzere) sunma amacıyla Webso Hizmetlerini ve Lisanslı İçeriği Webso Koşullarında açıkça izin verilen şekilde ve sadece Webso Hizmetleri kapsamında olmak kaydıyla kullanma konusunda tarafınızamünhasır olmayan, devredilemez, alt lisansı verilebilir, tümüyle geri alınabilir ve sınırlı bir lisans vermektedir.</p>
+                             <p>Webso Koşullarında, yukarıda açıkça verilen sınırlı lisans haricinde Webso'nun Fikri Mülkiyetine (veya herhangi bir parçasına) ait olan veya bundan kaynaklanan herhangi bir hak veya menfaat tanınmamaktadır. Webso Koşullarında yer alan hiçbir husus hiçbir kanun kapsamında Webso'nun Fikri Mülkiyet hakları bakımından herhangi bir devir veya feragat teşkil etmez.
+                                Yukarıdaki hükümlere ek olarak, Webso Hizmetleri dâhilinde kullanımınıza sunulan bazı yazı tipleri için bir üçüncü taraf sağlayıcı tarafından Webso’ya lisans verilmiştir ve bu nedenle ilgili sağlayıcının ek lisans hükümlerine tabi olup https://www.webso.com/kullanim-kosullari adresinde özetlenmiştir ve incelenebilir.</p>
+                            <h3 class="h5 lg:h5 m-0">3.3. Geribildirim ve Öneriler</h3>
+                            <p>Webso Hizmetleri (gerek mevcut, gerekse önerilen veya planlananlar) ile ilgili olarak tarafımıza herhangi bir Fikri Mülkiyet hakkına konu olan veya konu olabilecek olan herhangi bir öneri, yorum veya diğer geribildirimde ("Geribildirim") bulunmanız halinde, söz konusu Geribildirimin münhasır sahibi Webso olacaktır. Webso'ya Geribildirimde bulunmakla, bu Geribildirimin Webso tarafından şu amaçlarla kullanılabileceğini kabul etmektesiniz: (i) Webso Hizmetlerini daha da geliştirmek, özelleştirmek ve iyileştirmek, (ii) sürekli yardım ve teknik destek sağlamak, (iii) Geribildiriminize dayalı olarak veya diğer bir şekilde genel veya kişiselleştirilmiş Webso'ya ilişkin bildirimler ve/veya görüşme taleplerini size iletmek, (iv) belli promosyonlara olanak tanımak, desteklemek ve sunmak ve performansını izlemek, (v) Webso'nun hizmetlerini iyileştirmek amacıyla kullanabileceği toplu istatistiksel veriler ve başka toplu ve/veya çıkarım yoluyla elde edilen bilgiler oluşturmak, (vi) Webso veri güvenliği ve dolandırıcılığı önleme imkânlarını artırmak, (vii) İlgili kanun ve yönetmeliklere uymak. Buna ek olarak, siz (1) söz konusu Geribildirimin doğru ve eksiksiz olduğunu ve herhangi bir üçüncü taraf hakkını ihlal etmediğini beyan ve taahhüt etmekte; (2) söz konusu Geribildirime ilişkin olarak sahip olabileceğiniz her türlü hak, mülkiyet ve menfaati gayrikabil-i rücu olarak Webso'ya devretmekte ve (3) söz konusu Geribildirime ait olan veya bundan kaynaklanan tüm geçmiş, güncel ve ileri tarihli manevi haklardan, sanatçı haklarından ve diğer bilumum benzer haklardan dünya çapında açıkça ve gayrikabil-i rücu olarak feragat etmektesiniz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">4. Gizlilik</h3>
+                                <p>Webso Hizmetlerinin bazı bölümleri (aşağıda 10. Bölümde ayrıntılı olarak açıklandığı üzere, bu kapsamda sağlanan bazı Üçüncü Taraf Hizmetleri de dâhil olmak üzere) belirli kişisel tanıtıcı veya tanımlayıcı bilgilerin verilmesini, toplanmasını ve/veya kullanılmasını gerektirmektedir.</p>
+                                <p>Webso ve ilgili Üçüncü Taraf Hizmetleri Webso Hizmetlerine erişimin veya bu hizmetlerin kullanımının bir parçası olarak özellikle Kullanıcıların ve Nihai Kullanıcıların Webso Hizmetleri üzerinden ve/veya Kullanıcı Platformları üzerinden gerçekleştirdikleri işlemler veya gezinim de dâhil olmak üzere, Kullanıcılara ve Nihai Kullanıcılara ilişkin bazı verileri toplayabilir, bu verilere erişebilir ve bu verileri kullanabilir. Anılan veri toplama ve kullanım uygulamalarıyla ilgili ayrıntılar için Gizlilik Politikamızı ve ilgili Üçüncü Taraf Hizmetlerinin bu konudaki politikalarını düzenli olarak incelemenizi tavsiye ederiz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">5. Yapay Zeka Hizmetleri</h3>
+                                <p>Webso size, Webso Hizmetlerinin bir parçası olarak, İçerik üretme yoluyla Kullanıcı Platformunuzu oluşturmanıza yardımcı olacak yapay zeka ve makine öğrenimi araçlarına ve ürünlerine ("AI Araçları") erişim izni verebilir. Ayrıca Webso, etkinleştirmeniz ve böylelikle Son Kullanıcılarınıza yapay zekayla etkileşim kurma seçeneği sunmanız amacıyla yapay zeka ve makine öğrenimi araçlarına ve ürünlerine ("AI Ürünleri", “AI Araçları” ile birlikte "AI Hizmetleri") erişim sağlayabilir. Bu bölüm yalnızca AI Hizmetlerinin sizin tarafınızdan Webso Hizmetlerinin bir parçası olarak kullanılmasına yöneliktir.</p>
+                                <h3 class="h5 lg:h5 m-0">5.1. Girdiler ve Çıktılar</h3>
+                                <p>AI Hizmetleri, sizin veya Son Kullanıcılarınızın AI Hizmetlerine (metin, görüntü veya başka bir biçimde) bir istem ("Girdi") girerek, sağlayarak veya göndererek AI Hizmetlerini bir İçerik çıktısı ("Çıktı") oluşturmaya yönlendirmenizi sağlar.</p>
+                                <h3 class="h5 lg:h5 m-0">5.2. Çıktı Doğruluğu</h3>
+                                <p>Yapay zeka teknolojisinin doğası gereği, çıktıları tam anlamıyla kontrol etmek ve tahmin etmek zordur. Bu nedenle Webso, AI Hizmetleri tarafından üretilen Çıktıların sizin veya Son Kullanıcılarınızın gereksinimlerini veya beklentilerini karşılayacağını beyan veya taahhüt etmez, ve bu Çıktıların doğruluğu, eksiksizliği, alaka düzeyi, fikri mülkiyet haklarına uygunluğu, yasallığı, nezaket seviyesi, kalitesi, önyargısızlığı veya diğer herhangi bir yönü ile ilgili tüm sorumluluk ve yükümlülükleri reddeder. Örneğin, üretilen Çıktının tıbbi, hukuki veya mali konularla ilgili olduğu durumlarda bu meydana gelebilir. Çıktı ayrıca başkalarının gizlilik veya fikri mülkiyet hakları gibi bazı haklarını ihlal edebilir. Çıktı size veya Son Kullanıcılarınıza özgü olmayabilir ve AI Hizmetlerinin diğer Kullanıcıları, sizin veya Son Kullanıcılarınız için üretilebilecek Çıktılarla aynı veya benzer olan Çıktılar üretebilirler. Buna göre:</p>
+                                <ul>
+                                    <li><p class="h6 lg:h6 m-0">1.</p> Herhangi bir şekilde kullanmadan, yayınlamadan, iletmeden veya sergilemeden önce AI Araçlarının ürettiği tüm Çıktıları incelemek ve bu Çıktıları kullanmaya yasal olarak ehil olduğunuzdan emin olmak sizin sorumluluğunuzdadır.</li>
+                                    <li><p class="h6 lg:h6 m-0">2.</p> Çıktıyı yalnızca bir öneri olarak değerlendirmeli ve görüşlerinizi temsil edip etmediğine, amacınıza hizmet edip etmediğine ve iletmek istediğiniz mesajı iletip iletmediğine tamamen kendi takdirinize göre karar vermelisiniz</li>
+                                    <li><p class="h6 lg:h6 m-0">3.</p> Geçerli yasa ve yönetmeliklerin gerektirdiği durumlarda ve zamanlarda, Son Kullanıcılarınızı, Çıktıyı kullanmadan önce gözden geçirme ihtiyacı da dahil olmak üzere AI Ürünlerinin Çıktılarını kullanırken uymaları gereken her türlü kısıtlama, sınırlama veya yükümlülük hakkında bilgilendirmek sizin sorumluluğunuzdadır.</li>
+                                    <li><p class="h6 lg:h6 m-0">4.</p> Oluşturulan Çıktıların Webso'nun görüşlerini temsil etmediğini kabul edersiniz.</li>
+                                </ul>
+                                <h3 class="h5 lg:h5 m-0">5.3. Girdileriniz</h3>
+                                <p>Sizin ve Son Kullanıcılarınızın Girdilerinin birer Kullanıcı İçeriği (yukarıda tanımlandığı gibi) olarak kabul edileceğini ve bu Şartların tüm bu girdilere, yürürlükteki yasaların izin verdiği ölçüde, Kullanıcı İçeriği kapsamında uygulanacağını kabul edersiniz.</p>
+                                <h3 class="h5 lg:h5 m-0">5.4. Çıktı Sahipliği</h3>
+                                <p>Herhangi bir şekilde kullanmayı, yayınlamayı, iletmeyi veya sergilemeyi tercih ettiğiniz bir Çıktı sizin Kullanıcı İçeriğiniz (yukarıda tanımlandığı gibi) olarak kabul edilir ve bu Şartlar tüm çıktılara, geçerli yasaların izin verdiği ölçüde, Kullanıcı İçeriği kapsamında uygulanır. Siz (veya Son Kullanıcılarınız) ile Webso arasında olduğu gibi, Çıktının Webso'ya ait önceden var olan herhangi bir fikrî mülkiyeti içermediği bir çerçevede, Webso bir Çıktı üzerinde herhangi bir mülkiyet hakkı talep etmez.</p>
+                                <h3 class="h5 lg:h5 m-0">5.5. Webso'ya Verilen Lisans</h3>
+                                <p>Yürürlükteki yasa ve yönetmelikler uyarınca gerekli olduğu ölçüde ve yukarıdaki Bölüm 3.1 kapsamında bize verdiğiniz lisansa ek olarak, bize ayrıca aşağıdaki amaçlar doğrultusunda münhasır olmayan, devredilebilir, alt lisans olarak verilebilir, telifsiz ve dünya genelinde geçerli bir lisans sağlarsınız: </p>
+                                <p>(a) Webso Hizmetlerini iyileştirmek, Girdi ve Çıktıları yürürlükteki yasalara uygunluk açısından incelemek ve Şartları uygulamak için sizin (ve Son Kullanıcılarınızın) Girdi ve Çıktılarınıza erişmek, yüklemek, kopyalamak, çoğaltmak, ayarlamalar yapmak ve görüntülemek, yazılım araçlarımızı eğitmek ve diğer teknik eylemleri ve/veya kullanımları gerçekleştirmek; ve 
+                                    (b) Kullanıcılarımıza Webso Hizmetlerini sunmak için gerekli olduğunda, sizin (ve Son Kullanıcılarınızın) Girdi ve Çıktılarınızın kopyalarını Üçüncü Taraf Hizmetlerimize veya alt yüklenicilerimize iletmek.</p>
+                                <h3 class="h5 lg:h5 m-0">5.6. Üçüncü Taraf Hizmetler</h3>
+                                <p>Webso size AI Hizmetleri sağlamak için Üçüncü Taraf Hizmetleri kullanabilir ve söz konusu Üçüncü Taraf Hizmetlerinin kullanımı bu Şartların 10. bölümüne tabidir. Herhangi bir Girdi ve Çıktı kullanımınız dahil olmak üzere Webso'nun Yapay Zeka Hizmetlerini kullanırken, Üçüncü Taraf Yapay Zeka Hizmetlerinin zaman zaman değişebilen politikalarını gözden geçirmeyi ve bunlara uymayı ve Son Kullanıcılarınızın her birinden bunları gözden geçirmesini ve uymasını istemeyi kabul edersiniz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">6. Hizmet Ücretleri</h3>
+                            <p>Bayi Kullanıcısı iseniz, Ücretli Hizmet ödemeleri ve yönetimi doğrudan Bayi ile yürütülebilir. Bayi Kullanıcısı olmadığınız sürece, Ücretli hizmetlerimizin faturalarına kullanıcı hesabınızdan ulaşılabilir.</p>
+                            <h3 class="h5 lg:h5 m-0">6.1. Ücretli Hizmetler</h3>
+                            <p>Bazı Webso Hizmetlerinin kullanımı, Webso'nun tamamen kendi takdirine bağlı olarak belirlediği kimi ücretlerin ödenmesine tabi olabilir ("Ücretli Hizmetler" ve "Ücretler"). Önemli: Eğer bir Bayi Kullanıcısıysanız ve ödemeniz Bayiye yapılıyorsa, o zaman bu Bölüm 6’nın 6.1(1), 6.1(4), 6.2, 6.3(2), 6.4(1) ve 6.5 alt maddelerinin ilgili muayyen Ücretli Hizmet içerikli hükümleri sizin için geçerli olmayabilir. Ödeme ve bu Ücretli Hizmetin yönetimi, Bayi ile sizin aranızda anlaşılan şartlara göre doğrudan Bayi ile yapılacaktır.</p>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Webso sizi Ücretler hakkında bilgilendirecek ve Webso'dan satın almaya karar verdiğiniz Ücretli Hizmetlerle ilgili olarak doğrudan Webso'ya ödeme yapmanız gerekecektir. Ücretli Hizmetleri almak veya kullanmak isterseniz, geçerli tüm Ücretleri önceden ödemeniz gerekir.</li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Webso, kendi takdirine bağlı olarak herhangi bir zamanda Ücretlerini değiştirme hakkını saklı tutar. Böyle bir değişiklik mevcut aboneliklerinizi etkileyecekse, Webso size veya Satıcınıza değişiklikle ilgili bir bildirim gönderecektir.</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Webso'dan veya bir Bayiden, Webso veya Bayiden bir indirim veya başka bir promosyon teklifi aldıysanız, ilgili indirimli sürenin sonunda otomatik olarak ve bildirimde bulunmaksızın söz konusu Webso Hizmet(ler)ine, o sırada geçerli olan tam Ücret üzerinden aboneliğinizi yenileme hakkına sahip olacaksınız.</li>
+                            <li><p class="h6 lg:h6 m-0">4.</p> Doğrudan Webso'ya ödenen tüm Ücretler, aksi Webso tarafından yazılı olarak özellikle belirtilmedikçe ABD Doları olarak kabul edilecektir. Yasal olarak izin verilen ölçüde (ve Webso tarafından yazılı olarak belirtilmediği sürece), tüm Ücretler vergilerden (katma değer vergisi, satış vergisi, mal ve hizmet vergisi vb.), vergi makamları tarafından uygulanan harçlardan veya vergilerden hariç tutulur ve Webso Hizmetlerini kullanımınızla ya da sizin tarafınızdan yapılan herhangi bir ödeme veya satın alma işlemi ile ilgili vergileri ödemek sizin sorumluluğunuzdadır. Eğer Webso, sizin ödemeniz gereken Ücretler için vergi toplama veya ödeme yükümlülüğü altındaysa, bu Vergiler daha önceki işlemler için eklenip sizden tahsil edilmiş olsun ya da olmasın, söz konusu vergiler, ödenmemiş Ücretlere eklenebilir ve söz konusu işlem için faturaya yansıtılabilir. Ücretli Hizmetlerin satın alımı veya yenilenmesiyle ilgili olarak üçüncü taraflar tarafından size yansıtılabilecek herhangi ek ücretlerin varlığını doğrulamanızı öneririz (örneğin uluslararası işlem ücretleri, döviz kuru ücretleri veya bankalar veya kredi kartı şirketlerine ödenen ücretler). Webso, bu tür ek ücretler veya maliyetlerden sorumlu değildir.</li>
+                            <li><p class="h6 lg:h6 m-0">5.</p> Ücretli Hizmetleri doğrudan Webso'dan aldığınız takdirde, kayıt işleminin veya Ücretli Hizmetleri almak için bilgi girişinin bir parçası olarak Webso'ya (doğrudan veya bağlı kuruluşları, yan kuruluşları, diğer üçüncü taraflar aracılığıyla), ödeme sağlayıcımızdan veya belirlediğiniz banka hesabınızdan ödeme ve hizmet bedeli (veya başka bir şekilde ödeme alma, para iadesi yapma veya herhangi bir faturalandırma işlemi gerçekleştirme) talep ve tahsili yetkisi verirsiniz. Webso veya bağlı kuruluşları, ödeme hesabınızı veya finansal bilgilerinizi doğrulamak için gerekli gördükleri her türlü soruşturmayı yapabilir; ödemelerin zamanında yapılmasını sağlamak amacıyla, ödeme, kredi kartı veya banka hesabı sağlayıcınızdan güncellenmiş ödeme detaylarını (örneğin, kredi kartı şirketiniz tarafından bize sağlanmış olabilecek güncel son kullanma tarihi veya kart numarası) almak dahil olmak üzere, hızlı ödeme işlemlerini sağlamak için gereken her türlü adımı atabilirler.</li>
+                            <li><p class="h6 lg:h6 m-0">6.</p> Doğrudan Webso'ten satın alınan Ücretli Hizmetlerinizin ("Kayıtlı Kart") ödemesini yapabilmek için Webso'ya kayıtlı bir kredi kartınız olmalıdır. Hesap Ayarları Sayfanızda Saklı Kartınızı son dört hanesinden tanıyabileceksiniz.</li>
+                            <h3 class="h5 lg:h5 m-0">6.2. Faturalar</h3>
+                            <p>Bayi Kullanıcıysanız ve doğrudan Webso'ya değil, Bayiye ödeme yapıyorsanız, aşağıdaki Bölüm 6.2 sizin için geçerli değildir.</p>
+                            <p>Webso ve/veya bağlı şirketleri, Webso'ya veya Webso tarafından yapılan herhangi bir Ücret ödemesi veya geri ödeme için bir fatura veya alacak dekontu ("Fatura") düzenleyecektir. Her Fatura, elektronik biçimde ve fatura adresinizde belirtilen ülkeye göre düzenlenecek ve Kullanıcı Hesabınız aracılığıyla ve/veya e-posta yoluyla size sunulacaktır. Faturayı düzenlemek amacıyla, yerel yasalara uymak için belirli Kişisel Bilgileri (bu terim Gizlilik Politikasında tanımlandığı şekliyle) sağlamanız istenebilir. Kullanıcı Hesabınızda yer alan Faturanın yerel yasa gereksinimlerinize uygun olmayabileceğini ve bu durumda yalnızca proforma amaçlarla kullanılabileceğini lütfen unutmayın.</p>
+                            <h3 class="h5 lg:h5 m-0">6.3. Aboneliklerin Otomatik Olarak Yenilenmesi</h3>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Hizmetlere erişiminizin aksamaması veya hizmet kaybı yaşamamanız için, bazı Ücretli Hizmetler varsayılan olarak otomatik yenileme seçeneği içerir. Buna göre otomatik yenileme seçeneği tarafınızdan veya Bayiniz tarafından devre dışı bırakılmadığı takdirde bu Ücretli Hizmetler, orijinal abonelik dönemine eşit bir yenileme süresi için (ek süreler hariç) ve Webso veya Bayi tarafından aksi size bildirilmediği takdirde aynı fiyattan (geçerli Vergi değişikliklerine tabi olarak ve ilk dönem için sağlanan herhangi bir indirim veya diğer promosyon teklifi dışında) ilgili abonelik döneminin sonunda otomatik olarak yenilenecektir (“Ücretli Hizmetlerin Yenilenmesi”).  Örneğin, bir Hizmet için orijinal abonelik süresi bir ay ise, yenileme dönemlerinin her biri (uygulanabildiği yerde) bir ay olacaktır. </li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Buna göre, geçerli durumlarda ve doğrudan Webso'ya ödenen Ücretler söz konusu olduğunda, Webso yenileme döneminin başlamasından iki (2) hafta öncesine kadar Saklanan Kartı kullanarak Ücretleri sizden otomatik olarak tahsil etmeye çalışacaktır. Tarafınızdan ödenmesi gereken Ücretlerin tahsil edilememesi durumunda, tamamen kendi takdirimize bağlı olarak (fakat buna mecbur olmamakla birlikte) daha sonra yeniden tahsil etmeyi deneyebiliriz ve/veya başka bir bildirimde bulunmaksızın Kullanıcı Hesabınızı askıya alabilir veya iptal edebiliriz. Yenilenen Ücretli Hizmetiniz yıllık veya birden çok yıllık abonelik dönemine tabiyse, Webso, söz konusu Ücretli Hizmetin yenilenmesinden önce, yenileme tarihinden en az otuz (30) gün önce size bir bildirim sunmaya çalışacaktır.</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Bu Kullanım Koşullarını kabul ederek ve bir Yenileme Ücretli Hizmeti satın alarak, Yenilenen Ücretli Hizmetin yukarıdaki şartlara uygun olarak kendiliğinden yenileneceğini kabul etmiş olursunuz.</li>
+                            <li><p class="h6 lg:h6 m-0">4.</p> Siz (veya Ücretli Hizmetleri satın aldığınız Bayi), Kullanıcı Hesabınız aracılığıyla veya Webso Yardım Merkezini ziyaret ederek, Ücretli Hizmetlerin Yenilenmesi için otomatik yenileme seçeneğini istediğiniz zaman kapatabilirsiniz.</li>
+                            <li><p class="h6 lg:h6 m-0">5.</p> Belirli alan adları, uygun olduğu üzere, Web.com Bayi Alan Adı Kayıt Sözleşmesi ve Tucows Bayi Alan Adı Kayıt Sözleşmesi'nde ayrıntılı olarak açıklanan farklı bir yenileme politikasına tabidir.</li>
+                            <li><p class="h6 lg:h6 m-0">6.</p> Yukarıda belirtilen aksi yöndeki herhangi bir şeye bakılmaksızın, kullandığınız Webso Hizmetlerini doğrulamaktan ve başarılı bir şekilde yenilenmesini sağlamaktan yalnızca siz sorumlusunuz ve sorumlu olacaksınız (söz konusu Webso Hizmetleri otomatik abonelik yenilemelerine tabi olsun ya da olmasın). Aynı şekilde iptal, tekerrür eden Ücretlerin tahsil edilmemesi veya herhangi bir Webso Hizmetinin otomatik abonelik yenilemelerine tabi olmaması nedeniyle daha önce satın aldığınız herhangi bir Webso Hizmetinin durdurulmasından yalnızca siz sorumlu olacaksınız. Herhangi bir Webso Hizmetinin veya Üçüncü Şahıs Hizmetinin herhangi bir nedenle durdurulması ile ilgili olarak Webso'ya karşı herhangi bir hak talebinde bulunmayacağınızı kabul ve beyan edersiniz.</li>
+                            <h3 class="h5 lg:h5 m-0">6.4. Para İade Garantisi</h3>
+                            <p>Bayi Kullanıcıysanız ve doğrudan Webso'ya değil, Bayiye ödeme yapıyorsanız, aşağıdaki Bölüm 6.4 sizin için geçerli değildir.</p>
+                            <p>İlk Premium Plan satın alımınızdan memnun değilseniz söz konusu Premium Plan’ı ilk kez sipariş ettiğiniz veya etkinleştirdiğiniz tarihten itibaren on dört (14) gün içinde ("Para İadesi" ve "Para İadesi Süresi") herhangi bir nedenle iptal bildiriminde bulunabilirsiniz. Para İadesi, sadece ücretsiz bir web sitesinin yükseltmesi olan Premium Plan’ın ilk satın alımına uygulanır.</p>
+                            <p>Para İadesi, Webso Hizmetlerinin ek satın alımları, yükseltmeleri, modifikasyonları veya yenilemeleri için geçerli değildir. Daha uzun bir Para İadesi Süresi gerektiren bir yargı alanında ikamet ediyorsanız, bu tür gereklilikleri yürürlükteki tüm yasalara uygun olarak yerine getireceğiz. Eğer Webso bu bildirimi Para İadesi Süresi içinde alırsa, Webso size öncelikle faturalandırdığı tutarı, özgün faturalandırma dövizinde iade eder ve ilgili hizmetleri iptal eder.</p>
+                            <p>Para İadesi tutarının, para birimi değişiklikleri ve üçüncü taraf ücretleri nedeniyle sizden tahsil edilen tutardan farklı olabileceğini lütfen unutmayın. Webso, döviz kurlarındaki değişikliklerden veya üçüncü taraflarca sizden tahsil edilen ücretlerden kaynaklanan herhangi bir farktan sorumlu olmayacaktır. Para İadesi Süresinden sonra tarafınızca ödenen Ücretler iade edilemez ve iptal edilemez olacaktır. Buna ek olarak, Kullanıcının kötü niyetle veya fiilen alınan hizmetler için ödeme yapmaktan kaçınmaya yönelik meşru olmayan bir girişimle iptal bildiriminde bulunduğunu tespit ettiğimiz durumlarda, ilgili kanunun izin verdiği şekilde, fiilen alınan herhangi bir Webso Hizmeti için Kullanıcıdan yine de ücret alma hakkımızı saklı tutarız.</p>
+                            <p>Lütfen unutmayın: Webso Hizmetleri üzerinden veya aracılığıyla satın alınan belirli hizmetler tamamen iade edilemez olabilir. Bunlar; alanlar, iş araçları ve uygulamalar gibi Üçüncü Taraf Hizmetlerini içerir. Her satın alınan hizmetin veya uygulamanın şartları Webso Web Sitesinde ve/veya bu hizmetleri veya uygulamaları satın alma sürecinde veya satın alma sırasında belirtilir. Bir hizmeti satın almadan önce iptal şartlarını sorgulamak sizin sorumluluğunuzdadır. Webso, iadesi yapılmayan Ücretli Hizmetler, uygulamalar veya Üçüncü Taraf Hizmetleri için ödenen hiçbir tutarı iade etmeyecektir.</p>
+                            <h3 class="h5 lg:h5 m-0">6.5. Geri Ödeme Talepleri</h3>
+                            <p>Herhangi bir zamanda Webso hesabınızda ödenmesi gereken herhangi bir Ücretin reddedildiği, geri ödenmesinin talep edildiği veya başkaca bir şekilde itiraz edildiği takdirde ("Geri Ödeme Talebi"), bu durum işbu koşullar kapsamındaki ödeme yükümlülüklerinizin ihlali olarak addedilir ve Webso Hizmetlerini kullanımınız otomatik olarak devre dışı bırakılabilir veya sonlandırılabilir.</p>
+                            <p>Bir Geri Ödeme Talebinde bulunulması halinde, Kullanıcı Hesabınız yeniden satın alma veya yeniden kullanma seçeneği sunulmaksızın bloke edilebilir ve söz konusu Kullanıcı Hesabının içerdiği tüm veriler her türlü alan adı, uygulama ve Üçüncü Taraf hizmeti de dâhil olmak üzere, iptal edilebilir ve Kapasite Kaybına (aşağıda Bölüm 7.3'te tanımlanan şekilde) uğrayabilir.</p>
+                            <p>Webso Hizmetlerini kullanımınız, ilgili Webso Hizmeti için yeniden abonelik yaptırmadığınız ve alınan her bir Geri Ödeme Talebi ile ilgili olarak Webso'nun ve/veya herhangi bir Üçüncü Taraf Hizmetinin maruz kaldığı bilumum ücret ve giderler de dâhil olmak üzere geçerli Ücretlerin tamamını (Geri Ödeme Talebi öncesinde sağlanan Webso Hizmetlerine ilişkin Ücretler, ödemeyi işleme alan merciinin maruz kaldığı hizmet ve işlem bedelleri ve ücretleri de dâhil) ödemediğiniz müddetçe yeniden başlatılmayacaktır.</p>
+                            <p>Webso'ya yapılan ödemelerle ilgili herhangi bir sorunuz veya sorununuz var ise, Webso Hizmetlerinin iptal edilmesini ve Kullanıcı Hesabınızın bloke edilmesini önlemek, ayrıca, tarafınızca satın alınmış (ve geri ödeme talebinde bulunulmuş) olan Webso Hizmetlerine ait tüm Ücretlerin tarafınızca yeniden ödenmesine ek olarak ilişkili diğer Ücretlerin ödenmesi konusunda yükümlülük altına girmenize neden olması muhtemel mesnetsiz veya hatalı bir Geri Ödeme Talebinde bulunulmasını önlemek amacıyla Geri Ödeme Talebinde bulunmadan veya ödemenin iptali için başvurmadan önce Müşteri Destek ekibimizle temasa geçmenizi öneririz.</p>
+                            <p>Alınan herhangi bir Geri Ödeme Talebi ile ilgili olarak, söz konusu Geri Ödeme Talebinden sorumlu Kullanıcının fiilen işleme onay vermiş olduğunu ve akabinde sağlanan hizmetleri kullanmış olduğunu kanıtlayan her türlü bilgi ve belgenin ilgili kredi kartı şirketine veya finans kuruluşuna sunulması yolu da dâhil olmak üzere itirazda bulunma hakkımız saklıdır.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">7. İptal</h3>
+                            <p>Burada yer alan koşulların herhangi birini ihlal etmeniz veya ödemeleri zamanında yapmamanız halinde, hesabınızı askıya alabiliriz veya iptal edebiliriz.</p>
+                            <h3 class="h5 lg:h5 m-0">7.1. Kullanıcı Tarafından Yapılan İptaller</h3>
+                            <p>Kullanıcı Hesabınızı ve/veya herhangi bir Webso Hizmetini kullanmayı dilediğiniz zaman durdurabilir ve Webso Hizmetlerine ilişkin talimatlara uygun bir şekilde bunların iptal edilmesini talep edebilirsiniz. Söz konusu iptale ilişkin yürürlük tarihi ve saati Webso Hizmetlerine ilişkin iptal işleminin tarafınızca tamamlandığı tarih ve saat olacak, Ücretli Hizmetlerin iptaline ilişkin yürürlük tarihi ve saati ise ilgili Ücretli Hizmetlerin abonelik döneminin bitimi olacaktır. Yukarıda belirtilenlere bakılmaksızın, bir Bayiden satın alınan herhangi bir Ücretli Hizmet (Ücretli Hizmetlerin Yenilenmesi dahil), siz ve Bayiniz arasında kararlaştırılan iptal koşullarına tabidir.</p>
+                            <p>Ücretli Hizmet Yenileme abonelikleri, yukarıda yer alan hükümlere bakılmaksızın, sadece hali hazırda ödeme yapmış olduğunuz dönemin sona ermesi üzerine sonlandırılacaktır. İptal süreci birkaç gün sürebileceğinden, bir sonraki yenilemenin ve ilgili ücretlendirmenin otomatik olarak yapılmasını önlemek için, iptal talebinin güncel hizmet döneminin sona ermesinden en az on dört (14) gün önce iletilmesi gerektiği unutulmamalıdır. Webso'dan satın aldığınız Ücretli Hizmetleri iptal etme hakkında daha fazla bilgi için lütfen Webso Yardım Merkezini ziyaret edin.</p>
+                            <p>Bir Bayiden satın aldığınız Ücretli Hizmetleri iptal etme hakkında bilgi için lütfen Bayinizle iletişime geçin.</p>
+                            <h3 class="h5 lg:h5 m-0">7.2. Webso Tarafından Yapılan İptaller</h3>
+                            <p>Webso Koşullarından herhangi birine uyulmaması ve/veya ödenmesi gereken Ücretlerin ödenmemesi halinde, Webso, Kullanıcı Hesabını ve Kullanıcı Platformunu (veya bunların belirli özelliklerini) ve ayrıca, ilişkili herhangi bir Webso Hizmetinin (örneğin Ücretli Hizmetler) veya Üçüncü Taraf Hizmetlerinin tarafınıza sağlanmasını (ödeme tamamen yapılıncaya kadar) askıya alma veya iptal etme hakkına sahiptir.</p>
+                            <p>Bir Bayi aracılığıyla Kullanıcı Hesabı açarsanız veya bir Bayiden Ücretli Hizmetler satın alırsanız, Webso, Kullanıcı Hesabınıza ve Kullanıcı Platformunuza (veya bunların belirli özelliklerine) erişimi askıya alma, sonlandırma veya engelleme hakkına sahiptir.</p>
+                            <p>Aynı zamanda ilgili Webso Hizmetleri veya Üçüncü Taraf Hizmetlerine erişmenize engel olabilir. Bu durum şu hallerde de geçerlidir: (a) Bayiniz tarafından Webso'ya böyle bir talepte bulunulması durumunda; veya (b) Bayi, Bayi Sözleşmesi uyarınca Webso'ya ödenmesi gereken herhangi bir tutarı ödemezse. Bu askıya alma ve fesih haklarını kabul ediyorsunuz ve böyle bir askıya alma veya fesih durumunda Webso'nun size karşı herhangi bir sorumluluğu olmayacağını onaylıyorsunuz. Bu tür askıya alma veya fesih işlemleri ile ilgili yalnızca Bayiye karşı başvuru yapabilirsiniz.</p>
+                            <h3 class="h5 lg:h5 m-0">7.3. Veri, İçerik ve Kapasite Kaybı</h3>
+                            <p>Kullanıcı Hesabınızın veya Kullanıcı Hesabınızla ilişkili herhangi bir Webso Hizmetinin veya Üçüncü Taraf Hizmetinin (gerek tarafınızca talep edilmesi üzerine, gerekse Webso'nun takdirine bağlı olarak) iptal edilmesi, her türlü Kullanıcı İçeriği, Nihai Kullanıcı verileri veya Kullanıcı Hesabınızda tutulan diğer kullanım verileri ve söz konusu Hizmetlere dahil olan herhangi bir alan adı rezervasyonu veya kaydı da dahil olmak üzere Kullanıcı Hesabınızın içerik, özellik veya kapasitesinin bir kısmının kaybına ("Kapasite Kaybı") neden olabilir. Webso söz konusu Kapasite Kaybıyla ilgili veya Kullanıcı Hesabınızın, Kullanıcı İçeriği veya Nihai Kullanıcı verilerinin yedeğinin alınmasıyla ilgili hiçbir şekilde yükümlülük altında değildir. Ayrıca, bir Kullanıcı Hesabının ve/veya herhangi bir Webso Hizmetinin iptal edilmesini takiben yeniden etkinleştirilmesinin, tamamen Webso'nun takdir yetkisi dahilinde tayin edilecek ek Ücretlere tabi olabileceği de unutulmamalıdır.</p>
+                            <p>Kullanıcı Hesabınızın veya Kullanıcı Platformunuzun feshedilmesinin ardından Webso, normal işleyiş sürecinde tüm verileri silme hakkını saklı tutar. Kullanıcı Hesabınız veya Kullanıcı Platformunuz feshedildikten sonra veriler kurtarılamaz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">8. E-Ticaret</h3>
+                            <p>Webso Hizmetleri ayrıca, Kullanıcı Platformunuz üzerinden mal, içerik, medya, etkinlik bileti ve hizmet satmanızı sağlayan belirli özellikler de içerir ("Kullanıcı Ürünleri" ve Webso Hizmetleri ile toplu olarak – "E-Ticaret").</p>
+                            <p>Kullanıcı Ürünleriniz ve E-Ticaret ile ilgili faaliyetlerinizden, Kullanıcı Platformunuzda yer alan veya atıfta bulunulan tüm promosyonlardan ve ilgili İçeriklerden ve bunlarla ilgili yasalara uyulmasından yalnızca siz sorumlusunuz. Biz sadece online E-Ticaret faaliyetlerinizi yönetmeniz için size platform sağlıyoruz. Kullanıcı Ürünlerinizin herhangi bir gerçek veya potansiyel alıcısıyla olan ilişkinize ve/veya herhangi bir işleminize dahil değiliz. Biri Kullanıcı Ürünlerinizi satın aldığında, bu tür işlemler için ödemeler Webso Ödemeleri veya bir üçüncü taraf ödeme hizmeti sağlayıcısı ("Ödeme Sağlayıcılar") aracılığıyla işleme alınacaktır.</p>
+                            <h3 class="h5 lg:h5 m-0">8.1. Ödeme Sağlayıcıları</h3>
+                            <p>Webso Ödemeleri'nin (ülkenizde mevcutsa) varsayılan ödeme sağlayıcınız olacağını onaylar ve kabul edersiniz.</p>
+                            <p>Webso Ödemeleri hesabı, burada referans olarak dahil edilen Webso Ödemeleri Hizmet Şartları'na tabi olacaktır. Sitenizi yayınlamadan ve ödemeleri kabul etmeden önce lütfen bu kullanım koşulları hizmetini okuyun.</p>
+                            <p>Ayrıca, bölgesel sınırlamalara tabi olarak Apple Pay ile ödeme kabul edebilirsiniz. Apple Pay'i kullanarak, Apple Pay Platformu Web Satıcısı Hüküm ve Koşulları'nı kabul etmiş olursunuz.  Diğer Ödeme Sağlayıcıları tarafından yapılan ödemelerin işlenmesi, söz konusu Ödeme Sağlayıcısının hizmet şartlarına tabi olacaktır. Bu tür Ödeme Sağlayıcıları ile olan ilişkinize veya bu Ödeme Sağlayıcıların eylemlerine taraf değiliz veya hiçbir şekilde sorumlu tutulamayız.</p>
+                            <h3 class="h5 lg:h5 m-0">8.2. Etkinlikler</h3>
+                            <p>Planınıza bağlı olarak Webso, siteniz üzerinden satılan etkinlik biletleri için sizden hizmet ücreti talep edebilir. İşbu belgeyle, Webso'nun gerektirdiği şekilde bu tür ücretleri ödemeyi kabul edersiniz ve Webso'ya, ödeme işleme ortaklarına veya Ödeme Sağlayıcınıza, uygun olduğu şekilde, bu ücretleri ilgili işlemlerinizden düşürme veya başka bir şekilde bu ücretleri tahsil etme talimatı verme yetkisi sunarsınız.</p>
+                            <h3 class="h5 lg:h5 m-0">8.3. E-Ticaret Taahhüt ve Garantileri</h3>
+                            <p>E-Ticaret özelliklerimizden herhangi birini kullanarak, aşağıdakileri onaylar, garanti eder ve kabul edersiniz:</p>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Kullanıcı Ürünlerinin satın alınması veya satılmasıyla ilgili tüm Vergiler de dahil olmak üzere, E-Ticaret faaliyetlerinizle ilişkili her türlü Vergi ve ücretten, doğru tutarları toplamak, raporlamak ve uygun makamlara havale etmek ve/veya Son Kullanıcılarınızı bu konuda bilgilendirmek ve yasaların gerektirdiği şekilde usulüne uygun olarak düzenlenmiş bir fatura sunmaktan yalnızca ve tamamen siz sorumlusunuz;</li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Webso'nun sunduğu E-Ticaret özelliklerince belirtilen Vergiler yalnızca örnek amaçlıdır ve buna göre hareket edilemez;</li>
+                            <li><p class="h6 lg:h6 m-0">3.</p> Kullanıcı Ürünlerinizi tedarik etme ve teslim etme ve bunları endüstri standartlarına uygun olarak güvenli ve profesyonel bir şekilde sağlama konusundaki tüm masraflardan siz sorumlusunuz ve bunları üstleniyorsunuz;</li>
+                            <li><p class="h6 lg:h6 m-0">4.</p> Kullanıcı Ürünleri ile ilgili yaptığınız tüm beyan ve vaatlerden ve tüm yardım, garanti ve destekten yalnızca siz sorumlusunuz ve herhangi bir soru, şikayet veya talep için Kullanıcı Platformunuzda gerçek iletişim bilgilerinizi sunacaksınız; ve</li>
+                            <li><p class="h6 lg:h6 m-0">5.</p> satışı, dağıtımı veya kullanımı yasak olan; veya tüketici hakları, fikri mülkiyet veya gizlilik hakları, ürün güvenliği, ticari düzenlemeler ve yaptırımlar, destek, bakım ve ihracat dahil olmak üzere yürürlükteki yasalara uymayan; tehlikeli, sahte, çalıntı, hileli, saldırgan veya kötü amaçlı olarak kabul edilebilecek herhangi bir Kullanıcı Ürünü sunamaz veya satamaz, böyle kabul edilebilecek herhangi bir bilgi, İçerik veya materyal sağlayamazsınız; ve -</li>
+                            <li><p class="h6 lg:h6 m-0">6.</p> Webso, tamamen kendi takdirine bağlı olarak, herhangi bir zamanda Kullanıcı Platformunuzu askıya alabilir, erişimi devre dışı bırakabilir veya kaldırabilir ve/veya herhangi bir Kullanıcı Ürününüzü - o anki zamanında Kullanıcı Platformunuzun bir parçası olarak dahil edilmiş, yayınlanmış veya yapılmış olsun veya olmasın - herhangi bir sorumluluk olmaksızın sizin veya Son Kullanıcıların herhangi birinden, buna bağlı olarak meydana gelen herhangi bir Kapasite Kaybı dahil olmak üzere, kaldırabilir.</li>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">9. Üçüncü Taraf Hizmetleri</h3>
+                            <p>Webso Hizmetleri, Kullanıcı Platformunuz için bir alan adı satın alabileceğiniz alan adı tescil firmaları, Webso Web Sitesi (Webso App Market de dâhil) üzerinden sunulan üçüncü taraf uygulamaları ve pencere öğeleri, üçüncü taraf Lisanslı İçeriği, medya dağıtım hizmetleri, E-Ticaret Ödeme Sağlayıcıları, fiziki ürün satıcıları, Kullanıcı Platformunuzla ilgili olarak size destek sağlayabilecek üçüncü taraf tasarımcılar da dâhil olmak üzere, ancak bunlarla sınırlı kalmaksızın Kullanıcı Platformunuzu ve genel anlamda kullanıcı deneyiminizi geliştirmek amacıyla kullanabileceğiniz bazı üçüncü taraf hizmet, ürün ve araçlarından (hep birlikte "Üçüncü Taraf Hizmetleri" olarak anılacaktır) faydalanmanıza ve bunları temin etmenize olanak sağlar.</p>
+                            <p>Söz konusu Üçüncü Taraf Hizmetlerinin tarafınıza ne şekilde (bazı Webso Hizmetleriyle paket halinde veya bütünleştirilmiş şekilde, Webso veya Webso tarafından belgelendirilen veya yetkilendirilen kişilerce ayrı olarak veya Webso Hizmetlerinin herhangi bir yerinde başka şekillerde) sunulmuş olduğuna bakılmaksızın, Webso, sadece tarafınızla anılan Üçüncü Taraf Hizmetleri arasında aracı bir platform olarak hareket etmekte olup, söz konusu Üçüncü Taraf Hizmetlerini herhangi bir şekilde desteklemediği gibi bunlarla ilgili herhangi bir sorumluluk veya yükümlülük altında da değildir. Webso, tarafınızla herhangi bir Üçüncü Taraf Hizmeti arasındaki herhangi bir ilişki veya işleme taraf olmadığı gibi, bunların izlenmesinden de hiçbir şekilde sorumlu değildir.</p>
+                            <p>Bu tür hizmetlerin Webso'ya ve/veya bu Üçüncü Taraf Hizmetlerinin sağlayıcılarına ek ücretler ödenmesini gerektirebileceğini kabul etmektesiniz.</p>
+                            <p>Söz konusu Üçüncü Taraf Hizmetlerinin her türlü kullanımıyla ilgili risk ve sorumluluklar münhasıran tarafınıza ait olup, ilgili Üçüncü Taraf Hizmetlerinin tabi olduğu ve bu hizmetleri kullanmadan önce incelemeniz önerilen belirli hukuki ve mali şartlara tabi olabilir.</p>
+                            <p>Hizmetlerimizi kullanırken üçüncü taraf hizmetlerini, araçlarını, kodlarını, algoritmalarını, veritabanlarını, ürünlerini, yazılımlarını veya mallarını kullanırsanız, kullanım koşullarına uygun hareket ettiğinizi beyan edersiniz. Örneğin, Hizmetleri kullanırken YouTube'u kullanıyorsanız, söz konusu hizmetlerin kullanım tarihinden itibaren geçerli sürümde yer alan geçerli YouTube şartlarına ve gizlilik politikasına uymanız gerekir.</p>
+                            <p>Webso, bu tür durumlarla karşılaşılmayacağını ummakla birlikte, tamamen kendi takdir yetkisi dâhilinde olmak kaydıyla herhangi bir Üçüncü Taraf Hizmetini -o an itibarıyla Kullanıcı Hesabınız ve/veya Kullanıcı Platformunuzun/Platformlarınızın bünyesi dâhilinde yer almış ya da bunların bir parçası yapılmış olsun ya da olmasın- tarafınıza veya herhangi bir Nihai Kullanıcıya karşı herhangi bir yükümlülük altına girmeksizin dilediği zaman askıya alabilir, erişime kapatabilir veya Kullanıcı Platformunuzdan/Platformlarınızdan ve/veya Webso Hizmetlerinden kaldırabilir.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">10. Uygunsuz Davranışlar ve Telif Hakları</h3>
+                            <p>Hizmetlerimizi kullanan herhangi birinin uygunsuz veya taciz edici davranışlarda bulunduğuna şahit olursanız lütfen tarafımıza bildirin.</p>
+                            <h3 class="h5 lg:h5 m-0">10.1. Uygunsuz Davranışlar ve Taciz</h3>
+                            <p>Webso Hizmetlerini kullanırken çeşitli kaynaklara ait Kullanıcı Platformlarına, Kullanıcı İçeriği veya Üçüncü Taraf Hizmetlerine maruz kalabilirsiniz ve bunlar hatalı, saldırgan, sakıncalı veya yasa dışı olabilir. Bunlarla ilgili olarak Webso aleyhinde sahip olduğunuz veya olabileceğiniz her türlü yasal veya hakkaniyete uygun hak ve hukuki çözüm yollarından feragat etmektesiniz.</p>
+                            <p>Herhangi bir Kullanıcının veya Üçüncü Taraf Hizmetinin uygunsuz hareket ettiğini veya herhangi bir Webso Hizmetini diğer şekillerde istismar ettiğini düşünüyorsanız lütfen bu formu kullanarak bu Kullanıcıyı ve/veya Üçüncü Taraf Hizmetini hemen tarafımıza bildiriniz. Bu konudaki bildiriminizin Webso'yu herhangi bir sorumluluk veya yükümlülük altına sokmayacağını, Webso'nun tamamen kendi takdir yetkisi dâhilinde olmak kaydıyla anılan bildirimi değerlendirerek harekete geçebileceğini, harekete geçmekten imtina edebileceğini veya harekete geçmeden önce ek bilgi ve belge talebinde bulunabileceğini kabul etmektesiniz.</p>
+                            <h3 class="h5 lg:h5 m-0">10.2. Telif Hakları</h3>
+                            <p>Webso, Dijital Milenyum Telif Hakkı Yasasına ("DMCA") ilişkin yorumu uyarınca hareket etmektedir.  Eserinizin kopyalandığını veya telif hakkı ihlali teşkil edecek başka şekillerde kullanıldığını düşünüyorsanız bu formu kullanarak söz konusu ihlali tarafımıza bildirebilir, veya aşağıda belirtilen bilgileri yazılı olarak Telif Hakkı Temsilcimize iletebilirsiniz: (1) telif hakkı sahibinin adına hareket etme yetkisine sahip olan kişinin iletişim bilgileri; (2) ihlal edildiğini iddia ettiğiniz telif hakkıyla korunan eserin tanımı; (3) ihlale neden olduğunu veya ihlal eylemine konu olduğunu ve kaldırılması veya erişime kapatılması gerektiğini iddia ettiğiniz materyalin tanımı, Webso'nun söz konusu materyali bulmasını sağlamaya yeterli düzeyde (URL adresi de içeren) bilgiler; (4) samimi kanaatinize göre materyalin şikayete konu edilen biçimde kullanılmasına telif hakkının sahibi, onun temsilcisi veya kanun tarafından izin verilmediğine dair bir beyan; ve (5) bildirimde yer alan bilgilerin doğru olduğuna ve yalan beyanda bulunma cezasına tabi olmak kaydıyla, ihlal edildiği iddia edilen telif hakkının sahibi olduğunuza veya onun adına hareket etme yetkisine sahip olduğunuza dair beyan.</p>
+                            <p>Webso, Kullanıcı Hesabınız veya Kullanıcı Platformunuz ile ilgili bir telif hakkı ihlaline ilişkin bir ihbar alması halinde tamamen kendi takdir yetkisi dâhilinde olmak kaydıyla, tarafınıza önceden bildirimde bulunulmasına gerek olmaksızın Kullanıcı Hesabınızı iptal edebilir, Kullanıcı Platformunuzu veya herhangi bir İçeriği kaldırabilir. Bu durumda, DMCA Bölüm 512 uyarınca aşağıdaki bilgileri içermesi gereken uygun bir karşı ihbarda bulunabilirsiniz: (1) adınız soyadınız, adresiniz, telefon numaranız ve ıslak veya elektronik imzanız; (2) materyale ait açıklama ve kaldırılmadan önceki konumu; (3) yalan beyanda bulunma cezasına tabi olmak kaydıyla, materyalin yanlışlıkla veya yanlış tanımlama nedeniyle kaldırılmış olduğuna dair beyan; (4) uygun bir yargı organına ilişkin rızanız ve (5) ilgili DMCA hükümleri kapsamında gerekli olan diğer her türlü bilgi. İşbu 13. bölüm uyarınca yapılan tüm ihbarlar, tamamen Webso'nun makul takdir yetkisi dâhilinde olmak kaydıyla kabul edilmiş, uygulanabilir ve DMCA'ya uygun olarak addedilebilir. Webso, ihlal bildiriminde bulunan kişi veya kurumu söz konusu karşı beyanla ilgili olarak bilgilendirme ve bu kapsamda yer alan herhangi bir ayrıntıyı verme hakkını saklı tutar.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">11. Garantilerin Reddi</h3>
+                            <p>Tarafımızca sağlanan Webso Hizmetleri, kanunların müsaade ettiği en geniş kapsamda olmak kaydıyla, ticari elverişliliğe, belirli bir amaca uygunluğa, işçilik kusurlarına ve diğer herhangi bir garantinin ihlal edilmediğine ilişkin bilumum zımni garanti veya koşullar da dâhil olmak üzere herhangi bir garanti altında olmaksızın "olduğu gibi", "garanti verilmeksizin" ve "kullanıma sunulduğu şekliyle" esasına göre sağlanmaktadır. Özellikle de, Webso Hizmetlerinin (veya bunların herhangi bir parçası, özelliği veya İçeriğinin) eksiksiz, doğru, belirli bir kalitede, herhangi bir şekilde güvenilir veya güvenli oldukları, tarafınızca (veya Nihai Kullanıcılarınız tarafından) öngörülen herhangi bir faaliyet, cihaz, işletim sistemi, tarayıcı, yazılım veya araç için uygun veya bunlarla uyumlu oldukları (veya herhangi bir zamanda bu niteliklere sahip olacakları), veya tarafınızın veya Nihai Kullanıcılarınızın (faaliyet gösterdiğiniz yargı alanı dâhilinde geçerli olanlar da dâhil olmak üzere) tabi olduğu herhangi bir kanuna uygun olduklarına veya çalıştırılmaları halinde her türlü virüs, yazılım hatası veya diğer zararlı bileşen veya program kısıtlamalarından arî olacaklarına dair tarafımızca herhangi bir beyan veya taahhüt verilmemektedir.  Ayrıca, Webso Hizmetleri kapsamında adı geçen veya kullanıma sunulan herhangi bir kurum, ürün veya hizmet (tüm Üçüncü Taraf Hizmetleri de dâhil olmak üzere) tarafımızca desteklenmemektedir - bu nedenle lütfen bunları kullanmadan veya bunlardan başka şekillerde faydalanmadan önce doğru olduklarını teyit edin.</p>
+                            <p>Webso, tamamen kendi takdir yetkisi dâhilinde olmak (ancak bu yönde bir yükümlülük altında olmamak) kaydıyla, herhangi bir Kullanıcı Platformunuzu ve/veya Kullanıcı İçeriğini herhangi bir nedenle, bildirimde bulunarak veya bildirimde bulunmaksızın dilediği zaman tarayabilir, izleyebilir ve/veya düzenleyebilir.</p>
+                            <p>Yukarıda yer alan aksine hükümlere bakılmaksızın, Webso hiçbir durumda herhangi bir Kullanıcı İçeriğinin "yayıncısı" olarak addedilemez, herhangi bir Kullanıcı İçeriğini herhangi bir şekilde desteklemez ve herhangi bir Kullanıcı veya diğer herhangi bir tarafça Webso Hizmetlerinde ve/veya Webso Hizmetleri vasıtasıyla yüklenen, duyurulan, yayınlanan ve/veya kullanıma sunulan herhangi bir Kullanıcı İçeriği, bunlarla ilgili olarak herhangi bir tarafça gerçekleştirilen herhangi bir kullanım veya yaşanan herhangi bir kayıp, silme veya zarar bakımından veya herhangi bir Kullanıcı İçeriğinin yayınlanması veya bunlara erişilmesi ve/veya istinat edilmesi nedeniyle veya bunlarla bağlantılı olarak tarafınızın veya başkalarının maruz kalabileceği herhangi bir ziyan, zarar, gider veya masraf bakımından hiçbir yükümlülük kabul etmez. Ayrıca, Webso, tarafınızca veya diğer herhangi bir tarafça karşılaşılabilecek herhangi bir yanlışlık, hakaret, karalama, yalan, müstehcenlik, pornografi, tahrik ve/veya yasa dışı ve/veya ihlal edici nitelikteki diğer Kullanıcı İçeriği nedeniyle herhangi bir yükümlülük altında olmayacaktır.</p>
+                            <p>Webso Hizmetlerini kullanma ve/veya Webso Hizmetleri üzerinden veya bunlarla bağlantılı olarak herhangi bir Üçüncü Taraf Hizmetine bağlama ve/veya bunlarla ilişki kurma ile ilgili risklerin söz konusu olduğunu ve Webso'nun söz konusu kullanım ve/veya etkileşimlerin belirli bir şekilde sonuçlanacağını garanti edemeyeceğini ve etmediğini kabul etmekte ve bu tür etkileşimlerle bağlantılı olarak ve/veya bunların sonucu olarak ortaya çıkabilecek her türlü riski, yükümlülüğü ve/veya zararı üstlenmektesiniz. Söz konusu riskler, diğerlerinin yanı sıra, Üçüncü Taraf Hizmetleri ve/veya Lisanslı İçerik ile ilgili olarak ve/veya bunlar tarafından yanlış bilgi verilmesini, garanti ve/veya sözleşme koşullarının ihlal edilmesini, hakların ihlal edilmesini ve netice kabilinden doğan bilumum tazminat taleplerini içerebilir.</p>
+                            <p>Webso, Webso Hizmetlerinin kişisel içeriğin barındırılması amacıyla kullanılmasını önermemektedir ve bu tür içeriğin ihlal edilmesi veya zarar görmesi ile ilgili herhangi bir güvenlik veya bütünlük yükümlülüğü veya riskini kabul etmez.</p>
+                            <p>Bazı Webso Hizmetlerinin hali hazırda BETA versiyonu halinde kullanıma sunulduğunu ve BETA testlerinin sürmekte olduğunu lütfen unutmayın. Bazı Webso Hizmetlerinin halen yazılım hataları içerebileceğini, kesintiler yaşanmasına neden olabileceğini ve planlanan veya belirlenen şekilde çalışmayabileceğini anlamakta ve kabul etmektesiniz. BETA aşamasındaki Webso Hizmetlerini kullanımınız, söz konusu Webso Hizmetlerinin BETA testlerine katılmayı kabul ettiğiniz anlamına gelmektedir.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">12. Sorumluluğun Sınırlandırılması</h3>
+                            <p>Geçerli yargı alanlarında kanunların müsaade ettiği en geniş kapsamda olmak kaydıyla, Webso, onun yetkilileri, yöneticileri, hissedarları, çalışanları, bağlı kuruluşları ve/veya aracıları (1)  herhangi bir içeriğe ait olan veya herhangi bir içerikte yer alan hata, yanlışlık veya sapmalardan; (2) Webso Hizmetlerini kullanımınızla ilgili her türlü kişisel yaralanma veya maddi zarardan; (3) sunucularımıza ve/veya herhangi bir kişisel bilgiye ve/veya bu kapsamda depolanan diğer bilgilere yetkisiz erişilmesinden veya bunların herhangi bir şekilde kullanılmasından; (4) Webso Hizmetlerine gönderilen veya Webso Hizmetlerinden alınan iletimde yaşanan herhangi bir kesinti veya duraklamadan; (5) Webso Hizmetlerinde yayınlanan, e-posta yoluyla gönderilen, iletilen veya başka şekillerde kullanıma sunulan herhangi bir İçeriğin veya Kullanıcı İçeriğinin kullanılmasından veya görüntülenmesinden; (6) her türlü internet arızası, donanım arızası, elektrik kesintisi, grev, işçi-işveren anlaşmazlığı, ayaklanma, ihtilal, toplumsal kargaşa, iş gücü veya materyal kıtlığı, yangın, sel, fırtına, deprem, patlama, doğal afet, savaş, terör, galaksiler arası çatışma, hükümet icraatı, mahkeme, temsilci veya hakem heyeti kararı veya üçüncü taraflarca âdem-i ifa; ve/veya (7) Webso Hizmetlerinin tümünün veya Hizmetlerden herhangi birinin kullanımından ya da kullanılamamasından kaynaklanan kullanım, veri, kâr, şerefiye kaybı ve diğer maddi olmayan kayıplar dâhil olmak üzere Webso'nun makul kontrolü dışında meydana gelen olaylardan kaynaklanan bilumum zarar/ziyan da dâhil olmak üzere her türlü doğrudan, dolaylı, arızi, özel, cezai veya netice kabilinden doğan zararlar bakımından tarafınıza karşı herhangi bir yükümlülük altında tutulamaz.</p>
+                            <p>Bu sorumluluk sınırlandırmalarının Webso'nun hizmetlerinin öneminin kısmen dikkate alınmasıyla belirlenen ve üzerinde mutabık kalınan bir risk dağıtımı anlamına geldiğini ve bu sınırlandırmaların Webso'nun söz konusu sorumlulukların doğma olasılığıyla ilgili olarak bilgilendirilmiş olduğu durumlarda bile geçerli olacağını kabul etmektesiniz.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">13. Tazminat</h3>
+                            <p>Webso'yu, onun yetkililerini, yöneticilerini, hissedarlarını, çalışanlarını, bağlı kuruluşlarını ve aracılarını aşağıda belirtilenlerden doğan her türlü tazminat talebi, zarar, yükümlülük, ziyan, sorumluluk, masraf, borç ve gider (avukat ücretleri de dâhil olmak üzere) bakımından savunmayı, tazmin etmeyi ve masun tutmayı kabul etmektesiniz: (1) bu Kullanım Koşullarının herhangi bir hükmünün veya diğer herhangi bir Webso Koşulunun tarafınızca ihlal edilmesi; (2) her türlü telif hakkı, erişim hakkı, mülkiyet hakkı ve mahremiyet hakkı da dâhil olmak üzere, herhangi bir üçüncü taraf hakkının Kullanıcı Platformunuzdan veya Kullanıcı İçeriğinizden ve/veya Webso Hizmetlerinin lehinize başlattığı her türlü yasal işlem de dâhil, ancak bunlarla sınırlı kalmaksızın Webso Hizmetlerini kullanmanızdan kaynaklanan nedenlerle tarafınızca ihlal edilmesi; (3) Kullanıcı Platformunuzun ve/veya Kullanıcı İçeriğinizin bir üçüncü tarafın zarara maruz kalmasına neden olduğuna dair diğer tür talep ve iddialar.</p>
+                            <h3 class="h4 md:h3 mt-3 lg:mt-6 mb-2">14. Genel</h3>
+                            <p>Webso herhangi bir Webso Hizmetini (veya bunlara ilişkin herhangi bir özelliği veya bunlar için uygulanan fiyatları) önceden haber vererek veya vermeksizin dilediği zaman ve dilediği şekilde değiştirme, askıya alma veya sonlandırma ve/veya herhangi bir nedenle Webso Hizmetlerinden herhangi birine erişiminizi iptal etme (Webso Hizmetleri ile bağlantılı olarak tarafınızca oluşturulmuş materyallerin tümünün kaldırılması da dâhil) ve/veya herhangi bir Webso Koşulunu dilediği zaman ve dilediği şekilde değiştirebilme hakkını saklı tutar. Bu Webso Hizmetlerinin herhangi bir şekilde değiştirilmesi, askıya alınması veya sona erdirilmesine ilişkin olarak Webso'nun size veya herhangi bir üçüncü tarafa karşı hiçbir yükümlülüğünün bulunmayacağını kabul etmektesiniz. Bu tür değişikliklerin ek Ücretler ödenmesini gerektirmesi halinde, bu Ücretler ilgili değişiklikler etkinleştirilmeden önce tarafınıza bildirilecektir. Anılan Ücretleri ödememeniz veya ödemeyi reddetmeniz halinde (tamamen kendi takdir yetkimiz dâhilinde olmak kaydıyla) Kullanıcı Hesabınızı iptal edebilir (Bölüm 7'de ayrıntılı olarak açıklanan şekilde), söz konusu değişiklikleri etkinleştirmeksizin o tarih itibarıyla güncel olan Webso Hizmetlerinizi desteklemeye devam edebilir veya tarafınıza alternatif Hizmetler sağlayabiliriz.</p>
+                            <h3 class="h5 lg:h5 m-0">14.1. Anlaşmanın Bütünlüğü</h3>
+                            <p>Bu Kullanım Koşulları, Webso Koşulları ve Webso'nun tarafınıza iletmiş olduğu diğer hukuki bildirimler veya ücret bildirimleri ile birlikte, konuları bakımından tarafınızla Webso arasındaki anlaşmanın bütününü teşkil eder ve herhangi bir Webso Hizmetiyle ilgili olarak temsilcilerimiz arasında veya bunlar tarafından yapılanlar da dahil olmak üzere Webso ile tarafınız arasındaki gerek yazılı, gerekse sözlü her türlü eski veya eş zamanlı anlaşma, mutabakat, vaat, koşul, müzakere, taahhüt veya beyanın yerine geçer.  Ayrıca, herhangi bir Webso Koşulunu kabul ederken Webso'nun herhangi bir vaadine, teşvikine, beyanına, ifadesine, açıklamasına veya açıklama yükümlülüğüne istinat etmediğinizi de kabul etmektesiniz.</p>
+                            <h3 class="h5 lg:h5 m-0">14.2. Devir</h3>
+                            <li><p class="h6 lg:h6 m-0">1.</p> Webso, onayınız olmaksızın ve tarafınıza önceden bildirimde bulunmaksızın bu koşullar kapsamındaki haklarını ve/veya yükümlülüklerini ve Webso Hizmetlerine ve/veya Lisanslı İçeriğe ilişkin mülkiyet haklarını bir üçüncü tarafa devredebilir. Bu koşullar kapsamındaki haklarınızı ve yükümlülüklerinizi önceden Webso'dan yazılı onay almaksızın devir veya temlik edemezsiniz. Webso'nun önceden alınacak açık ve yazılı onayı olmaksızın yapılacak her türlü devir veya devir girişimi geçersiz addedilir. Her durumda, işbu Bölüm 14.2 uyarınca gerçekleştirilecek bir devir veya temlik işlemi kendiliğinden Webso'ya veya tarafınıza o tarihte geçerli olan herhangi bir Webso Hizmetini veya Üçüncü Taraf Hizmetini iptal etme hakkını tanımaz.</li>
+                            <li><p class="h6 lg:h6 m-0">2.</p> Eğer bir Bayi Kullanıcısıysanız, Kullanıcı Hesabınız veya Kullanıcı Platformunuzla ilgili aboneliğiniz (veya onun herhangi bir kısmı) Webso'ya devredilebilir. Bayi ile bir Webso Kullanıcı Hesabına veya Kullanıcı Platformuna aboneliğinizin (veya herhangi bir kısmının) Webso'ya atanması durumunda, Kullanıcı Hesabınıza ve Kullanıcı Platformunuza erişme ve bunları kullanma haklarınızın tamamen (zaman zaman değiştirilebileceği gibi) bu Kullanım Koşullarına tabi olacağını ve bu Kullanım Koşullarının sınırlama olmaksızın, burada yer alan faturalandırma ve ödeme hükümleri dahil olmak üzere tam olarak uygulanmasına izin verdiğinizi kabul edersiniz, Bu tür bir atamanın ardından, Webso'nun talebi üzerine, söz konusu atamadan sonra başlayan herhangi bir Ücretli Hizmet için ödemeyi güvence altına almak adına gereken bilgileri sağlayacağınızı kabul edersiniz.</li>
+                            <h3 class="h5 lg:h5 m-0">14.3. Devir</h3>
+                            <p>Webso Koşullarında yer alan herhangi bir hükmün yargı yetkisini haiz bir mahkeme tarafından geçersiz, kanuna aykırı, hükümsüz veya herhangi bir nedenle uygulanamaz addedilmesi halinde, söz konusu hüküm bölünebilir olarak değerlendirilir ve diğer hükümlerin geçerliliğini ve uygulanabilirliğini etkilemez. Webso Koşullarının herhangi birine ilişkin bir ihlal veya temerrütten feragat edilmesi, daha önce yapılan veya daha sonra yapılacak olan herhangi bir ihlal veya temerrütten feragat olarak addedilmez.</p>
+                        </div>
+                        <div class="page-footer panel">
+                            <p class="fs-7 opacity-60 m-0">Güncellenen Tarih: 20 Haziran, 2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wrapper end -->
+
+               <!-- Footer start -->
+               <footer id="uc-footer" class="uc-footer panel overflow-hidden uc-dark">
+                <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
+                    <div class="container max-w-xl">
+                        <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                            <div class="uc-footer-widgets panel">
+                                <div class="row child-cols-6 md:child-cols col-match g-4">
+                                    <div class="col-12 lg:col-4">
+                                        <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                            <div class="vstack gap-2">
+                                                <a href="index.html">
+                                                    <img class="w-32px text-primary" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                                                </a>
+                                                <p>Bizimle, herkes kolayca profesyonel web siteleri oluşturabilir. Sürükle-bırak arayüzümüz ve şablonlarımızla, kodlama gerektirmeden hayalinizdeki siteyi hızla oluşturun. Dijital dünyada yer almak artık çok kolay!</p>
+                                            </div>
+                                            <div class="hstack items-start gap-1">
+                                                <a href="#">
+                                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                                </a>
+                                                <a href="#">
+                                                    <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-about.html">Hakkımızda</a></li>
+                                            <li><a href="page-pricing.html">Planlar</a></li>
+                                            <li><a href="page-features.html">Özellikler</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-integrations.html">Blog</a></li>
+                                            <li><a href="page-career.html">Kariyer</a></li>
+                                            <li><a href="page-contact.html">İletişim</a></li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <ul class="nav-y gap-1 fw-medium">
+                                            <li><a href="page-faq.html">S.S.S</a></li>
+                                            <li><a href="page-terms.html">Kullanım Koşulları</a></li>
+                                            <li><a href="page-privacy.html">Gizlilik Politikası</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                                <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+                                    <p class="opacity-60">Webso Teknoloji A.Ş. © 2024, Bütün hakları saklıdır.</p>
+                                </div>
+                                <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+                                    <ul class="nav-x gap-2">
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-facebook"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-instagram"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><i class="icon icon-2 unicon-logo-youtube"></i></a>
+                                        </li>
+                                    </ul>
+                                    <div class="vr"></div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+    
+            <!-- Footer end -->
+
+        <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper-defined-timelines.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
+
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                setDarkMode(1);
+            } else if (getSchema === "light") {
+                setDarkMode(0);
+            }
+        </script>
+    </body>
+</html>

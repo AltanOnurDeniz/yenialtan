@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="zxx" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webso | Tasarla Yayınla Ödeme Al</title>
+        <meta name="description" content="SaaS, Software and Startup Site Template">
+        <meta name="theme-color" content="#178d72">
+
+        <!-- Meta for SEO and Link Cards -->
+        <meta name="twitter:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Lexend">
+        <meta property="og:description" content="SaaS, Software and Startup Site Template">
+        <meta property="og:url" content="https://unistudio.co/html/lexend/">
+        <meta property="og:site_name" content="Lexend">
+        <meta property="og:image" content="../assets/images/common/lexend-preview.jpg">
+        <meta property="og:image:width" content="1180">
+        <meta property="og:image:height" content="600">
+        <meta property="og:image:type" content="image/png">
+        <link rel="canonical" href="https://unistudio.co/html/lexend/">
+
+        <!-- preload head styles -->
+        <link rel="preload" href="../assets/css/unicons.min.css" as="style">
+        <link rel="preload" href="../assets/css/swiper-bundle.min.css" as="style">
+
+        <!-- preload footer scripts -->
+        <link rel="preload" href="../assets/js/libs/jquery.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/scrollmagic.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/swiper-bundle.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/anime.min.js" as="script">
+        <link rel="preload" href="../assets/js/libs/gsap.min.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/data-attr-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/swiper-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper.js" as="script">
+        <link rel="preload" href="../assets/js/helpers/anime-helper-defined-timelines.js" as="script">
+        <link rel="preload" href="../assets/js/uikit-components-bs.js" as="script">
+        <link rel="preload" href="../assets/js/app.js" as="script">
+
+        <!-- app head for bootstrap core -->
+        <script src="../assets/js/app-head-bs.js"></script>
+
+        <!-- include uni-core components -->
+        <link rel="stylesheet" href="../assets/js/uni-core/css/uni-core.min.css">
+
+        <!-- include styles -->
+        <link rel="stylesheet" href="../assets/css/unicons.min.css">
+        <link rel="stylesheet" href="../assets/css/prettify.min.css">
+        <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+
+        <!-- include main style -->
+        <link rel="stylesheet" href="../assets/css/theme/main.min.css">
+
+        <!-- include scripts -->
+        <script src="../assets/js/uni-core/js/uni-core-bundle.min.js"></script>
+    </head>
+    <body class="uni-body panel bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-200 overflow-x-hidden">
+
+        <!--  Search modal -->
+        <div id="uc-search-modal" class="uc-modal-full uc-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog d-flex justify-center bg-white text-dark dark:bg-gray-900 dark:text-white" data-uc-height-viewport="">
+                <div class="uc-modal-close-full m-1 p-0 vstack gap-narrow text-center">
+                    <button class="icon-3 btn btn-md btn-dark dark:bg-white dark:text-dark w-24px sm:w-32px h-24px sm:h-32px rounded-circle flex-1" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                    <span class="ft-tertiary fs-7">ESC</span>
+                </div>
+
+                <div class="panel w-100 sm:w-500px px-2 py-10">
+                    <h3 class="h4 sm:h2 text-center">Ne aramıştınız?</h3>
+                    <form class="hstack gap-1 mt-4 border-bottom p-narrow dark:border-gray-700" action="?">
+                        <span class="d-inline-flex justify-center items-center w-24px sm:w-40 h-24px sm:h-40px opacity-50"><i class="unicon-search icon-3"></i></span>
+                        <input type="search" name="q" class="form-control-plaintext ms-1 fs-6 sm:fs-5 w-full dark:text-white" placeholder="Ara..." aria-label="Search" autofocus>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!--  Newsletter modal -->
+        <div id="uc-newsletter-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog w-800px bg-white text-dark dark:bg-gray-900 dark:text-white rounded-3 p-1 overflow-hidden">
+                <button class="uc-modal-close-default p-0 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+                <div class="row md:child-cols-6 col-match g-0">
+                    <div class="d-none md:d-flex">
+                        <div class="position-relative w-100 ratio-1x1 rounded-2 overflow-hidden">
+                            <img class="media-cover" src="../assets/images/common/newsletter.jpg" alt="Newsletter image">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="panel vstack self-center p-4 md:py-8 text-center">
+                            <h3 class="h3 md:h2">Haber bültenimize abone ol</h3>
+                            <p class="ft-tertiary">Yeni gönderiler, haberler ve güncellemeler hakkında bildirim almak için 10 binden fazla kişiye katılın.</p>
+                            <div class="panel mt-2 lg:mt-4">
+                                <form class="vstack gap-1">
+                                    <input type="email" class="form-control form-control-sm w-full fs-6 bg-white dark:border-white dark:border-gray-700" placeholder="Email...">
+                                    <button type="submit" class="btn btn-sm btn-primary">Üye ol</button>
+                                </form>
+                                <p class="fs-7 mt-2">Endişelenmeyin, spam yapmıyoruz!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Menu panel -->
+        <div id="uc-menu-panel" data-uc-offcanvas="overlay: true;">
+            <div class="uc-offcanvas-bar bg-white text-dark dark:bg-gray-900 dark:text-white">
+                <header class="uc-offcanvas-header hstack justify-between items-center pb-2 bg-white dark:bg-gray-900">
+                    <div class="uc-logo">
+                        <a href="index.html" class="h5 text-none text-gray-900 dark:text-white">
+                            <img class="w-32px" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                        </a>
+                    </div>
+                    <button class="uc-offcanvas-close rtl:end-auto rtl:start-0 m-1 mt-2 icon-3 btn border-0 dark:text-white dark:text-opacity-50 hover:text-primary hover:rotate-90 duration-150 transition-all" type="button">
+                        <i class="unicon-close"></i>
+                    </button>
+                </header>
+
+                <div class="panel">
+                    <form id="search-panel" class="form-icon-group vstack gap-1 mb-2" data-uc-sticky="">
+                        <input type="email" class="form-control form-control-sm fs-7 rounded-default" placeholder="Ara...">
+                        <span class="form-icon text-gray">
+                            <i class="unicon-search icon-1"></i>
+                        </span>
+                    </form>
+                    <ul class="nav-y gap-narrow fw-medium fs-6" data-uc-nav>
+                        <li><a href="index.html">Ana Sayfa</a></li>
+                        <li><a href="page-feature.html">Ürünler</a></li>
+                        <li><a href="page-pricing.html">Paketler</a></li>
+                        <li><a href="page-about.html">Hakkımızda</a></li>
+                        <li><a href="page-career.html">Kariyer</a></li>
+                        <li><a href="page-contact.html">İletişim</a></li>
+                        <li class="hr opacity-10 my-1"></li> 
+                        <li><a href="sign-in.html">Giriş Yap</a></li>
+                        <li><a href="sign-up.html">Kayıt Ol</a></li>
+                    </ul>
+                    <ul class="social-icons nav-x mt-4">
+                        <li>
+                            <a href="#"><i class="unicon-logo-medium icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-x-filled icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-instagram icon-2"></i></a>
+                            <a href="#"><i class="unicon-logo-pinterest icon-2"></i></a>
+                        </li>
+                    </ul>
+                    <div class="py-2 hstack gap-2 mt-4 bg-white dark:bg-gray-900" data-uc-sticky="position: bottom">
+                        <div class="vstack gap-1">
+                            <span class="fs-7 opacity-60">Arayüz seçimi:</span>
+                            <div class="darkmode-trigger" data-darkmode-switch="">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider fs-5"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Contact modal -->
+        <div id="uc-contact-modal" data-uc-modal="overlay: true">
+            <div class="uc-modal-dialog lg:max-w-650px bg-secondary text-dark dark:bg-gray-800 dark:text-white rounded-1-5">
+                <button class="uc-modal-close-default top-0 ltr:end-0 rtl:start-0 rtl:end-auto m-2 p-0 border-0 icon-2 lg:icon-3 btn btn-md dark:text-white transition-transform duration-150 hover:rotate-90" type="button">
+                    <i class="unicon-close"></i>
+                </button>
+
+                <div class="panel vstack gap-2 md:gap-4 text-center">
+                    <div class="panel cstack px-3 md:px-4 py-4 md:py-8 m-0 lg:mx-auto">
+                        <div class="panel vstack justify-center items-center gap-2 sm:gap-4 text-center">
+                            <h4 class="h5 lg:h4 m-0">Kısaca bahsedin, size yardımcı olalım.</h4>
+                            <div class="panel w-100 sm:w-350px md:w-500px mx-auto">
+                                <form class="vstack gap-2">
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="İsim*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="text" placeholder="Soyisim*" required>
+                                    </div>
+                                    <div class="vstack lg:hstack gap-2">
+                                        <input class="form-control h-48px w-100 md:w-1/2 bg-white dark:border-white dark:text-dark" type="email" placeholder="E-mail adresi*" required>
+                                        <input class="form-control h-48px w-100 md:w-1/2 rtl:text-end bg-white dark:border-white dark:text-dark" type="tel" placeholder="Telefon numarası*" required>
+                                    </div>
+                                    <input class="form-control h-48px w-full bg-white dark:border-white dark:text-dark" type="text" placeholder="Şirket ismi*" required>
+                                    <textarea class="form-control min-h-150px w-full bg-white dark:border-white dark:text-dark" placeholder="Mesaj..."></textarea>
+                                    <button class="btn btn-primary btn-md text-white mt-2" type="submit">Gönder</button>
+                                    <p class="fs-7 opacity-70 mt-2 text-center">Platform hakkında bilgi almak ve tüm sorularınızı yanıtlamak için buradayız. Nasıl çalıştığını görmeye hazır olun!</p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  Bottom Actions Sticky -->
+        <div class="backtotop-wrap position-fixed bottom-0 end-0 z-99 m-2 vstack">
+            <div class="darkmode-trigger cstack w-40px h-40px rounded-circle text-none bg-gray-100 dark:bg-gray-700 dark:text-white" data-darkmode-toggle="">
+                <label class="switch">
+                    <span class="sr-only">Dark mode toggle</span>
+                    <input type="checkbox">
+                    <span class="slider fs-5"></span>
+                </label>
+            </div>
+            <a class="btn btn-sm bg-primary text-white w-40px h-40px rounded-circle" href="to_top" data-uc-backtotop>
+                <i class="icon-2 unicon-chevron-up"></i>
+            </a>
+        </div>
+
+        <!-- Header start -->
+        <header class="uc-header uc-navbar-sticky-wrap z-999 uc-dark" style="--uc-nav-height: 80px" data-uc-sticky="start: 170; show-on-up: true; animation: uc-animation-slide-top; sel-target: .uc-navbar-container; cls-active: uc-navbar-sticky; cls-inactive: uc-navbar-transparent; end: !*;">
+            <nav class="uc-navbar-container uc-navbar-float ft-tertiary z-1" data-anime="translateY: [-40, 0]; opacity: [0, 1]; easing: easeOutExpo; duration: 750; delay: 0;">
+                <div class="container max-w-xl">
+                    <div class="uc-navbar min-h-64px lg:min-h-80px text-gray-900 dark:text-white" data-uc-navbar="mode: click; animation: uc-animation-slide-top-small; duration: 150;">
+                        <div class="uc-navbar-left">
+                            <div class="uc-logo text-dark dark:text-white">
+                                <a class="panel text-none" href="index.html" style="width: 140px">
+                                    <img class="dark:d-none" src="../assets/images/common/webso-dark-logo.svg" alt="Webso-logo">
+                                    <img class="d-none dark:d-block" src="../assets/images/common/webso-light-logo.svg" alt="Webso-logo">
+                                </a>
+                            </div>
+                            <ul class="uc-navbar-nav gap-3 xl:gap-4 d-none lg:d-flex fw-medium ms-2">
+                                <li>
+                                    <a href="#">Şablonlar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; stretch: x; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row g-0 col-match" data-uc-grid>
+                                            <div class="col-7">
+                                                <div class="panel p-3">
+                                                    <h6 class="h6 ms-3">Bütün şablonları incele</h6>
+                                                    <div class="row child-cols-3 g-0">
+                                                        <div>
+                                                            <a href="index.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index.png" alt="Home - 01">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 1</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-2.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-2.png" alt="Home - 02">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 2</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-3.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-3.png" alt="Home - 03">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 3</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="index-4.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/index-4.png" alt="Home - 04">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Home 4</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-features.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-features.png" alt="Features">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Features</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-pricing.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-pricing.png" alt="Pricing">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Pricing</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-integrations.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-integrations.png" alt="Integrations">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">Integrations</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        <div>
+                                                            <a href="page-about.html" class="vstack p-1 text-none text-center rounded-1-5 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150">
+                                                                <div class="featured-image panel border shadow-xs rounded-1 overflow-hidden">
+                                                                    <img src="../assets/images/demos/screenshots/page-about.png" alt="About">
+                                                                </div>
+                                                                <div class="panel p-1">
+                                                                    <h5 class="fs-7 m-0">About</h5>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-5">
+                                                <div class="panel p-3 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <h6 class="h6 ms-3">Diğer sayfalar</h6>
+                                                    <div class="row child-cols-6 g-0">
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Career</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career-detail.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Job details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact-2.html">
+                                                                        <i class="icon-1 unicon-wikis fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Contact v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-2.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v2</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog-details-3.html">
+                                                                        <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Blog details v3</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div>
+                                                            <ul class="uc-nav uc-navbar-dropdown-nav">
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-2.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign up</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-3.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Sign in</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="index-4.html">
+                                                                        <i class="icon-1 unicon-unlocked fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Reset Password</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Shop</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-cart.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Cart</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-checkout.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Checkout</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-product-detail.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Product detail</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="shop-order.html">
+                                                                        <i class="icon-1 unicon-shopping-cart fw-bold text-primary dark:text-secondary"></i>
+                                                                        <span class="vstack gap-narrow">
+                                                                            <b class="fw-bold dark:text-white">Order confirmation</b>
+                                                                        </span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Ürünler <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-checkmark fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Sürükle-Bırak</b>
+                                                                <p class="fw-normal">Her seviyeden kullanıcı için uygun!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-pie fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">CRM Entegrasyonları</b>
+                                                                <p class="fw-normal">İşletmenizi kolaylıkla yönetin.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-increase-level fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">E-Ticaret Çözümleri</b>
+                                                                <p class="fw-normal">Her yerden satış yapmanın keyfini çıkarın.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-chart-venn-diagram fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Çoklu Birimler</b>
+                                                                <p class="fw-normal">Global pazara hitap edin!</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <div class="vstack gap-2 p-3 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <div class="featured-image panel" data-uc-lightbox="video-autoplay: true;">
+                                                        <figure class="featured-image m-0 rounded ratio ratio-3x2 rounded-1-5 uc-transition-toggle overflow-hidden">
+                                                            <img class="media-cover image uc-transition-scale-up uc-transition-opaque" src="../assets/images/common/login.webp" alt="Image">
+                                                        </figure>
+                                                        <button class="btn btn-md btn-alt-primary p-0 w-32px h-32px position-absolute bottom-0 ltr:start-0 rtl:end-0 m-2"><i class="icon-1 unicon-play-filled-alt"></i></button>
+                                                        <a href="../assets/images/media/lexend_vid.webm" data-caption="Easy project managment of any complexity." data-attrs="width: 640; height: 480;" class="position-cover"></a>
+                                                    </div>
+                                                    <div class="vstack justify-between gap-2">
+                                                        <div class="vstack gap-1">
+                                                            <h5 class="h6 m-0">İhtiyacınız olan her şey parmaklarınızın ucunda</h5>
+                                                            <p class="fs-7 opacity-70">Farklı görevler için birden fazla yazılım zorluğuna elveda.</p>
+                                                        </div>
+                                                        <a href="page-pricing.html" class="btn btn-sm btn-primary">Şimdi dene</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Kaynaklar <span data-uc-navbar-parent-icon></span></a>
+                                    <div class="uc-navbar-dropdown w-600px ft-primary text-unset fs-6 fw-normal p-0 hide-scrollbar rounded-2 overflow-hidden" data-uc-drop="mode: click; offset: 0; boundary: !.uc-navbar; animation: uc-animation-slide-top-small; duration: 150;">
+                                        <div class="row child-cols-6 g-0 col-match" data-uc-grid>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="blog.html">
+                                                            <i class="icon-1 unicon-course fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Blog</b>
+                                                                <p class="fw-normal">Blog bültenimize katılın ve her yeni yazıyı ilk siz okuyun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="#uc-newsletter-modal" data-uc-toggle="">
+                                                            <i class="icon-1 unicon-email fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Bülten</b>
+                                                                <p class="fw-normal">En son güncellemeler ve özel içerikler için bültenimize abone olun.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-features.html">
+                                                            <i class="icon-1 unicon-play fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Video Eğitimleri</b>
+                                                                <p class="fw-normal">İşletmenizi birlikte büyütelim.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <ul class="uc-nav uc-navbar-dropdown-nav p-2 h-100 bg-gray-25 dark:bg-gray-300 dark:bg-opacity-5">
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-career.html">
+                                                            <i class="icon-1 unicon-star fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Kariyer</b>
+                                                                <p class="fw-normal">Vizyonumuzu paylaşan insanlar arıyoruz.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="hstack items-start gap-2 p-2 hover:bg-gray-600 hover:bg-opacity-5 dark:hover:bg-white duration-150 rounded-1-5" href="page-contact.html">
+                                                            <i class="icon-1 unicon-headset fw-bold text-primary dark:text-secondary"></i>
+                                                            <span class="vstack gap-narrow mt-nnarrow">
+                                                                <b class="fw-bold dark:text-white">Yardım Merkezi</b>
+                                                                <p class="fw-normal">Özel ekibimiz sorularınızı derhal yanıtlayacaktır.</p>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li><a href="page-pricing.html">Paketler</a></li>
+                            </ul>
+                        </div>
+                        <div class="uc-navbar-right">
+                            <div class="d-none xl:d-block">
+                                <a class="text-none fw-medium" href="#uc-contact-modal" data-uc-toggle>
+                                    <span>Size Ulaşalım</span>
+                                </a>
+                            </div>
+                            <div class="d-none lg:d-block">
+                                <a class="text-none fw-medium" href="sign-in.html">
+                                    <span>Giriş Yap</span>
+                                </a>
+                            </div>
+                            <a class="btn btn-sm btn-primary text-white text-none d-none lg:d-inline-flex" href="page-pricing.html">Siteni Oluştur</a>
+                            <a class="d-block lg:d-none" href="#uc-menu-panel" data-uc-navbar-toggle-icon data-uc-toggle></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Header end -->
+
+        <!-- Wrapper start -->
+        <div id="wrapper" class="wrap">
+
+            <!-- Section start -->
+            <div id="hero_header" class="hero-header section panel overflow-hidden">
+                <div class="position-absolute top-0 start-0 end-0 h-500px xl:h-screen bg-gray-900"></div>
+                <div class="position-absolute top-0 start-0 end-0 min-h-screen overflow-hidden d-none lg:d-block uc-dark" data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 250; delay: anime.stagger(50, {start: 500});">
+                    <div class="position-absolute top-0 start-0 rotate-45" style="top: 40% !important; left: 25% !important">
+                        <img class="w-32px text-gray-900 dark:text-white" src="../assets/images/template/star-1.svg" alt="star-1" data-uc-svg>
+                    </div>
+                    <div class="position-absolute top-0 end-0 rotate-45" style="top: 25% !important; right: 12% !important">
+                        <img class="w-24px text-gray-900 dark:text-white" src="../assets/images/template/star-2.svg" alt="star-2" data-uc-svg>
+                    </div>
+                    <div class="position-absolute top-0 start-0 translate-middle-y -rotate-12" style="top: 20% !important; left: 12% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-trophy.svg" alt="icon-trophy">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-trophy-dark.svg" alt="icon-trophy-dark">
+                    </div>
+                    <div class="position-absolute top-0 start-0 translate-middle-y rotate-45 ms-n3" style="top: 35% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-location.svg" alt="icon-location">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-location-dark.svg" alt="icon-location-dark">
+                    </div>
+                    <div class="position-absolute top-0 start-0 translate-middle-y" style="top: 80% !important; left: 4% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-globe.svg" alt="icon-globe">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-globe-dark.svg" alt="icon-globe-dark">
+                    </div>
+                    <div class="position-absolute top-0 end-0 translate-middle-y rotate-45" style="top: 53% !important; right: 18% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-crown.svg" alt="icon-crown">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-crown-dark.svg" alt="icon-crown-dark">
+                    </div>
+                    <div class="position-absolute top-0 end-0 translate-middle-y -rotate-45" style="top: 80% !important; right: 8% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-diamond.svg" alt="icon-diamond">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-diamond-dark.svg" alt="icon-diamond-dark">
+                    </div>
+                    <div class="position-absolute top-0 end-0 translate-middle-y -rotate-12 me-n3" style="top: 35% !important">
+                        <img class="w-56px xl:w-64px d-block dark:d-none" src="../assets/images/template/icon-chat.svg" alt="icon-chat">
+                        <img class="w-56px xl:w-64px d-none dark:d-block" src="../assets/images/template/icon-chat-dark.svg" alt="icon-chat-dark">
+                    </div>
+                </div>
+                <div class="section-outer panel pb-6 sm:pb-9 pt-9 sm:pt-10">
+                    <div class="container max-w-xl">
+                        <div class="section-inner panel">
+                            <div class="vstack gap-6 sm:gap-8 xl:gap-9">
+                                <div class="panel text-center max-w-850px mx-auto uc-dark">
+                                    <div class="vstack items-center gap-2 text-white" data-anime="targets: >*; translateY: [24, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                        <h1 class="h2 sm:h1 lg:display-6 xl:display-4 mt-4 sm:mt-0">
+                                            İşletmeni Tasarla, <br class="d-none sm:d-block">
+                                            Yayınla, Ödeme al!
+                                        </h1>
+                                        <a href="page-pricing.html" class="btn btn-md lg:btn-lg btn-primary text-white min-w-150px sm:mt-1 lg:mt-2">Denemeye Başla!</a>
+                                    </div>
+                                </div>
+                                <div class="panel" data-anime="translateY: [24, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;" data-uc-lightbox="video-autoplay: true;">
+                                    <figure class="featured-image m-0 rounded ratio ratio-16x9 lg:rounded-2 overflow-hidden">
+                                        <img class="media-cover image" src="../assets/images/template/use_anim_1.gif" alt="Lexend">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="main_features" class="main-features section panel overflow-hidden">
+                <div class="section-outer panel pb-6 xl:pb-9">
+                    <div class="container max-w-xl lg:max-w-lg">
+                        <div class="section-inner panel" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 100});">
+                            <div class="panel vstack items-center gap-2 xl:gap-3 mb-4 sm:mb-8 xl:mb-9 sm:max-w-600px xl:max-w-700px mx-auto text-center">
+                                <h2 class="h3 lg:h2 xl:h1 m-0">İşletmeniz için akıllı özellikler</h2>
+                                <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">Bir içerik oluşturucu olarak iyi bir kâr paylaşımına yönelik nihai hedefle, yararlı içeriği daha erişilebilir hale getirmenize yardımcı olmaya odaklanıyoruz.</p>
+                            </div>
+                            <div class="panel vstack gap-4 xl:gap-6">
+                                <div class="panel px-3 rounded-2 bg-secondary dark:bg-gray-300 dark:bg-opacity-10">
+                                    <ul class="main-features-nav hstack text-center overflow-auto" data-uc-switcher="connect: .main-features-switcher; active: 1; animation: uc-animation-fade;">
+                                        <li><a class="h6 lg:h5 text-nowrap m-0" href="#">Sürükle-Bırak</a></li>
+                                        <li><a class="h6 lg:h5 text-nowrap m-0" href="#">Entegrasyonlar</a></li>
+                                        <li><a class="h6 lg:h5 text-nowrap m-0" href="#">E-ticaret Çözümleri</a></li>
+                                        <li><a class="h6 lg:h5 text-nowrap m-0" href="#">Çoklu Birimler</a></li>
+                                    </ul>
+                                </div>
+                                <div class="main-features-switcher uc-switcher overflow-hidden">
+                                    <div>
+                                        <div class="feature-item panel">
+                                            <div class="row child-cols col-match justify-between g-4">
+                                                <div class="col-12 sm:col-6">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
+                                                        <img class="media-cover image" src="../assets/images/template/sürüklebırak.svg" alt="Kapsamlı Tasarım Araçları">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 sm:col-6">
+                                                    <div class="panel">
+                                                        <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                            <div>
+                                                                <div class="panel vstack gap-2">
+                                                                    <h3 class="h4 sm:h3 lg:h2 m-0">Kapsamlı Tasarım Araçları</h3>
+                                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Sürükle-bırak özellikleri ile kolayca web sitenizi tasarlayın. Geniş şablon kütüphanemiz ve özelleştirilebilir tasarım araçlarımız ile profesyonel görünümlü web siteleri oluşturmak hiç bu kadar kolay olmamıştı.</p>
+                                                                    <a href="page-features.html" class="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2">
+                                                                        <span>İncele</span>
+                                                                        <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="feature-item panel">
+                                            <div class="row child-cols col-match justify-between g-4">
+                                                <div class="col-12 sm:col-6">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
+                                                        <img class="media-cover image" src="../assets/images/template/entegrasyon.svg" alt="Tüm işletmenizin her bölümünü birbirine bağlayın">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 sm:col-6">
+                                                    <div class="panel">
+                                                        <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                            <div>
+                                                                <div class="panel vstack gap-2">
+                                                                    <h3 class="h4 sm:h3 lg:h2 m-0">Tüm işletmenizin her bölümünü birbirine bağlayın</h3>
+                                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Tüm iş akışınızı kolaylaştıran yerel CRM entegrasyonlarıyla işletmenizi kolaylıkla yönetin.</p>
+                                                                    <a href="page-features.html" class="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2">
+                                                                        <span>İncele</span>
+                                                                        <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="feature-item panel">
+                                            <div class="row child-cols col-match justify-between g-4">
+                                                <div class="col-12 sm:col-6">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
+                                                        <img class="media-cover image" src="../assets/images/template/eticaret-çözümleri.svg" alt="Maintain compliance and control your apps">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 sm:col-6">
+                                                    <div class="panel">
+                                                        <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                            <div>
+                                                                <div class="panel vstack gap-2">
+                                                                    <h3 class="h4 sm:h3 lg:h2 m-0">Güçlü E-Ticaret Çözümleri</h3>
+                                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Online mağazanızı kolayca oluşturun ve yönetin. Ürün envanteri, ödeme işlemleri ve kargo entegrasyonları gibi tüm e-ticaret ihtiyaçlarınızı tek bir platformda karşılayın.</p>
+                                                                    <a href="page-features.html" class="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2">
+                                                                        <span>İncele</span>
+                                                                        <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="feature-item panel">
+                                            <div class="row child-cols col-match justify-between g-4">
+                                                <div class="col-12 sm:col-6">
+                                                    <figure class="featured-image m-0 rounded ratio ratio-1x1 rounded-2 overflow-hidden">
+                                                        <img class="media-cover image" src="../assets/images/template/çoklu-para-birimi.svg" alt="Çoklu Dil ve Çoklu Para Birimi Desteği">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-12 sm:col-6">
+                                                    <div class="panel">
+                                                        <div class="panel vstack justify-center gap-4 h-100 sm:p-3 lg:p-4">
+                                                            <div>
+                                                                <div class="panel vstack gap-2">
+                                                                    <h3 class="h4 sm:h3 lg:h2 m-0">Çoklu Dil ve Çoklu Para Birimi Desteği</h3>
+                                                                    <p class="fs-6 lg:fs-5 opacity-70 dark:opacity-80">Global pazara hitap edin! Web sitenizi birden fazla dilde ve para biriminde yayınlayarak, farklı bölgelerden müşterilere ulaşın.</p>
+                                                                    <a href="#" class="uc-link fw-bold hstack gap-narrow mt-2 sm:mt-1 lg:mt-2">
+                                                                        <span>İncele</span>
+                                                                        <i class="position-relative icon icon-1 unicon-arrow-right rtl:rotate-180 translate-y-px"></i>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="hero_header" class="hero-header section panel overflow-hidden">
+                <div class="section-outer panel py-6 xl:py-9 pt-9 lg:pt-10 bg-secondary dark:bg-gray-900">
+                    <div class="position-absolute top-0 start-0 end-0 min-h-screen overflow-hidden d-none lg:d-block" data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
+                        <div class="position-absolute top-0 start-0 rotate-45" style="top: 35% !important; left: 47% !important">
+                            <img class="w-32px text-gray-900 dark:text-white" src="../assets/images/template/star-1.svg" alt="star-1" data-uc-svg>
+                        </div>
+                        <div class="position-absolute top-0 end-0 rotate-45" style="top: 12% !important; right: 15% !important">
+                            <img class="w-24px text-gray-900 dark:text-white" src="../assets/images/template/star-2.svg" alt="star-2" data-uc-svg>
+                        </div>
+                        <div class="position-absolute top-0 start-0 translate-middle-y -rotate-12" style="top: 15% !important; left: 35% !important">
+                            <img class="w-48px xl:w-56px d-block dark:d-none" src="../assets/images/template/icon-trophy.svg" alt="icon-trophy">
+                            <img class="w-48px xl:w-56px d-none dark:d-block" src="../assets/images/template/icon-trophy-dark.svg" alt="icon-trophy-dark">
+                        </div>
+                        <div class="position-absolute top-0 start-0 translate-middle-y rotate-45 ms-n3" style="top: 35% !important">
+                            <img class="w-48px xl:w-56px d-block dark:d-none" src="../assets/images/template/icon-location.svg" alt="icon-location">
+                            <img class="w-48px xl:w-56px d-none dark:d-block" src="../assets/images/template/icon-location-dark.svg" alt="icon-location-dark">
+                        </div>
+                        <div class="position-absolute bottom-0 start-0 translate-middle-y" style="bottom: 15% !important; left: 30% !important">
+                            <img class="w-40px xl:w-48px d-block dark:d-none" src="../assets/images/template/icon-globe.svg" alt="icon-globe">
+                            <img class="w-40px xl:w-48px d-none dark:d-block" src="../assets/images/template/icon-globe-dark.svg" alt="icon-globe-dark">
+                        </div>
+                        <div class="position-absolute bottom-0 ltr:end-0 rtl:start-0 translate-middle-y rotate-45" style="bottom: 20% !important; right: 8% !important">
+                            <img class="w-48px xl:w-56px d-block dark:d-none" src="../assets/images/template/icon-crown.svg" alt="icon-crown">
+                            <img class="w-48px xl:w-56px d-none dark:d-block" src="../assets/images/template/icon-crown-dark.svg" alt="icon-crown-dark">
+                        </div>
+                        <div class="position-absolute top-0 end-0 translate-middle-y -rotate-12" style="top: 60% !important; right: 48% !important">
+                            <img class="w-48px xl:w-56px d-block dark:d-none" src="../assets/images/template/icon-diamond.svg" alt="icon-diamond">
+                            <img class="w-48px xl:w-56px d-none dark:d-block" src="../assets/images/template/icon-diamond-dark.svg" alt="icon-diamond-dark">
+                        </div>
+                        <div class="position-absolute top-0 end-0 translate-middle-y -rotate-12 me-n3" style="top: 35% !important">
+                            <img class="w-48px xl:w-56px d-block dark:d-none" src="../assets/images/template/icon-chat.svg" alt="icon-chat">
+                            <img class="w-48px xl:w-56px d-none dark:d-block" src="../assets/images/template/icon-chat-dark.svg" alt="icon-chat-dark">
+                        </div>
+                    </div>
+                    <div class="container max-w-xl">
+                        <div class="section-inner panel py-4">
+                            <div class="row child-cols justify-center lg:justify-between items-center gy-4 sm:gy-6 gx-0">
+                                <div class="col-12 sm:col-9 lg:col-5">
+                                    <div class="vstack gap-2 mt-2 sm:mt-4 lg:mt-0 sm:text-center lg:text-start rtl:lg:text-end" data-anime="targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                        <span class="fs-6 fw-bold text-primary dark:text-secondary">Alan adınızı bulun!</span>
+                                        <h1 class="h2 sm:h1 lg:display-6 xl:display-5 mb-1 xl:mb-2">.com alan adınızı bugün kaydettirin</h1>
+                                        <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">İnternetteki varlığınızın ilk adımı, doğru domaini seçmekle başlar.</p>
+                                        <form class="row child-cols g-1 mt-1 sm:mt-2">
+                                            <div>
+                                                <input class="form-control h-48px lg:h-56px w-full bg-white dark:border-white dark:bg-opacity-10 dark:border-opacity-0 dark:text-white" type="text" placeholder="AlanAdiniz.com" required="">
+                                            </div>
+                                            <div class="col-12 sm:col-auto">
+                                                <a href="page-pricing.html" class="btn btn-md h-48px lg:h-56px w-100 sm:min-w-150px btn-primary text-white">Domainimi Bul</a>
+                                            </div>
+                                        </form>
+                                        <p class="fs-7 text-dark dark:text-white text-opacity-70">Şimdi ücretsiz dene.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12 lg:col-6 xl:col-7">
+                                    <div class="hero-scene panel rtl:me-6 rtl:ms-n6" data-anime="targets: > *; scale: [0.9, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
+                                        <div class="panel overflow-hidden">
+                                            <img class="d-block dark:d-none" src="../assets/images/template/dashboard.svg" alt="Main hero image">
+                                            <img class="d-none dark:d-block" src="../assets/images/template/dashboard.svg" alt="Main hero image">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="pricing_tiers" class="pricing-tiers section panel overflow-hidden">
+                <div class="section-outer panel py-6 xl:py-9">
+                    <div class="container max-w-lg">
+                        <div class="section-inner panel">
+                            <div class="panel vstack items-center gap-4 sm:gap-6 xl:gap-8" data-anime="onview: -100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                <div class="heading panel vstack items-center gap-2 xl:gap-3 text-center">
+                                    <h2 class="title h3 lg:h2 xl:h1 m-0">İhtiyaçlarınıza göre fiyat planları</h2>
+                                    <p class="fs-6 xl:fs-5 text-dark dark:text-white text-opacity-70">Dakikalar içinde profesyonel web sitesi oluşturun.</p>
+                                </div>
+                                <div class="panel w-100 lg:max-w-900px border rounded-3 overflow-hidden">
+                                    <div class="row child-cols-12 sm:child-cols-6 col-match justify-between g-0">
+                                        <div>
+                                            <div class="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded-0">
+                                                <div class="panel">
+                                                    <h3 class="title h5 sm:h4 dark:text-white">Plus İşletme Planı</h3>
+                                                    <p class="desc dark:text-whiteopacity-70 dark:opacity-80">Markanızı büyütün</p>
+                                                </div>
+                                                <div class="panel">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h5 class="title h3 sm:h2 m-0 dark:text-white">325 TL</h5><p>/ay</p>
+                                                        <span class="fs-7 opacity-70">Ödeme almak için ideal</span>
+                                                        <div class="vstack gap-1 justify-center text-center mt-3">
+                                                            <a href="sign-up.html" class="btn btn-md sm:btn-sm lg:btn-md btn-primary text-white">Hemen Başla</a>
+                                                            <span class="fs-7 opacity-70 min-h-24px">İlk yılınıza özel %50 indirimli fiyatıdır!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel">
+                                                    <div class="panel vstack gap-2">
+                                                        <span class="fs-6 fw-bold dark:text-white">Ana Özellikler:</span>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>1 yıllık ücretsiz domain</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Müşteri hesapları</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-danger text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Özelleştirilmiş raporlar</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-danger text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Otomatik pazarlama araçları</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Ödeme kabul etme</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Abonelikler ve tekrarlayan ödemeler</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Alışveriş platformlarında satış</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Sosyal medya kanallarında satış</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>7/24 ücretsiz destek</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="tier panel vstack gap-2 xl:gap-4 px-3 py-4 sm:p-4 lg:p-6 rounded-0 bg-secondary dark:bg-gray-300 dark:bg-opacity-10">
+                                                <span class="position-absolute top-0 ltr:end-0 rtl:start-0 m-2 d-inline-flex py-narrow px-1 bg-primary rounded-1 text-white fs-7 fw-medium">En Popüler</span>
+                                                <div class="panel">
+                                                    <h3 class="title h5 sm:h4 dark:text-white">VIP İşletme Planı</h3>
+                                                    <p class="desc dark:text-whiteopacity-70 dark:opacity-80">İşletmenizi taçlandırın</p>
+                                                </div>
+                                                <div class="panel">
+                                                    <div class="panel vstack gap-narrow">
+                                                        <h5 class="title h3 sm:h2 m-0 dark:text-white">375 TL</h5><p>/ay</p>
+                                                        <span class="fs-7 opacity-70">Ödeme almak için mükemmel</span>
+                                                        <div class="vstack gap-1 justify-center text-center mt-3">
+                                                            <a href="sign-up.html" class="btn btn-md sm:btn-sm lg:btn-md btn-primary text-white">Hemen Başla</a>
+                                                            <span class="fs-7 opacity-70 min-h-24px">İlk yılınıza özel %50 indirimli fiyatıdır!</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="panel">
+                                                    <div class="panel vstack gap-2">
+                                                        <span class="fs-6 fw-bold dark:text-white">Ana Özellikler:</span>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>1 yıllık ücretsiz domain</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Müşteri hesapları</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Özelleştirilmiş raporlar</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Otomatik pazarlama araçları</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Ödeme kabul etme</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Abonelikler ve tekrarlayan ödemeler</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Alışveriş platformlarında satış</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>Sosyal medya kanallarında satış</span>
+                                                        </div>
+                                                        <div class="hstack gap-1 fs-7">
+                                                            <i class="cstack w-16px h-16px bg-primary text-white rounded-circle unicon-checkmark fw-bold"></i>
+                                                            <span>7/24 ücretsiz destek</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="position-absolute bottom-0 ltr:end-0 rtl:start-0 m-2 d-none md:d-block">
+                                                    <img class="w-100px lg:w-128px d-block dark:d-none" src="../assets/images/template/money.svg" alt="money">
+                                                    <img class="w-100px lg:w-128px d-none dark:d-block" src="../assets/images/template/money-dark.svg" alt="money-dark">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="page-pricing.html" class="uc-link fw-bold d-inline-flex items-center gap-narrow">
+                                    <span>Paketlerin detaylı fiyatları
+                                    </span>
+                                    <i class="icon icon-1 unicon-arrow-right rtl:rotate-180"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+
+            <!-- Section start -->
+            <div id="cta" class="cta section panel overflow-hidden">
+                <div class="section-outer panel" data-anime="onview: -100; translateY: [24, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 200;">
+                    <div class="container max-w-xl">
+                        <div class="section-inner panel overflow-hidden rounded xl:rounded-2 px-2 sm:px-0 py-4 sm:py-6 xl:py-9 bg-secondary dark:bg-gray-300 dark:bg-opacity-10">
+                            <div class="d-none lg:d-block" data-anime="targets: >*; scale: [0, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 750});">
+                                <div class="position-absolute top-0 start-0 rotate-45" style="top: 40% !important; left: 20% !important">
+                                    <img class="w-24px text-gray-900 dark:text-white" src="../assets/images/template/star-1.svg" alt="star-1" data-uc-svg>
+                                </div>
+                                <div class="position-absolute bottom-0 ltr:end-0 rtl:start-0 rotate-45" style="bottom: 40% !important; right: 20% !important">
+                                    <img class="w-24px text-gray-900 dark:text-white" src="../assets/images/template/star-2.svg" alt="star-2" data-uc-svg>
+                                </div>
+                            </div>
+                            <div class="d-none lg:d-block" data-anime="onview: -100; targets: img; scale: [0.8, 1]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: 350;">
+                                <div class="position-absolute top-50 start-0 translate-middle-y ms-n6">
+                                    <img class="w-200px xl:w-250px d-block dark:d-none" src="../assets/images/template/talking.svg" alt="talking">
+                                    <img class="w-200px xl:w-250px d-none dark:d-block" src="../assets/images/template/talking-dark.svg" alt="talking-dark">
+                                </div>
+                                <div class="position-absolute top-50 end-0 translate-middle-y me-n6">
+                                    <img class="w-200px xl:w-250px d-block dark:d-none" src="../assets/images/template/chatting.svg" alt="chatting">
+                                    <img class="w-200px xl:w-250px d-none dark:d-block" src="../assets/images/template/chatting-dark.svg" alt="chatting-dark">
+                                </div>
+                            </div>
+                            <div class="vstack items-center gap-2 max-w-400px lg:max-w-600px mx-auto text-center" data-anime="onview:-100; targets: >*; translateY: [48, 0]; opacity: [0, 1]; easing: spring(1, 80, 10, 0); duration: 450; delay: anime.stagger(100, {start: 200});">
+                                <h2 class="h3 sm:h1 xl:display-6 m-0">Yüksek maliyetli hataları önleyin</h2>
+                                <p class="fs-6 sm:fs-5 text-dark dark:text-white text-opacity-70">Önceden hazırlanmış şablonlar ile çarpıcı web sitenizi oluşturun.</p>
+                                <a href="page-pricing.html" class="btn btn-md h-48px lg:h-56px min-w-150px btn-primary text-white mt-2">
+                                    <span>Şimdi Dene</span>
+                                    <i class="icon icon-1 unicon-arrow-up-right"></i>
+                                </a>
+                                <p class="fs-7 text-dark dark:text-white text-opacity-70">14 gün boyunca paranız iade.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section end -->
+        </div>
+
+        <!-- Wrapper end -->
+
+        <!-- Footer start -->
+        <footer id="uc-footer" class="uc-footer panel overflow-hidden">
+            <div class="footer-outer py-4 lg:py-6 xl:py-9 dark:bg-gray-900 dark:text-white">
+                <div class="container max-w-xl">
+                    <div class="footer-inner vstack gap-4 lg:gap-6 xl:gap-8">
+                        <div class="uc-footer-widgets panel">
+                            <div class="row child-cols-6 md:child-cols col-match g-4">
+                                <div class="col-12 lg:col-4">
+                                    <div class="panel vstack items-start gap-4 ltr:md:pe-8 rtl:md:ps-8">
+                                        <div class="vstack gap-2">
+                                            <a href="index.html">
+                                                <img class="w-32px text-primary" src="../assets/images/common/Webso-mobile-logo.svg" alt="Webso-mobile-logo">
+                                            </a>
+                                            <p>Bizimle, herkes kolayca profesyonel web siteleri oluşturabilir. Sürükle-bırak arayüzümüz ve şablonlarımızla, kodlama gerektirmeden hayalinizdeki siteyi hızla oluşturun. Dijital dünyada yer almak artık çok kolay!</p>
+                                        </div>
+                                        <div class="hstack items-start gap-1">
+                                            <a href="#">
+                                                <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/playstore.svg" alt="Google Play Store" data-uc-svg>
+                                            </a>
+                                            <a href="#">
+                                                <img class="text-gray-900 dark:text-white hover:text-opacity-70 transition-all duration-150" src="../assets/images/common/appstore.svg" alt="Apple Store" data-uc-svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium">
+                                        <li><a href="page-about.html">Hakkımızda</a></li>
+                                        <li><a href="page-pricing.html">Planlar</a></li>
+                                        <li><a href="page-features.html">Özellikler</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium">
+                                        <li><a href="page-integrations.html">Blog</a></li>
+                                        <li><a href="page-career.html">Kariyer</a></li>
+                                        <li><a href="page-contact.html">İletişim</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="nav-y gap-1 fw-medium">
+                                        <li><a href="page-faq.html">S.S.S</a></li>
+                                        <li><a href="page-terms.html">Kullanım Koşulları</a></li>
+                                        <li><a href="page-privacy.html">Gizlilik Politikası</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uc-footer-bottom panel vstack lg:hstack gap-4 justify-center lg:justify-between pt-4 lg:pt-6 border-top dark:text-white">
+                            <div class="vstack sm:hstack justify-center lg:justify-start items-center lg:items-start gap-1 lg:gap-2">
+                                <p class="opacity-60">Webso Teknoloji A.Ş. © 2024, Bütün hakları saklıdır.</p>
+                            </div>
+                            <div class="hstack justify-center lg:justify-end gap-2 lg:gap-3">
+                                <ul class="nav-x gap-2">
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 unicon-logo-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 unicon-logo-facebook"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 unicon-logo-x-filled"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 unicon-logo-instagram"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><i class="icon icon-2 unicon-logo-youtube"></i></a>
+                                    </li>
+                                </ul>
+                                <div class="vr"></div>
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Footer end -->
+
+        <!-- include jquery & bootstrap js -->
+        <script defer src="../assets/js/libs/jquery.min.js"></script>
+        <script defer src="../assets/js/libs/bootstrap.min.js"></script>
+
+        <!-- include scripts -->
+        <script defer src="../assets/js/libs/anime.min.js"></script>
+        <script defer src="../assets/js/libs/swiper-bundle.min.js"></script>
+        <script defer src="../assets/js/libs/scrollmagic.min.js"></script>
+        <script defer src="../assets/js/libs/gsap.min.js"></script>
+        <script defer src="../assets/js/helpers/data-attr-helper.js"></script>
+        <script defer src="../assets/js/helpers/swiper-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper.js"></script>
+        <script defer src="../assets/js/helpers/anime-helper-defined-timelines.js"></script>
+        <script defer src="../assets/js/uikit-components-bs.js"></script>
+
+        <!-- include app script -->
+        <script defer src="../assets/js/app.js"></script>
+
+        <script>
+            // Schema toggle via URL
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const getSchema = urlParams.get("schema");
+            if (getSchema === "dark") {
+                setDarkMode(1);
+            } else if (getSchema === "light") {
+                setDarkMode(0);
+            }
+        </script>
+    </body>
+</html>
